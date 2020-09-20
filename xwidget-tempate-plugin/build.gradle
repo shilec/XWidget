@@ -1,8 +1,7 @@
 apply plugin: "java-library"
 apply plugin: 'groovy'//使用 groovy 插件构建项目
-//apply plugin: 'maven'//用于发布本地 maven 仓库中
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.shilec'
+apply plugin: 'maven'//用于发布本地 maven 仓库中
+
 
 dependencies {
     implementation gradleApi()//gradle sdk
@@ -14,18 +13,18 @@ repositories {
     mavenCentral()
 }
 
-//def groupName = 'com.scott.xwidget.template.plugin'//组名
-//def artifactName = 'xwidget-template-plugin'//项目名
-//def versionName = '1.0.1'//版本号
-//
-////上传至本地仓库
-//uploadArchives {
-//    repositories {
-//        mavenDeployer {
-//            pom.groupId = "${groupName}"
-//            pom.artifactId = "${artifactName}"
-//            pom.version = "${versionName}"
-//            repository(url: uri('../maven/xwidget-template-plugin'))
-//        }
-//    }
-//}
+def groupName = 'com.scott.xwidget.template.plugin'//组名
+def artifactName = 'xwidget-template-plugin'//项目名
+def versionName = '1.0.1'//版本号
+
+//上传至本地仓库
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = "${groupName}"
+            pom.artifactId = "${artifactName}"
+            pom.version = "${versionName}"
+            repository(url: uri('../maven/xwidget-template-plugin'))
+        }
+    }
+}
