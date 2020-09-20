@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto generated, do not modify!!! -->
+<resources>
+
+<!-- XTextViewCustom -->
+<declare-styleable name="XTextViewCustom" >
+    <attr name="XTextViewCustom_corner" format="dimension" />
+    <attr name="XTextViewCustom_solid_color" format="color" />
+    <attr name="XTextViewCustom_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XTextViewCustom_gradient_start_color" format="color"/>
+    <attr name="XTextViewCustom_gradient_end_color" format="color"/>
+    <attr name="XTextViewCustom_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XTextViewCustom_gradient_radius" format="dimension"/>
+    <attr name="XTextViewCustom_stroke_color" format="color" />
+    <attr name="XTextViewCustom_stroke_border" format="dimension"/>
+    <attr name="XTextViewCustom_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XTextViewCustom_stated_corner" format="dimension" />
+    <attr name="XTextViewCustom_stated_solid_color" format="color"/>
+    <attr name="XTextViewCustom_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XTextViewCustom_stated_gradient_start_color" format="color"/>
+    <attr name="XTextViewCustom_stated_gradient_end_color" format="color"/>
+    <attr name="XTextViewCustom_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XTextViewCustom_stated_gradient_radius" format="dimension"/>
+    <attr name="XTextViewCustom_stated_stroke_color" format="color" />
+    <attr name="XTextViewCustom_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XTextViewCustom -->
+
+<!-- XButtonCustom -->
+<declare-styleable name="XButtonCustom" >
+    <attr name="XButtonCustom_corner" format="dimension" />
+    <attr name="XButtonCustom_solid_color" format="color" />
+    <attr name="XButtonCustom_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XButtonCustom_gradient_start_color" format="color"/>
+    <attr name="XButtonCustom_gradient_end_color" format="color"/>
+    <attr name="XButtonCustom_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XButtonCustom_gradient_radius" format="dimension"/>
+    <attr name="XButtonCustom_stroke_color" format="color" />
+    <attr name="XButtonCustom_stroke_border" format="dimension"/>
+    <attr name="XButtonCustom_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XButtonCustom_stated_corner" format="dimension" />
+    <attr name="XButtonCustom_stated_solid_color" format="color"/>
+    <attr name="XButtonCustom_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XButtonCustom_stated_gradient_start_color" format="color"/>
+    <attr name="XButtonCustom_stated_gradient_end_color" format="color"/>
+    <attr name="XButtonCustom_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XButtonCustom_stated_gradient_radius" format="dimension"/>
+    <attr name="XButtonCustom_stated_stroke_color" format="color" />
+    <attr name="XButtonCustom_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XButtonCustom -->
+</resources>

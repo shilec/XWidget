@@ -1,0 +1,19 @@
+apply plugin: 'java-library'
+apply plugin: "com.scott.xwidget-template-plugin"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.google.auto.service:auto-service:1.0-rc7'
+    //gradle高版本必须再添加以下依赖
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc7'
+
+    implementation project(":xwidget-annotation")
+    implementation 'com.squareup:javapoet:1.12.1'
+}
+
+
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

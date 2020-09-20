@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GradientCheckbox">
+        <attr name="checkbox_gradient_start_color" format="color" />
+        <attr name="checkbox_test" format="flags">
+            <flag value="0x101" name="test"/>
+        </attr>
+<!--        <attr name="checkbox_gradient_end_color" format="color" />-->
+    </declare-styleable>
+
+</resources>

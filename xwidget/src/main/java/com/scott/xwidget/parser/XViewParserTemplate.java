@@ -1,0 +1,151 @@
+package com.scott.xwidget.parser;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.StateListDrawable;
+import android.util.AttributeSet;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import com.scott.xwidget.IWidgetParser;
+import com.scott.xwidget.R;
+
+
+public class XViewParserTemplate implements IWidgetParser {
+    public XViewParserTemplate () {
+    }
+
+    @Nullable
+    @Override
+    public Drawable parseDrawable(@NotNull Context context, @Nullable AttributeSet attrs, @Nullable Drawable drawable) {
+        TypedArray arr = context.getResources().obtainAttributes(attrs, R.styleable.XTextViewCustom);
+        int type = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_state, 0);
+
+        Drawable drb = null;
+        if (drawable instanceof GradientDrawable) {
+            drb = parseGradientDrawable((GradientDrawable) drawable, arr);
+        } else if (drawable instanceof StateListDrawable) {
+            drb = parseStateListDrawable((StateListDrawable) drawable, arr, type);
+        }
+
+        if (drb == null) {
+            if (type == 0) {
+                drb = parseGradientDrawable(new GradientDrawable(), arr);
+            } else if (type == 1) {
+                drb = parseStateListDrawable(new StateListDrawable(), arr, type);
+            }
+        }
+
+        arr.recycle();
+        return drb;
+    }
+
+    private Drawable parseGradientDrawable(GradientDrawable gradientDrawable, TypedArray arr) {
+        return buildNormalGradientDrawable(gradientDrawable, arr);
+    }
+
+    private GradientDrawable buildStatedGradientDrawable(GradientDrawable gradientDrawable, TypedArray arr) {
+        int statedSoldColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_solid_color, Color.TRANSPARENT);
+        float statedCorner = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_corner, 0F);
+        float statedBorder = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_border, 0F);
+        int statedBorderColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_color, Color.TRANSPARENT);
+        float statedGradientRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_radius, 0F);
+        int statedStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_start_color, Color.TRANSPARENT);
+        int statedEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_end_color, Color.TRANSPARENT);
+        int statedGradientType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_solid_gradient, 0);
+        int statedGradientOrientation = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_orientation, 0);
+        GradientDrawable.Orientation gradientOrientation = GradientDrawable.Orientation.LEFT_RIGHT;
+        switch (statedGradientOrientation) {
+            case 1:
+                gradientOrientation = GradientDrawable.Orientation.LEFT_RIGHT;
+                break;
+            case 2:
+                gradientOrientation = GradientDrawable.Orientation.TOP_BOTTOM;
+                break;
+        }
+
+        if (statedSoldColor != Color.TRANSPARENT) {
+            gradientDrawable.setColor(statedSoldColor);
+        }
+        if (statedCorner != 0f) {
+            gradientDrawable.setCornerRadius(statedCorner);
+        }
+        if (statedBorder != 0 && statedBorderColor != 0) {
+            gradientDrawable.setStroke((int) statedBorder, statedBorderColor);
+        }
+        if (statedGradientRadius != 0) {
+            gradientDrawable.setGradientRadius(statedGradientRadius);
+        }
+        if (statedStartColor != Color.TRANSPARENT && statedEndColor != Color.TRANSPARENT) {
+            gradientDrawable.setColors(new int[] {statedStartColor, statedEndColor});
+        }
+        if (statedGradientType != 0) {
+            gradientDrawable.setGradientType(statedGradientType);
+        }
+        if (gradientDrawable.getOrientation() != gradientOrientation) {
+            gradientDrawable.setOrientation(gradientOrientation);
+        }
+        return gradientDrawable;
+    }
+
+    private GradientDrawable buildNormalGradientDrawable(GradientDrawable gradientDrawable, TypedArray arr) {
+        int statedSoldColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_solid_color, Color.TRANSPARENT);
+        float statedCorner = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_corner, 0F);
+        float statedBorder = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_border, 0F);
+        int statedBorderColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stroke_color, Color.TRANSPARENT);
+        float statedGradientRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_gradient_radius, 0F);
+        int statedStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_start_color, Color.TRANSPARENT);
+        int statedEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_end_color, Color.TRANSPARENT);
+        int statedGradientType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_solid_gradient, 0);
+        int statedGradientOrientation = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_gradient_orientation, 0);
+        GradientDrawable.Orientation gradientOrientation = GradientDrawable.Orientation.LEFT_RIGHT;
+        switch (statedGradientOrientation) {
+            case 1:
+                gradientOrientation = GradientDrawable.Orientation.LEFT_RIGHT;
+                break;
+            case 2:
+                gradientOrientation = GradientDrawable.Orientation.TOP_BOTTOM;
+                break;
+        }
+
+        gradientDrawable.setColor(statedSoldColor);
+        gradientDrawable.setCornerRadius(statedCorner);
+        gradientDrawable.setStroke((int) statedBorder, statedBorderColor);
+        gradientDrawable.setGradientRadius(statedGradientRadius);
+        if (statedStartColor != Color.TRANSPARENT && statedEndColor != Color.TRANSPARENT) {
+            gradientDrawable.setColors(new int[] {statedStartColor, statedEndColor});
+        }
+        gradientDrawable.setGradientType(statedGradientType);
+        gradientDrawable.setOrientation(gradientOrientation);
+        return gradientDrawable;
+    }
+
+    private Drawable parseStateListDrawable(StateListDrawable stateListDrawable, TypedArray arr, int stateType) {
+        GradientDrawable normaDrawable = buildNormalGradientDrawable(new GradientDrawable(), arr);
+        if (stateType == 0)
+            return normaDrawable;
+
+        int[] state_arr = null;
+        int[] state_normal = null;
+
+
+        if (stateType == 1) {
+            state_arr = new int[] {android.R.attr.state_pressed};
+            state_normal = new int[] {-android.R.attr.state_pressed};
+        } else if (stateType == 2) {
+            state_arr = new int[] {android.R.attr.state_selected};
+            state_normal = new int[] {-android.R.attr.state_selected};
+        } else if (stateType == 3) {
+            state_arr = new int[] {android.R.attr.state_checked};
+            state_normal = new int[] {-android.R.attr.state_checked};
+        }
+
+        GradientDrawable statedDrawable = buildStatedGradientDrawable(buildNormalGradientDrawable(new GradientDrawable(), arr), arr);
+        stateListDrawable.addState(state_arr, statedDrawable);
+        stateListDrawable.addState(state_normal, normaDrawable);
+        return stateListDrawable;
+    }
+}
