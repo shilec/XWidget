@@ -67,12 +67,20 @@ public class XWidgetBuildHelper {
         builder.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>" + NEW_LINE);
         builder.append("<!-- Auto generated, do not modify!!! -->").append(NEW_LINE);
         builder.append("<resources>" + NEW_LINE);
-        
+
         for (String name : widgetNames) {
             builder.append(NEW_LINE);
             builder.append("<!-- ").append(name).append(" -->").append(NEW_LINE);
             builder.append("<declare-styleable name=\"").append(name).append("\" >").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_corner\" format=\"dimension\" />").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_corner_type\">").append(NEW_LINE);
+            builder.append("        <flag name=\"left_top\" value=\"0x01\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"right_top\" value=\"0x08\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"left_bottom\" value=\"0x16\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"right_bottom\" value=\"0x32\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"all\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+
             builder.append("    <attr name=\"").append(name).append("_solid_color\" format=\"color\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_solid_gradient\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
@@ -96,6 +104,14 @@ public class XWidgetBuildHelper {
             builder.append("    </attr>").append(NEW_LINE);
 
             builder.append("    <attr name=\"").append(name).append("_stated_corner\" format=\"dimension\" />").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_corner_type\">").append(NEW_LINE);
+            builder.append("        <flag name=\"left_top\" value=\"0x01\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"right_top\" value=\"0x08\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"left_bottom\" value=\"0x16\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"right_bottom\" value=\"0x32\"/>").append(NEW_LINE);
+            builder.append("        <flag name=\"all\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+
             builder.append("    <attr name=\"").append(name).append("_stated_solid_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_solid_gradient\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);

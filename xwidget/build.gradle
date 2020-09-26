@@ -7,7 +7,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.shilec'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "30.0.0"
 
     defaultConfig {

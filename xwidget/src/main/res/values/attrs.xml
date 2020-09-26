@@ -2,6 +2,13 @@
 <resources>
     <declare-styleable name="XTextViewCustom" >
         <attr name="XTextViewCustom_corner" format="dimension" />
+        <attr name="XTextViewCustom_corner_type">
+            <flag name="left_top" value="0x11"/>
+            <flag name="right_top" value="0x21"/>
+            <flag name="left_bottom" value="0x12"/>
+            <flag name="right_bottom" value="0x22"/>
+            <flag name="all" value="0"/>
+        </attr>
         <attr name="XTextViewCustom_solid_color" format="color" />
         <attr name="XTextViewCustom_solid_gradient" format="enum">
             <enum name="linear" value="0"/>
@@ -23,6 +30,13 @@
             <enum name="checked" value="3"/>
         </attr>
         <attr name="XTextViewCustom_stated_corner" format="dimension" />
+        <attr name="XTextViewCustom_stated_corner_type">
+            <flag name="left_top" value="0x11"/>
+            <flag name="right_top" value="0x21"/>
+            <flag name="left_bottom" value="0x12"/>
+            <flag name="right_bottom" value="0x22"/>
+            <flag name="all" value="0"/>
+        </attr>
         <attr name="XTextViewCustom_stated_solid_color" format="color"/>
         <attr name="XTextViewCustom_stated_solid_gradient" format="enum">
             <enum name="linear" value="0"/>
@@ -38,4 +52,5 @@
         <attr name="XTextViewCustom_stated_stroke_color" format="color" />
         <attr name="XTextViewCustom_stated_stroke_border" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="XTextViewCustom_corner_type"></declare-styleable>
 </resources>

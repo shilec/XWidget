@@ -70,8 +70,30 @@ public class XViewParserTemplate implements IWidgetParser {
         if (statedSoldColor != Color.TRANSPARENT) {
             gradientDrawable.setColor(statedSoldColor);
         }
-        if (statedCorner != 0f) {
-            gradientDrawable.setCornerRadius(statedCorner);
+        if (statedCorner != 0) {
+            int stateCornerType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_corner_type, 0);
+            if (stateCornerType == 0) {
+                gradientDrawable.setCornerRadius(statedCorner);
+            } else {
+                float[] corners = new float[] {0, 0, 0, 0, 0, 0, 0, 0};
+                if ((stateCornerType & 0x01) == 0x01) { // top-left
+                    corners[0] = statedCorner;
+                    corners[1] = statedCorner;
+                }
+                if ((stateCornerType & 0x08) == 0x8) { // top-right
+                    corners[2] = statedCorner;
+                    corners[3] = statedCorner;
+                }
+                if ((stateCornerType & 0x16) == 0x16) { // bottom-right
+                    corners[6] = statedCorner;
+                    corners[7] = statedCorner;
+                }
+                if ((stateCornerType & 0x32) == 0x32) { // bottom-left
+                    corners[4] = statedCorner;
+                    corners[5] = statedCorner;
+                }
+                gradientDrawable.setCornerRadii(corners);
+            }
         }
         if (statedBorder != 0 && statedBorderColor != 0) {
             gradientDrawable.setStroke((int) statedBorder, statedBorderColor);
@@ -111,8 +133,30 @@ public class XViewParserTemplate implements IWidgetParser {
                 break;
         }
 
+        int stateCornerType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_corner_type, 0);
+        if (stateCornerType == 0) {
+            gradientDrawable.setCornerRadius(statedCorner);
+        } else {
+            float[] corners = new float[] {0, 0, 0, 0, 0, 0, 0, 0};
+            if ((stateCornerType & 0x01) == 0x01) { // top-left
+                corners[0] = statedCorner;
+                corners[1] = statedCorner;
+            }
+            if ((stateCornerType & 0x08) == 0x8) { // top-right
+                corners[2] = statedCorner;
+                corners[3] = statedCorner;
+            }
+            if ((stateCornerType & 0x16) == 0x16) { // bottom-right
+                corners[6] = statedCorner;
+                corners[7] = statedCorner;
+            }
+            if ((stateCornerType & 0x32) == 0x32) { // bottom-left
+                corners[4] = statedCorner;
+                corners[5] = statedCorner;
+            }
+            gradientDrawable.setCornerRadii(corners);
+         }
         gradientDrawable.setColor(statedSoldColor);
-        gradientDrawable.setCornerRadius(statedCorner);
         gradientDrawable.setStroke((int) statedBorder, statedBorderColor);
         gradientDrawable.setGradientRadius(statedGradientRadius);
         if (statedStartColor != Color.TRANSPARENT && statedEndColor != Color.TRANSPARENT) {

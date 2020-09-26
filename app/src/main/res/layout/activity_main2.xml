@@ -164,6 +164,7 @@
         android:gravity="center_vertical"
         android:layout_height="100dp">
         <com.scott.xwidget.widget.XTextView
+            app:XTextView_corner_type="right_top|right_bottom"
             app:XTextView_corner="25dp"
             app:XTextView_solid_color="@color/colorPrimary"
             android:layout_width="50dp"

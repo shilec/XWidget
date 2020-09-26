@@ -5,6 +5,13 @@
 <!-- XButton -->
 <declare-styleable name="XButton" >
     <attr name="XButton_corner" format="dimension" />
+    <attr name="XButton_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XButton_solid_color" format="color" />
     <attr name="XButton_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -26,6 +33,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XButton_stated_corner" format="dimension" />
+    <attr name="XButton_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XButton_stated_solid_color" format="color"/>
     <attr name="XButton_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -46,6 +60,13 @@
 <!-- XConstraintLayout -->
 <declare-styleable name="XConstraintLayout" >
     <attr name="XConstraintLayout_corner" format="dimension" />
+    <attr name="XConstraintLayout_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XConstraintLayout_solid_color" format="color" />
     <attr name="XConstraintLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -67,6 +88,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XConstraintLayout_stated_corner" format="dimension" />
+    <attr name="XConstraintLayout_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XConstraintLayout_stated_solid_color" format="color"/>
     <attr name="XConstraintLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -87,6 +115,13 @@
 <!-- XEditText -->
 <declare-styleable name="XEditText" >
     <attr name="XEditText_corner" format="dimension" />
+    <attr name="XEditText_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XEditText_solid_color" format="color" />
     <attr name="XEditText_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -108,6 +143,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XEditText_stated_corner" format="dimension" />
+    <attr name="XEditText_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XEditText_stated_solid_color" format="color"/>
     <attr name="XEditText_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -128,6 +170,13 @@
 <!-- XFrameLayout -->
 <declare-styleable name="XFrameLayout" >
     <attr name="XFrameLayout_corner" format="dimension" />
+    <attr name="XFrameLayout_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XFrameLayout_solid_color" format="color" />
     <attr name="XFrameLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -149,6 +198,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XFrameLayout_stated_corner" format="dimension" />
+    <attr name="XFrameLayout_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XFrameLayout_stated_solid_color" format="color"/>
     <attr name="XFrameLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -169,6 +225,13 @@
 <!-- XImageView -->
 <declare-styleable name="XImageView" >
     <attr name="XImageView_corner" format="dimension" />
+    <attr name="XImageView_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XImageView_solid_color" format="color" />
     <attr name="XImageView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -190,6 +253,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XImageView_stated_corner" format="dimension" />
+    <attr name="XImageView_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XImageView_stated_solid_color" format="color"/>
     <attr name="XImageView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -210,6 +280,13 @@
 <!-- XLinearLayout -->
 <declare-styleable name="XLinearLayout" >
     <attr name="XLinearLayout_corner" format="dimension" />
+    <attr name="XLinearLayout_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XLinearLayout_solid_color" format="color" />
     <attr name="XLinearLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -231,6 +308,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XLinearLayout_stated_corner" format="dimension" />
+    <attr name="XLinearLayout_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XLinearLayout_stated_solid_color" format="color"/>
     <attr name="XLinearLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -251,6 +335,13 @@
 <!-- XRelativeLayout -->
 <declare-styleable name="XRelativeLayout" >
     <attr name="XRelativeLayout_corner" format="dimension" />
+    <attr name="XRelativeLayout_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XRelativeLayout_solid_color" format="color" />
     <attr name="XRelativeLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -272,6 +363,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XRelativeLayout_stated_corner" format="dimension" />
+    <attr name="XRelativeLayout_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XRelativeLayout_stated_solid_color" format="color"/>
     <attr name="XRelativeLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -292,6 +390,13 @@
 <!-- XTextView -->
 <declare-styleable name="XTextView" >
     <attr name="XTextView_corner" format="dimension" />
+    <attr name="XTextView_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XTextView_solid_color" format="color" />
     <attr name="XTextView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -313,6 +418,13 @@
         <enum name="checked" value="3"/>
     </attr>
     <attr name="XTextView_stated_corner" format="dimension" />
+    <attr name="XTextView_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
     <attr name="XTextView_stated_solid_color" format="color"/>
     <attr name="XTextView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>

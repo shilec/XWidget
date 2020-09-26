@@ -7,7 +7,7 @@ apply plugin: 'org.greenrobot.greendao'
 
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
@@ -46,5 +46,6 @@ dependencies {
     implementation project(":xwidget-annotation")
     kapt project(':xwidget-processor')
     //implementation 'com.github.shilec:XWidget:1.0.0'
-
+    //implementation 'com.github.shilec:XWidget:1.0.3'
+    kapt 'com.github.shilec:XWidget:1.0.3'
 }
