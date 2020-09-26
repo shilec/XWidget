@@ -56,7 +56,7 @@
         XWidgetParser.addParser(XButton::class.java, XButtonParser2())
 
 #### 插件及注解解析器介绍
-1. 使用`kapt 'com.github.shilec:XWidget:1.0.6'`时，可以为`XWidget`注解的View生成drawable解析器，用来生成模板代码，也可集成子模板代码进行扩展。
+1. 使用`kapt 'com.github.shilec:XWidget:1.0.6'`时，可以为`XWidget`注解的View生成drawable解析器，用来生成模板代码，也可继承自模板代码进行扩展。
 2. 使用`apply plugin: "com.scott.xwidget-gradle-plugin"`时，可以自动生成`XWidget`注解的View的attr属性定义，生成文件为**res/values/xwidget_attrs.xml**。(使用插件时，需要在根目录下的build.gradle文件中配置插件的`classpath:'com.github.shilec:XWidget:1.0.6'`)
 
 
