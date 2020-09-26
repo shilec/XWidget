@@ -8,7 +8,7 @@
 <img src="images/1.png"/>
 
 ## 支持的控件
-`XButton, XConstaintLayout, XEditText, XFrameLayout, XImageView, XLinearLayout, XRelativeLayout, XTextView `...
+`XButton, XConstraintLayout, XEditText, XFrameLayout, XImageView, XLinearLayout, XRelativeLayout, XTextView `...
 
 ## 支持属性名称
 | 含义 | 示例
