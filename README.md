@@ -11,7 +11,7 @@
 `XButton, XConstraintLayout, XEditText, XFrameLayout, XImageView, XLinearLayout, XRelativeLayout, XTextView `...
 
 ## 支持属性名称
-| 含义 | 示例
+| 属性名称 | 示例
 --------| ---
 **XButton_corner**|**圆角度数**
 **XButton_corner_type**|**圆角类型，默认 all。left_top,left_bottom,right_top,right_bottom**
