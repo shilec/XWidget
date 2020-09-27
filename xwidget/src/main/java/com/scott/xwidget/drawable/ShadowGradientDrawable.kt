@@ -2,6 +2,7 @@ package com.scott.xwidget.drawable
 
 import android.graphics.*
 import android.graphics.drawable.GradientDrawable
+import com.scott.xwidget.utils.ParseUtils
 
 /**
  *  gradient drawable with shadow
@@ -12,6 +13,7 @@ class ShadowGradientDrawable : GradientDrawable() {
     var shadowR: Int = 0
     var shadowDx: Float = 0f
     var shadowDy: Float = 0f
+    var corerType: Int = 0
 
     private val shadowPaint = Paint()
 
@@ -22,7 +24,11 @@ class ShadowGradientDrawable : GradientDrawable() {
         shadowRect.top = bounds.top.toFloat()
         shadowRect.bottom = bounds.bottom.toFloat()
 
-        canvas.drawRoundRect(shadowRect, corner, corner, shadowPaint)
+        val path = Path()
+        val corners = ParseUtils.getCornersByType(corerType, corner)
+        path.addRoundRect(shadowRect, corners, Path.Direction.CW)
+
+        canvas.drawPath(path, shadowPaint)
         super.draw(canvas)
     }
 

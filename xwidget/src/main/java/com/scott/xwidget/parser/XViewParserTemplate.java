@@ -13,6 +13,7 @@ import org.jetbrains.annotations.Nullable;
 import com.scott.xwidget.IWidgetParser;
 import com.scott.xwidget.R;
 import com.scott.xwidget.drawable.ShadowGradientDrawable;
+import com.scott.xwidget.utils.ParseUtils;
 
 
 public class XViewParserTemplate implements IWidgetParser {
@@ -71,29 +72,13 @@ public class XViewParserTemplate implements IWidgetParser {
         if (statedSoldColor != Color.TRANSPARENT) {
             gradientDrawable.setColor(statedSoldColor);
         }
+
+        int stateCornerType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_corner_type, 0);
         if (statedCorner != 0) {
-            int stateCornerType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_corner_type, 0);
             if (stateCornerType == 0) {
                 gradientDrawable.setCornerRadius(statedCorner);
             } else {
-                float[] corners = new float[] {0, 0, 0, 0, 0, 0, 0, 0};
-                if ((stateCornerType & 0x01) == 0x01) { // top-left
-                    corners[0] = statedCorner;
-                    corners[1] = statedCorner;
-                }
-                if ((stateCornerType & 0x08) == 0x8) { // top-right
-                    corners[2] = statedCorner;
-                    corners[3] = statedCorner;
-                }
-                if ((stateCornerType & 0x16) == 0x16) { // bottom-right
-                    corners[6] = statedCorner;
-                    corners[7] = statedCorner;
-                }
-                if ((stateCornerType & 0x32) == 0x32) { // bottom-left
-                    corners[4] = statedCorner;
-                    corners[5] = statedCorner;
-                }
-                gradientDrawable.setCornerRadii(corners);
+                gradientDrawable.setCornerRadii(ParseUtils.INSTANCE.getCornersByType(stateCornerType, statedCorner));
             }
         }
         if (statedBorder != 0 && statedBorderColor != 0) {
@@ -124,6 +109,7 @@ public class XViewParserTemplate implements IWidgetParser {
             shadowDrawable.setShadowDx(shadowDx);
             shadowDrawable.setShadowDy(shadowDy);
             shadowDrawable.setShadowR((int) shadowRadius);
+            shadowDrawable.setCorerType(stateCornerType);
         }
 
         return gradientDrawable;
@@ -153,24 +139,7 @@ public class XViewParserTemplate implements IWidgetParser {
         if (stateCornerType == 0) {
             gradientDrawable.setCornerRadius(statedCorner);
         } else {
-            float[] corners = new float[] {0, 0, 0, 0, 0, 0, 0, 0};
-            if ((stateCornerType & 0x01) == 0x01) { // top-left
-                corners[0] = statedCorner;
-                corners[1] = statedCorner;
-            }
-            if ((stateCornerType & 0x08) == 0x8) { // top-right
-                corners[2] = statedCorner;
-                corners[3] = statedCorner;
-            }
-            if ((stateCornerType & 0x16) == 0x16) { // bottom-right
-                corners[6] = statedCorner;
-                corners[7] = statedCorner;
-            }
-            if ((stateCornerType & 0x32) == 0x32) { // bottom-left
-                corners[4] = statedCorner;
-                corners[5] = statedCorner;
-            }
-            gradientDrawable.setCornerRadii(corners);
+            gradientDrawable.setCornerRadii(ParseUtils.INSTANCE.getCornersByType(stateCornerType, statedCorner));
          }
         gradientDrawable.setColor(statedSoldColor);
         gradientDrawable.setStroke((int) statedBorder, statedBorderColor);
@@ -193,6 +162,7 @@ public class XViewParserTemplate implements IWidgetParser {
             shadowDrawable.setShadowDx(shadowDx);
             shadowDrawable.setShadowDy(shadowDy);
             shadowDrawable.setShadowR((int) shadowRadius);
+            shadowDrawable.setCorerType(stateCornerType);
         }
 
         return gradientDrawable;

@@ -234,4 +234,17 @@
             android:layout_width="100dp"
             android:layout_height="100dp"/>
     </LinearLayout>
+
+    <com.scott.xwidget.widget.XTextView
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        app:XTextView_shadow_dy="0.5dp"
+        app:XTextView_shadow_dx="0.5dp"
+        app:XTextView_shadow_color="#77000000"
+        app:XTextView_shadow_radius="5dp"
+        app:XTextView_corner_type="left_top|left_bottom"
+        app:XTextView_corner="50dp"
+        app:XTextView_solid_color="#fff"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
 </LinearLayout>
