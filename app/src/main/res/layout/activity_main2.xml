@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#33000000"
     android:paddingStart="16dp"
     android:paddingEnd="16dp"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     
     <LinearLayout
+        android:visibility="visible"
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:gravity="center_vertical"
@@ -186,5 +186,52 @@
             app:XTextView_gradient_end_color="#00ff00"
             android:layout_width="50dp"
             android:layout_height="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <com.scott.xwidget.widget.XTextView
+            android:gravity="center"
+            app:XTextView_shadow_color="@color/colorAccent"
+            app:XTextView_shadow_radius="5dp"
+            app:XTextView_corner="50dp"
+            app:XTextView_solid_color="@color/colorAccent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <com.scott.xwidget.widget.XTextView
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="点我"
+            app:XTextView_stated_corner="3dp"
+            app:XTextView_stroke_border="0.5dp"
+            app:XTextView_state="pressed"
+            app:XTextView_stroke_color="@color/colorPrimary"
+            app:XTextView_shadow_color="@color/colorAccent"
+            app:XTextView_shadow_radius="5dp"
+            app:XTextView_shadow_dx="1dp"
+            app:XTextView_shadow_dy="1dp"
+            app:XTextView_stated_shadow_radius="3dp"
+            app:XTextView_stated_shadow_color="@color/colorPrimaryDark"
+            app:XTextView_corner="3dp"
+            app:XTextView_solid_color="@color/colorAccent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <com.scott.xwidget.widget.XTextView
+            android:gravity="center"
+            app:XTextView_shadow_dy="0.5dp"
+            app:XTextView_shadow_dx="0.5dp"
+            app:XTextView_shadow_color="#77000000"
+            app:XTextView_shadow_radius="5dp"
+            app:XTextView_corner="8dp"
+            app:XTextView_solid_color="#fff"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
     </LinearLayout>
 </LinearLayout>

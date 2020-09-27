@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ee000000"
-    app:layoutDescription="@xml/activity_main_scene"
-    app:motionDebug="SHOW_PATH"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
-
-    <TabBar
-        android:layout_width="match_parent"
-        android:layout_height="100dp"/>
-</androidx.constraintlayout.motion.widget.MotionLayout>
+    <com.scott.xwidget.widget.XTextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:XTextView_shadow_dy="3dp"
+        app:XTextView_shadow_dx="3dp"
+        app:XTextView_shadow_color="#77000000"
+        app:XTextView_shadow_radius="10dp"
+        app:XTextView_corner="3dp"
+        app:XTextView_solid_color="@color/colorAccent"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

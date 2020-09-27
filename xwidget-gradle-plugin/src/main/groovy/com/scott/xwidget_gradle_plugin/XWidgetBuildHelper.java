@@ -1,5 +1,6 @@
 package com.scott.xwidget_gradle_plugin;
 
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -80,6 +81,11 @@ public class XWidgetBuildHelper {
             builder.append("        <flag name=\"right_bottom\" value=\"0x32\"/>").append(NEW_LINE);
             builder.append("        <flag name=\"all\" value=\"0\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
+            
+            builder.append("    <attr name=\"").append(name).append("_shadow_radius\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shadow_dx\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shadow_dy\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shadow_color\" format=\"color\"/>").append(NEW_LINE);
 
             builder.append("    <attr name=\"").append(name).append("_solid_color\" format=\"color\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_solid_gradient\" format=\"enum\">").append(NEW_LINE);
@@ -111,6 +117,11 @@ public class XWidgetBuildHelper {
             builder.append("        <flag name=\"right_bottom\" value=\"0x32\"/>").append(NEW_LINE);
             builder.append("        <flag name=\"all\" value=\"0\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_stated_shadow_radius\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_shadow_dx\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_shadow_dy\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_shadow_color\" format=\"color\"/>").append(NEW_LINE);
 
             builder.append("    <attr name=\"").append(name).append("_stated_solid_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_solid_gradient\" format=\"enum\">").append(NEW_LINE);

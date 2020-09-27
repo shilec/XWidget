@@ -12,6 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.scott.xwidget.IWidgetParser;
 import com.scott.xwidget.R;
+import com.scott.xwidget.drawable.ShadowGradientDrawable;
 
 
 public class XViewParserTemplate implements IWidgetParser {
@@ -33,7 +34,7 @@ public class XViewParserTemplate implements IWidgetParser {
 
         if (drb == null) {
             if (type == 0) {
-                drb = parseGradientDrawable(new GradientDrawable(), arr);
+                drb = parseGradientDrawable(new ShadowGradientDrawable(), arr);
             } else if (type == 1) {
                 drb = parseStateListDrawable(new StateListDrawable(), arr, type);
             }
@@ -110,6 +111,21 @@ public class XViewParserTemplate implements IWidgetParser {
         if (gradientDrawable.getOrientation() != gradientOrientation) {
             gradientDrawable.setOrientation(gradientOrientation);
         }
+
+        if (gradientDrawable instanceof ShadowGradientDrawable) {
+            ShadowGradientDrawable shadowDrawable = (ShadowGradientDrawable) gradientDrawable;
+
+            int shadowColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_color, 0);
+            float shadowDx = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_dx, 0f);
+            float shadowDy = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_dy, 0f);
+            float shadowRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_radius, 0f);
+            shadowDrawable.setShadowColor(shadowColor);
+            shadowDrawable.setCorner(statedCorner);
+            shadowDrawable.setShadowDx(shadowDx);
+            shadowDrawable.setShadowDy(shadowDy);
+            shadowDrawable.setShadowR((int) shadowRadius);
+        }
+
         return gradientDrawable;
     }
 
@@ -164,11 +180,26 @@ public class XViewParserTemplate implements IWidgetParser {
         }
         gradientDrawable.setGradientType(statedGradientType);
         gradientDrawable.setOrientation(gradientOrientation);
+
+        if (gradientDrawable instanceof ShadowGradientDrawable) {
+            ShadowGradientDrawable shadowDrawable = (ShadowGradientDrawable) gradientDrawable;
+
+            int shadowColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_shadow_color, 0);
+            float shadowDx = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_shadow_dx, 0f);
+            float shadowDy = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_shadow_dy, 0f);
+            float shadowRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_shadow_radius, 0f);
+            shadowDrawable.setShadowColor(shadowColor);
+            shadowDrawable.setCorner(statedCorner);
+            shadowDrawable.setShadowDx(shadowDx);
+            shadowDrawable.setShadowDy(shadowDy);
+            shadowDrawable.setShadowR((int) shadowRadius);
+        }
+
         return gradientDrawable;
     }
 
     private Drawable parseStateListDrawable(StateListDrawable stateListDrawable, TypedArray arr, int stateType) {
-        GradientDrawable normaDrawable = buildNormalGradientDrawable(new GradientDrawable(), arr);
+        GradientDrawable normaDrawable = buildNormalGradientDrawable(new ShadowGradientDrawable(), arr);
         if (stateType == 0)
             return normaDrawable;
 
@@ -187,7 +218,7 @@ public class XViewParserTemplate implements IWidgetParser {
             state_normal = new int[] {-android.R.attr.state_checked};
         }
 
-        GradientDrawable statedDrawable = buildStatedGradientDrawable(buildNormalGradientDrawable(new GradientDrawable(), arr), arr);
+        GradientDrawable statedDrawable = buildStatedGradientDrawable(buildNormalGradientDrawable(new ShadowGradientDrawable(), arr), arr);
         stateListDrawable.addState(state_arr, statedDrawable);
         stateListDrawable.addState(state_normal, normaDrawable);
         return stateListDrawable;

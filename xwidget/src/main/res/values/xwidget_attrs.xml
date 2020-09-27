@@ -2,171 +2,6 @@
 <!-- Auto generated, do not modify!!! -->
 <resources>
 
-<!-- XButton -->
-<declare-styleable name="XButton" >
-    <attr name="XButton_corner" format="dimension" />
-    <attr name="XButton_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XButton_solid_color" format="color" />
-    <attr name="XButton_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XButton_gradient_start_color" format="color"/>
-    <attr name="XButton_gradient_end_color" format="color"/>
-    <attr name="XButton_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XButton_gradient_radius" format="dimension"/>
-    <attr name="XButton_stroke_color" format="color" />
-    <attr name="XButton_stroke_border" format="dimension"/>
-    <attr name="XButton_state" format="enum">
-        <enum name="none" value="0"/>
-        <enum name="pressed" value="1"/>
-        <enum name="selected" value="2"/>
-        <enum name="checked" value="3"/>
-    </attr>
-    <attr name="XButton_stated_corner" format="dimension" />
-    <attr name="XButton_stated_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XButton_stated_solid_color" format="color"/>
-    <attr name="XButton_stated_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XButton_stated_gradient_start_color" format="color"/>
-    <attr name="XButton_stated_gradient_end_color" format="color"/>
-    <attr name="XButton_stated_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XButton_stated_gradient_radius" format="dimension"/>
-    <attr name="XButton_stated_stroke_color" format="color" />
-    <attr name="XButton_stated_stroke_border" format="dimension"/>
-</declare-styleable>
-<!-- XButton -->
-
-<!-- XConstraintLayout -->
-<declare-styleable name="XConstraintLayout" >
-    <attr name="XConstraintLayout_corner" format="dimension" />
-    <attr name="XConstraintLayout_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XConstraintLayout_solid_color" format="color" />
-    <attr name="XConstraintLayout_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XConstraintLayout_gradient_start_color" format="color"/>
-    <attr name="XConstraintLayout_gradient_end_color" format="color"/>
-    <attr name="XConstraintLayout_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XConstraintLayout_gradient_radius" format="dimension"/>
-    <attr name="XConstraintLayout_stroke_color" format="color" />
-    <attr name="XConstraintLayout_stroke_border" format="dimension"/>
-    <attr name="XConstraintLayout_state" format="enum">
-        <enum name="none" value="0"/>
-        <enum name="pressed" value="1"/>
-        <enum name="selected" value="2"/>
-        <enum name="checked" value="3"/>
-    </attr>
-    <attr name="XConstraintLayout_stated_corner" format="dimension" />
-    <attr name="XConstraintLayout_stated_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XConstraintLayout_stated_solid_color" format="color"/>
-    <attr name="XConstraintLayout_stated_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XConstraintLayout_stated_gradient_start_color" format="color"/>
-    <attr name="XConstraintLayout_stated_gradient_end_color" format="color"/>
-    <attr name="XConstraintLayout_stated_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XConstraintLayout_stated_gradient_radius" format="dimension"/>
-    <attr name="XConstraintLayout_stated_stroke_color" format="color" />
-    <attr name="XConstraintLayout_stated_stroke_border" format="dimension"/>
-</declare-styleable>
-<!-- XConstraintLayout -->
-
-<!-- XEditText -->
-<declare-styleable name="XEditText" >
-    <attr name="XEditText_corner" format="dimension" />
-    <attr name="XEditText_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XEditText_solid_color" format="color" />
-    <attr name="XEditText_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XEditText_gradient_start_color" format="color"/>
-    <attr name="XEditText_gradient_end_color" format="color"/>
-    <attr name="XEditText_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XEditText_gradient_radius" format="dimension"/>
-    <attr name="XEditText_stroke_color" format="color" />
-    <attr name="XEditText_stroke_border" format="dimension"/>
-    <attr name="XEditText_state" format="enum">
-        <enum name="none" value="0"/>
-        <enum name="pressed" value="1"/>
-        <enum name="selected" value="2"/>
-        <enum name="checked" value="3"/>
-    </attr>
-    <attr name="XEditText_stated_corner" format="dimension" />
-    <attr name="XEditText_stated_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XEditText_stated_solid_color" format="color"/>
-    <attr name="XEditText_stated_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XEditText_stated_gradient_start_color" format="color"/>
-    <attr name="XEditText_stated_gradient_end_color" format="color"/>
-    <attr name="XEditText_stated_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XEditText_stated_gradient_radius" format="dimension"/>
-    <attr name="XEditText_stated_stroke_color" format="color" />
-    <attr name="XEditText_stated_stroke_border" format="dimension"/>
-</declare-styleable>
-<!-- XEditText -->
-
 <!-- XFrameLayout -->
 <declare-styleable name="XFrameLayout" >
     <attr name="XFrameLayout_corner" format="dimension" />
@@ -177,6 +12,10 @@
         <flag name="right_bottom" value="0x32"/>
         <flag name="all" value="0"/>
     </attr>
+    <attr name="XFrameLayout_shadow_radius" format="dimension"/>
+    <attr name="XFrameLayout_shadow_dx" format="dimension"/>
+    <attr name="XFrameLayout_shadow_dy" format="dimension"/>
+    <attr name="XFrameLayout_shadow_color" format="color"/>
     <attr name="XFrameLayout_solid_color" format="color" />
     <attr name="XFrameLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -205,6 +44,10 @@
         <flag name="right_bottom" value="0x32"/>
         <flag name="all" value="0"/>
     </attr>
+    <attr name="XFrameLayout_stated_shadow_radius" format="dimension"/>
+    <attr name="XFrameLayout_stated_shadow_dx" format="dimension"/>
+    <attr name="XFrameLayout_stated_shadow_dy" format="dimension"/>
+    <attr name="XFrameLayout_stated_shadow_color" format="color"/>
     <attr name="XFrameLayout_stated_solid_color" format="color"/>
     <attr name="XFrameLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -222,171 +65,6 @@
 </declare-styleable>
 <!-- XFrameLayout -->
 
-<!-- XImageView -->
-<declare-styleable name="XImageView" >
-    <attr name="XImageView_corner" format="dimension" />
-    <attr name="XImageView_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XImageView_solid_color" format="color" />
-    <attr name="XImageView_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XImageView_gradient_start_color" format="color"/>
-    <attr name="XImageView_gradient_end_color" format="color"/>
-    <attr name="XImageView_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XImageView_gradient_radius" format="dimension"/>
-    <attr name="XImageView_stroke_color" format="color" />
-    <attr name="XImageView_stroke_border" format="dimension"/>
-    <attr name="XImageView_state" format="enum">
-        <enum name="none" value="0"/>
-        <enum name="pressed" value="1"/>
-        <enum name="selected" value="2"/>
-        <enum name="checked" value="3"/>
-    </attr>
-    <attr name="XImageView_stated_corner" format="dimension" />
-    <attr name="XImageView_stated_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XImageView_stated_solid_color" format="color"/>
-    <attr name="XImageView_stated_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XImageView_stated_gradient_start_color" format="color"/>
-    <attr name="XImageView_stated_gradient_end_color" format="color"/>
-    <attr name="XImageView_stated_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XImageView_stated_gradient_radius" format="dimension"/>
-    <attr name="XImageView_stated_stroke_color" format="color" />
-    <attr name="XImageView_stated_stroke_border" format="dimension"/>
-</declare-styleable>
-<!-- XImageView -->
-
-<!-- XLinearLayout -->
-<declare-styleable name="XLinearLayout" >
-    <attr name="XLinearLayout_corner" format="dimension" />
-    <attr name="XLinearLayout_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XLinearLayout_solid_color" format="color" />
-    <attr name="XLinearLayout_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XLinearLayout_gradient_start_color" format="color"/>
-    <attr name="XLinearLayout_gradient_end_color" format="color"/>
-    <attr name="XLinearLayout_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XLinearLayout_gradient_radius" format="dimension"/>
-    <attr name="XLinearLayout_stroke_color" format="color" />
-    <attr name="XLinearLayout_stroke_border" format="dimension"/>
-    <attr name="XLinearLayout_state" format="enum">
-        <enum name="none" value="0"/>
-        <enum name="pressed" value="1"/>
-        <enum name="selected" value="2"/>
-        <enum name="checked" value="3"/>
-    </attr>
-    <attr name="XLinearLayout_stated_corner" format="dimension" />
-    <attr name="XLinearLayout_stated_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XLinearLayout_stated_solid_color" format="color"/>
-    <attr name="XLinearLayout_stated_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XLinearLayout_stated_gradient_start_color" format="color"/>
-    <attr name="XLinearLayout_stated_gradient_end_color" format="color"/>
-    <attr name="XLinearLayout_stated_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XLinearLayout_stated_gradient_radius" format="dimension"/>
-    <attr name="XLinearLayout_stated_stroke_color" format="color" />
-    <attr name="XLinearLayout_stated_stroke_border" format="dimension"/>
-</declare-styleable>
-<!-- XLinearLayout -->
-
-<!-- XRelativeLayout -->
-<declare-styleable name="XRelativeLayout" >
-    <attr name="XRelativeLayout_corner" format="dimension" />
-    <attr name="XRelativeLayout_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XRelativeLayout_solid_color" format="color" />
-    <attr name="XRelativeLayout_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XRelativeLayout_gradient_start_color" format="color"/>
-    <attr name="XRelativeLayout_gradient_end_color" format="color"/>
-    <attr name="XRelativeLayout_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XRelativeLayout_gradient_radius" format="dimension"/>
-    <attr name="XRelativeLayout_stroke_color" format="color" />
-    <attr name="XRelativeLayout_stroke_border" format="dimension"/>
-    <attr name="XRelativeLayout_state" format="enum">
-        <enum name="none" value="0"/>
-        <enum name="pressed" value="1"/>
-        <enum name="selected" value="2"/>
-        <enum name="checked" value="3"/>
-    </attr>
-    <attr name="XRelativeLayout_stated_corner" format="dimension" />
-    <attr name="XRelativeLayout_stated_corner_type">
-        <flag name="left_top" value="0x01"/>
-        <flag name="right_top" value="0x08"/>
-        <flag name="left_bottom" value="0x16"/>
-        <flag name="right_bottom" value="0x32"/>
-        <flag name="all" value="0"/>
-    </attr>
-    <attr name="XRelativeLayout_stated_solid_color" format="color"/>
-    <attr name="XRelativeLayout_stated_solid_gradient" format="enum">
-        <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
-    </attr>
-    <attr name="XRelativeLayout_stated_gradient_start_color" format="color"/>
-    <attr name="XRelativeLayout_stated_gradient_end_color" format="color"/>
-    <attr name="XRelativeLayout_stated_gradient_orientation" format="enum">
-        <enum name="top_bottom" value="2"/>
-        <enum name="left_right" value="1"/>
-    </attr>
-    <attr name="XRelativeLayout_stated_gradient_radius" format="dimension"/>
-    <attr name="XRelativeLayout_stated_stroke_color" format="color" />
-    <attr name="XRelativeLayout_stated_stroke_border" format="dimension"/>
-</declare-styleable>
-<!-- XRelativeLayout -->
-
 <!-- XTextView -->
 <declare-styleable name="XTextView" >
     <attr name="XTextView_corner" format="dimension" />
@@ -397,6 +75,10 @@
         <flag name="right_bottom" value="0x32"/>
         <flag name="all" value="0"/>
     </attr>
+    <attr name="XTextView_shadow_radius" format="dimension"/>
+    <attr name="XTextView_shadow_dx" format="dimension"/>
+    <attr name="XTextView_shadow_dy" format="dimension"/>
+    <attr name="XTextView_shadow_color" format="color"/>
     <attr name="XTextView_solid_color" format="color" />
     <attr name="XTextView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -425,6 +107,10 @@
         <flag name="right_bottom" value="0x32"/>
         <flag name="all" value="0"/>
     </attr>
+    <attr name="XTextView_stated_shadow_radius" format="dimension"/>
+    <attr name="XTextView_stated_shadow_dx" format="dimension"/>
+    <attr name="XTextView_stated_shadow_dy" format="dimension"/>
+    <attr name="XTextView_stated_shadow_color" format="color"/>
     <attr name="XTextView_stated_solid_color" format="color"/>
     <attr name="XTextView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -441,4 +127,382 @@
     <attr name="XTextView_stated_stroke_border" format="dimension"/>
 </declare-styleable>
 <!-- XTextView -->
+
+<!-- XButton -->
+<declare-styleable name="XButton" >
+    <attr name="XButton_corner" format="dimension" />
+    <attr name="XButton_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XButton_shadow_radius" format="dimension"/>
+    <attr name="XButton_shadow_dx" format="dimension"/>
+    <attr name="XButton_shadow_dy" format="dimension"/>
+    <attr name="XButton_shadow_color" format="color"/>
+    <attr name="XButton_solid_color" format="color" />
+    <attr name="XButton_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XButton_gradient_start_color" format="color"/>
+    <attr name="XButton_gradient_end_color" format="color"/>
+    <attr name="XButton_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XButton_gradient_radius" format="dimension"/>
+    <attr name="XButton_stroke_color" format="color" />
+    <attr name="XButton_stroke_border" format="dimension"/>
+    <attr name="XButton_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XButton_stated_corner" format="dimension" />
+    <attr name="XButton_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XButton_stated_shadow_radius" format="dimension"/>
+    <attr name="XButton_stated_shadow_dx" format="dimension"/>
+    <attr name="XButton_stated_shadow_dy" format="dimension"/>
+    <attr name="XButton_stated_shadow_color" format="color"/>
+    <attr name="XButton_stated_solid_color" format="color"/>
+    <attr name="XButton_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XButton_stated_gradient_start_color" format="color"/>
+    <attr name="XButton_stated_gradient_end_color" format="color"/>
+    <attr name="XButton_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XButton_stated_gradient_radius" format="dimension"/>
+    <attr name="XButton_stated_stroke_color" format="color" />
+    <attr name="XButton_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XButton -->
+
+<!-- XRelativeLayout -->
+<declare-styleable name="XRelativeLayout" >
+    <attr name="XRelativeLayout_corner" format="dimension" />
+    <attr name="XRelativeLayout_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XRelativeLayout_shadow_radius" format="dimension"/>
+    <attr name="XRelativeLayout_shadow_dx" format="dimension"/>
+    <attr name="XRelativeLayout_shadow_dy" format="dimension"/>
+    <attr name="XRelativeLayout_shadow_color" format="color"/>
+    <attr name="XRelativeLayout_solid_color" format="color" />
+    <attr name="XRelativeLayout_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_gradient_start_color" format="color"/>
+    <attr name="XRelativeLayout_gradient_end_color" format="color"/>
+    <attr name="XRelativeLayout_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_gradient_radius" format="dimension"/>
+    <attr name="XRelativeLayout_stroke_color" format="color" />
+    <attr name="XRelativeLayout_stroke_border" format="dimension"/>
+    <attr name="XRelativeLayout_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XRelativeLayout_stated_corner" format="dimension" />
+    <attr name="XRelativeLayout_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XRelativeLayout_stated_shadow_radius" format="dimension"/>
+    <attr name="XRelativeLayout_stated_shadow_dx" format="dimension"/>
+    <attr name="XRelativeLayout_stated_shadow_dy" format="dimension"/>
+    <attr name="XRelativeLayout_stated_shadow_color" format="color"/>
+    <attr name="XRelativeLayout_stated_solid_color" format="color"/>
+    <attr name="XRelativeLayout_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_stated_gradient_start_color" format="color"/>
+    <attr name="XRelativeLayout_stated_gradient_end_color" format="color"/>
+    <attr name="XRelativeLayout_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_stated_gradient_radius" format="dimension"/>
+    <attr name="XRelativeLayout_stated_stroke_color" format="color" />
+    <attr name="XRelativeLayout_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XRelativeLayout -->
+
+<!-- XImageView -->
+<declare-styleable name="XImageView" >
+    <attr name="XImageView_corner" format="dimension" />
+    <attr name="XImageView_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XImageView_shadow_radius" format="dimension"/>
+    <attr name="XImageView_shadow_dx" format="dimension"/>
+    <attr name="XImageView_shadow_dy" format="dimension"/>
+    <attr name="XImageView_shadow_color" format="color"/>
+    <attr name="XImageView_solid_color" format="color" />
+    <attr name="XImageView_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XImageView_gradient_start_color" format="color"/>
+    <attr name="XImageView_gradient_end_color" format="color"/>
+    <attr name="XImageView_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XImageView_gradient_radius" format="dimension"/>
+    <attr name="XImageView_stroke_color" format="color" />
+    <attr name="XImageView_stroke_border" format="dimension"/>
+    <attr name="XImageView_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XImageView_stated_corner" format="dimension" />
+    <attr name="XImageView_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XImageView_stated_shadow_radius" format="dimension"/>
+    <attr name="XImageView_stated_shadow_dx" format="dimension"/>
+    <attr name="XImageView_stated_shadow_dy" format="dimension"/>
+    <attr name="XImageView_stated_shadow_color" format="color"/>
+    <attr name="XImageView_stated_solid_color" format="color"/>
+    <attr name="XImageView_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XImageView_stated_gradient_start_color" format="color"/>
+    <attr name="XImageView_stated_gradient_end_color" format="color"/>
+    <attr name="XImageView_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XImageView_stated_gradient_radius" format="dimension"/>
+    <attr name="XImageView_stated_stroke_color" format="color" />
+    <attr name="XImageView_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XImageView -->
+
+<!-- XLinearLayout -->
+<declare-styleable name="XLinearLayout" >
+    <attr name="XLinearLayout_corner" format="dimension" />
+    <attr name="XLinearLayout_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XLinearLayout_shadow_radius" format="dimension"/>
+    <attr name="XLinearLayout_shadow_dx" format="dimension"/>
+    <attr name="XLinearLayout_shadow_dy" format="dimension"/>
+    <attr name="XLinearLayout_shadow_color" format="color"/>
+    <attr name="XLinearLayout_solid_color" format="color" />
+    <attr name="XLinearLayout_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_gradient_start_color" format="color"/>
+    <attr name="XLinearLayout_gradient_end_color" format="color"/>
+    <attr name="XLinearLayout_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_gradient_radius" format="dimension"/>
+    <attr name="XLinearLayout_stroke_color" format="color" />
+    <attr name="XLinearLayout_stroke_border" format="dimension"/>
+    <attr name="XLinearLayout_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XLinearLayout_stated_corner" format="dimension" />
+    <attr name="XLinearLayout_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XLinearLayout_stated_shadow_radius" format="dimension"/>
+    <attr name="XLinearLayout_stated_shadow_dx" format="dimension"/>
+    <attr name="XLinearLayout_stated_shadow_dy" format="dimension"/>
+    <attr name="XLinearLayout_stated_shadow_color" format="color"/>
+    <attr name="XLinearLayout_stated_solid_color" format="color"/>
+    <attr name="XLinearLayout_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_stated_gradient_start_color" format="color"/>
+    <attr name="XLinearLayout_stated_gradient_end_color" format="color"/>
+    <attr name="XLinearLayout_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_stated_gradient_radius" format="dimension"/>
+    <attr name="XLinearLayout_stated_stroke_color" format="color" />
+    <attr name="XLinearLayout_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XLinearLayout -->
+
+<!-- XConstraintLayout -->
+<declare-styleable name="XConstraintLayout" >
+    <attr name="XConstraintLayout_corner" format="dimension" />
+    <attr name="XConstraintLayout_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XConstraintLayout_shadow_radius" format="dimension"/>
+    <attr name="XConstraintLayout_shadow_dx" format="dimension"/>
+    <attr name="XConstraintLayout_shadow_dy" format="dimension"/>
+    <attr name="XConstraintLayout_shadow_color" format="color"/>
+    <attr name="XConstraintLayout_solid_color" format="color" />
+    <attr name="XConstraintLayout_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_gradient_start_color" format="color"/>
+    <attr name="XConstraintLayout_gradient_end_color" format="color"/>
+    <attr name="XConstraintLayout_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_gradient_radius" format="dimension"/>
+    <attr name="XConstraintLayout_stroke_color" format="color" />
+    <attr name="XConstraintLayout_stroke_border" format="dimension"/>
+    <attr name="XConstraintLayout_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XConstraintLayout_stated_corner" format="dimension" />
+    <attr name="XConstraintLayout_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XConstraintLayout_stated_shadow_radius" format="dimension"/>
+    <attr name="XConstraintLayout_stated_shadow_dx" format="dimension"/>
+    <attr name="XConstraintLayout_stated_shadow_dy" format="dimension"/>
+    <attr name="XConstraintLayout_stated_shadow_color" format="color"/>
+    <attr name="XConstraintLayout_stated_solid_color" format="color"/>
+    <attr name="XConstraintLayout_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_stated_gradient_start_color" format="color"/>
+    <attr name="XConstraintLayout_stated_gradient_end_color" format="color"/>
+    <attr name="XConstraintLayout_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_stated_gradient_radius" format="dimension"/>
+    <attr name="XConstraintLayout_stated_stroke_color" format="color" />
+    <attr name="XConstraintLayout_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XConstraintLayout -->
+
+<!-- XEditText -->
+<declare-styleable name="XEditText" >
+    <attr name="XEditText_corner" format="dimension" />
+    <attr name="XEditText_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XEditText_shadow_radius" format="dimension"/>
+    <attr name="XEditText_shadow_dx" format="dimension"/>
+    <attr name="XEditText_shadow_dy" format="dimension"/>
+    <attr name="XEditText_shadow_color" format="color"/>
+    <attr name="XEditText_solid_color" format="color" />
+    <attr name="XEditText_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XEditText_gradient_start_color" format="color"/>
+    <attr name="XEditText_gradient_end_color" format="color"/>
+    <attr name="XEditText_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XEditText_gradient_radius" format="dimension"/>
+    <attr name="XEditText_stroke_color" format="color" />
+    <attr name="XEditText_stroke_border" format="dimension"/>
+    <attr name="XEditText_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XEditText_stated_corner" format="dimension" />
+    <attr name="XEditText_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XEditText_stated_shadow_radius" format="dimension"/>
+    <attr name="XEditText_stated_shadow_dx" format="dimension"/>
+    <attr name="XEditText_stated_shadow_dy" format="dimension"/>
+    <attr name="XEditText_stated_shadow_color" format="color"/>
+    <attr name="XEditText_stated_solid_color" format="color"/>
+    <attr name="XEditText_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XEditText_stated_gradient_start_color" format="color"/>
+    <attr name="XEditText_stated_gradient_end_color" format="color"/>
+    <attr name="XEditText_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XEditText_stated_gradient_radius" format="dimension"/>
+    <attr name="XEditText_stated_stroke_color" format="color" />
+    <attr name="XEditText_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XEditText -->
 </resources>
