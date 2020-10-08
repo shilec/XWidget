@@ -8,13 +8,15 @@
 <img src="images/1.jpg"/>
 
 ## 支持的控件
-`XButton, XConstraintLayout, XEditText, XFrameLayout, XImageView, XLinearLayout, XRelativeLayout, XTextView `...
+`XButton, XConstraintLayout, XEditText, XFrameLayout, XImageView, XLinearLayout, XRelativeLayout, XTextView, XCheckBox, XView, XRadioButton `...
+
+>上面的所有的控件都支持下面表格中的属性，表格中仅以XButtonCustom举例。
 
 ## 支持属性名称
 | 属性名称 | 示例
 --------| ---
-**XButton_corner**|**圆角度数**
-**XButton_corner_type**|**圆角类型，默认 all。left_top,left_bottom,right_top,right_bottom**
+**XButtonCustom_corner**|**圆角度数**
+**XButtonCustom_corner_type**|**圆角类型，默认 all。left_top,left_bottom,right_top,right_bottom**
 **XButtonCustom_solid_color**|**背景填充颜色，当没有设置渐变填充时生效**
 **XButtonCustom_shadow_color**|**外阴影色值**
 **XButtonCustom_shadow_radius**|**外阴影半径**
@@ -27,20 +29,20 @@
 **XButtonCustom_gradient_radius**|**渐变角度**
 **XButtonCustom_stroke_color**|**描边颜色**
 **XButtonCustom_stroke_border**|**描边宽度**
-**XLinearLayout_blur_type**|**模糊类型，默认为normal。outer,solid,inner**
-**XLinearLayout_blur_radius**|**模糊半径**
-**XLinearLayout_blur_color**|**模糊颜色**
+**XButtonCustom_blur_type**|**模糊类型，默认为normal。outer,solid,inner**
+**XButtonCustom_blur_radius**|**模糊半径**
+**XButtonCustom_blur_color**|**模糊颜色**
 **XButtonCustom_state**|**selector类型，默认none。pressed, selected, checked。选定上述状态时，触发state前缀的属性**
 **XButtonCustom_stated_corner**|**state触发的圆角**
-**XButton_corner_type**|**state触发时的圆角类型，默认 all。left_top,left_bottom,right_top,right_bottom**
+**XButtonCustom_corner_type**|**state触发时的圆角类型，默认 all。left_top,left_bottom,right_top,right_bottom**
 **XButtonCustom_stated_solid_color**|**state出发时背景填充颜色，当没有设置渐变填充时生效**
 **XButtonCustom_stated_shadow_color**|**外阴影色值**
 **XButtonCustom_stated_shadow_radius**|**外阴影半径**
 **XButtonCustom_stated_shadow_dx**|**外阴影x方向偏移**
 **XButtonCustom_stated_shadow_dy**|**外阴影y方向偏移**
-**XLinearLayout_stated_blur_type**|**模糊类型，默认为normal。outer,solid,inner**
-**XLinearLayout_stated_blur_radius**|**模糊半径**
-**XLinearLayout_stated_blur_color**|**模糊颜色**
+**XButtonCustom_stated_blur_type**|**模糊类型，默认为normal。outer,solid,inner**
+**XButtonCustom_stated_blur_radius**|**模糊半径**
+**XButtonCustom_stated_blur_color**|**模糊颜色**
 **XButtonCustom_stated_solid_gradient**|**渐变类型，linear or sweep**
 **XButtonCustom_stated_gradient_start_color**|**渐变起始颜色**
 **XButtonCustom_stated_gradient_end_color**|**渐变结束颜色**
