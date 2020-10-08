@@ -87,6 +87,15 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_shadow_dy\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_shadow_color\" format=\"color\"/>").append(NEW_LINE);
 
+            builder.append("    <attr name=\"").append(name).append("_blur_type\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"normal\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"outer\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"solid\" value=\"2\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"inner\" value=\"3\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_blur_radius\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_blur_color\" format=\"color\"/>").append(NEW_LINE);
+
             builder.append("    <attr name=\"").append(name).append("_solid_color\" format=\"color\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_solid_gradient\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
@@ -122,6 +131,15 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stated_shadow_dx\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_shadow_dy\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_shadow_color\" format=\"color\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_stated_blur_type\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"normal\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"outer\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"solid\" value=\"2\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"inner\" value=\"3\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_blur_radius\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_blur_color\" format=\"color\"/>").append(NEW_LINE);
 
             builder.append("    <attr name=\"").append(name).append("_stated_solid_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_solid_gradient\" format=\"enum\">").append(NEW_LINE);

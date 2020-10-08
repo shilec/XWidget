@@ -44,7 +44,8 @@ dependencies {
 
     implementation project(":xwidget")
     implementation project(":xwidget-annotation")
-   kapt project(':xwidget-processor')
+
+    kapt project(':xwidget-processor')
     //implementation 'com.github.shilec:XWidget:1.0.0'
     //implementation 'com.github.shilec:XWidget:1.0.7'
     //kapt 'com.github.shilec:XWidget:1.0.3'

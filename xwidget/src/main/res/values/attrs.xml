@@ -10,6 +10,16 @@
             <flag name="all" value="0"/>
         </attr>
 
+        <attr name="XTextViewCustom_blur_type" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="outer" value="1"/>
+            <enum name="solid" value="2"/>
+            <enum name="inner" value="3"/>
+        </attr>
+
+        <attr name="XTextViewCustom_blur_radius" format="dimension"/>
+        <attr name="XTextViewCustom_blur_color" format="color"/>
+
         <attr name="XTextViewCustom_shadow_radius" format="dimension"/>
         <attr name="XTextViewCustom_shadow_dx" format="dimension"/>
         <attr name="XTextViewCustom_shadow_dy" format="dimension"/>
@@ -48,6 +58,16 @@
         <attr name="XTextViewCustom_stated_shadow_dx" format="dimension"/>
         <attr name="XTextViewCustom_stated_shadow_dy" format="dimension"/>
         <attr name="XTextViewCustom_stated_shadow_color" format="color"/>
+
+        <attr name="XTextViewCustom_stated_blur_type" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="outer" value="1"/>
+            <enum name="solid" value="2"/>
+            <enum name="inner" value="3"/>
+        </attr>
+
+        <attr name="XTextViewCustom_stated_blur_radius" format="dimension"/>
+        <attr name="XTextViewCustom_stated_blur_color" format="color"/>
 
         <attr name="XTextViewCustom_stated_solid_color" format="color"/>
         <attr name="XTextViewCustom_stated_solid_gradient" format="enum">

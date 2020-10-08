@@ -16,6 +16,14 @@
     <attr name="XFrameLayout_shadow_dx" format="dimension"/>
     <attr name="XFrameLayout_shadow_dy" format="dimension"/>
     <attr name="XFrameLayout_shadow_color" format="color"/>
+    <attr name="XFrameLayout_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XFrameLayout_blur_radius" format="dimension"/>
+    <attr name="XFrameLayout_blur_color" format="color"/>
     <attr name="XFrameLayout_solid_color" format="color" />
     <attr name="XFrameLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -48,6 +56,14 @@
     <attr name="XFrameLayout_stated_shadow_dx" format="dimension"/>
     <attr name="XFrameLayout_stated_shadow_dy" format="dimension"/>
     <attr name="XFrameLayout_stated_shadow_color" format="color"/>
+    <attr name="XFrameLayout_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XFrameLayout_stated_blur_radius" format="dimension"/>
+    <attr name="XFrameLayout_stated_blur_color" format="color"/>
     <attr name="XFrameLayout_stated_solid_color" format="color"/>
     <attr name="XFrameLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -65,6 +81,164 @@
 </declare-styleable>
 <!-- XFrameLayout -->
 
+<!-- XRadioButton -->
+<declare-styleable name="XRadioButton" >
+    <attr name="XRadioButton_corner" format="dimension" />
+    <attr name="XRadioButton_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XRadioButton_shadow_radius" format="dimension"/>
+    <attr name="XRadioButton_shadow_dx" format="dimension"/>
+    <attr name="XRadioButton_shadow_dy" format="dimension"/>
+    <attr name="XRadioButton_shadow_color" format="color"/>
+    <attr name="XRadioButton_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XRadioButton_blur_radius" format="dimension"/>
+    <attr name="XRadioButton_blur_color" format="color"/>
+    <attr name="XRadioButton_solid_color" format="color" />
+    <attr name="XRadioButton_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XRadioButton_gradient_start_color" format="color"/>
+    <attr name="XRadioButton_gradient_end_color" format="color"/>
+    <attr name="XRadioButton_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XRadioButton_gradient_radius" format="dimension"/>
+    <attr name="XRadioButton_stroke_color" format="color" />
+    <attr name="XRadioButton_stroke_border" format="dimension"/>
+    <attr name="XRadioButton_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XRadioButton_stated_corner" format="dimension" />
+    <attr name="XRadioButton_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XRadioButton_stated_shadow_radius" format="dimension"/>
+    <attr name="XRadioButton_stated_shadow_dx" format="dimension"/>
+    <attr name="XRadioButton_stated_shadow_dy" format="dimension"/>
+    <attr name="XRadioButton_stated_shadow_color" format="color"/>
+    <attr name="XRadioButton_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XRadioButton_stated_blur_radius" format="dimension"/>
+    <attr name="XRadioButton_stated_blur_color" format="color"/>
+    <attr name="XRadioButton_stated_solid_color" format="color"/>
+    <attr name="XRadioButton_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XRadioButton_stated_gradient_start_color" format="color"/>
+    <attr name="XRadioButton_stated_gradient_end_color" format="color"/>
+    <attr name="XRadioButton_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XRadioButton_stated_gradient_radius" format="dimension"/>
+    <attr name="XRadioButton_stated_stroke_color" format="color" />
+    <attr name="XRadioButton_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XRadioButton -->
+
+<!-- XView -->
+<declare-styleable name="XView" >
+    <attr name="XView_corner" format="dimension" />
+    <attr name="XView_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XView_shadow_radius" format="dimension"/>
+    <attr name="XView_shadow_dx" format="dimension"/>
+    <attr name="XView_shadow_dy" format="dimension"/>
+    <attr name="XView_shadow_color" format="color"/>
+    <attr name="XView_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XView_blur_radius" format="dimension"/>
+    <attr name="XView_blur_color" format="color"/>
+    <attr name="XView_solid_color" format="color" />
+    <attr name="XView_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XView_gradient_start_color" format="color"/>
+    <attr name="XView_gradient_end_color" format="color"/>
+    <attr name="XView_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XView_gradient_radius" format="dimension"/>
+    <attr name="XView_stroke_color" format="color" />
+    <attr name="XView_stroke_border" format="dimension"/>
+    <attr name="XView_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XView_stated_corner" format="dimension" />
+    <attr name="XView_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XView_stated_shadow_radius" format="dimension"/>
+    <attr name="XView_stated_shadow_dx" format="dimension"/>
+    <attr name="XView_stated_shadow_dy" format="dimension"/>
+    <attr name="XView_stated_shadow_color" format="color"/>
+    <attr name="XView_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XView_stated_blur_radius" format="dimension"/>
+    <attr name="XView_stated_blur_color" format="color"/>
+    <attr name="XView_stated_solid_color" format="color"/>
+    <attr name="XView_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XView_stated_gradient_start_color" format="color"/>
+    <attr name="XView_stated_gradient_end_color" format="color"/>
+    <attr name="XView_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XView_stated_gradient_radius" format="dimension"/>
+    <attr name="XView_stated_stroke_color" format="color" />
+    <attr name="XView_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XView -->
+
 <!-- XTextView -->
 <declare-styleable name="XTextView" >
     <attr name="XTextView_corner" format="dimension" />
@@ -79,6 +253,14 @@
     <attr name="XTextView_shadow_dx" format="dimension"/>
     <attr name="XTextView_shadow_dy" format="dimension"/>
     <attr name="XTextView_shadow_color" format="color"/>
+    <attr name="XTextView_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XTextView_blur_radius" format="dimension"/>
+    <attr name="XTextView_blur_color" format="color"/>
     <attr name="XTextView_solid_color" format="color" />
     <attr name="XTextView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -111,6 +293,14 @@
     <attr name="XTextView_stated_shadow_dx" format="dimension"/>
     <attr name="XTextView_stated_shadow_dy" format="dimension"/>
     <attr name="XTextView_stated_shadow_color" format="color"/>
+    <attr name="XTextView_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XTextView_stated_blur_radius" format="dimension"/>
+    <attr name="XTextView_stated_blur_color" format="color"/>
     <attr name="XTextView_stated_solid_color" format="color"/>
     <attr name="XTextView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -142,6 +332,14 @@
     <attr name="XButton_shadow_dx" format="dimension"/>
     <attr name="XButton_shadow_dy" format="dimension"/>
     <attr name="XButton_shadow_color" format="color"/>
+    <attr name="XButton_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XButton_blur_radius" format="dimension"/>
+    <attr name="XButton_blur_color" format="color"/>
     <attr name="XButton_solid_color" format="color" />
     <attr name="XButton_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -174,6 +372,14 @@
     <attr name="XButton_stated_shadow_dx" format="dimension"/>
     <attr name="XButton_stated_shadow_dy" format="dimension"/>
     <attr name="XButton_stated_shadow_color" format="color"/>
+    <attr name="XButton_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XButton_stated_blur_radius" format="dimension"/>
+    <attr name="XButton_stated_blur_color" format="color"/>
     <attr name="XButton_stated_solid_color" format="color"/>
     <attr name="XButton_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -205,6 +411,14 @@
     <attr name="XRelativeLayout_shadow_dx" format="dimension"/>
     <attr name="XRelativeLayout_shadow_dy" format="dimension"/>
     <attr name="XRelativeLayout_shadow_color" format="color"/>
+    <attr name="XRelativeLayout_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XRelativeLayout_blur_radius" format="dimension"/>
+    <attr name="XRelativeLayout_blur_color" format="color"/>
     <attr name="XRelativeLayout_solid_color" format="color" />
     <attr name="XRelativeLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -237,6 +451,14 @@
     <attr name="XRelativeLayout_stated_shadow_dx" format="dimension"/>
     <attr name="XRelativeLayout_stated_shadow_dy" format="dimension"/>
     <attr name="XRelativeLayout_stated_shadow_color" format="color"/>
+    <attr name="XRelativeLayout_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XRelativeLayout_stated_blur_radius" format="dimension"/>
+    <attr name="XRelativeLayout_stated_blur_color" format="color"/>
     <attr name="XRelativeLayout_stated_solid_color" format="color"/>
     <attr name="XRelativeLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -254,6 +476,85 @@
 </declare-styleable>
 <!-- XRelativeLayout -->
 
+<!-- XImageButton -->
+<declare-styleable name="XImageButton" >
+    <attr name="XImageButton_corner" format="dimension" />
+    <attr name="XImageButton_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XImageButton_shadow_radius" format="dimension"/>
+    <attr name="XImageButton_shadow_dx" format="dimension"/>
+    <attr name="XImageButton_shadow_dy" format="dimension"/>
+    <attr name="XImageButton_shadow_color" format="color"/>
+    <attr name="XImageButton_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XImageButton_blur_radius" format="dimension"/>
+    <attr name="XImageButton_blur_color" format="color"/>
+    <attr name="XImageButton_solid_color" format="color" />
+    <attr name="XImageButton_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XImageButton_gradient_start_color" format="color"/>
+    <attr name="XImageButton_gradient_end_color" format="color"/>
+    <attr name="XImageButton_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XImageButton_gradient_radius" format="dimension"/>
+    <attr name="XImageButton_stroke_color" format="color" />
+    <attr name="XImageButton_stroke_border" format="dimension"/>
+    <attr name="XImageButton_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XImageButton_stated_corner" format="dimension" />
+    <attr name="XImageButton_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XImageButton_stated_shadow_radius" format="dimension"/>
+    <attr name="XImageButton_stated_shadow_dx" format="dimension"/>
+    <attr name="XImageButton_stated_shadow_dy" format="dimension"/>
+    <attr name="XImageButton_stated_shadow_color" format="color"/>
+    <attr name="XImageButton_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XImageButton_stated_blur_radius" format="dimension"/>
+    <attr name="XImageButton_stated_blur_color" format="color"/>
+    <attr name="XImageButton_stated_solid_color" format="color"/>
+    <attr name="XImageButton_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XImageButton_stated_gradient_start_color" format="color"/>
+    <attr name="XImageButton_stated_gradient_end_color" format="color"/>
+    <attr name="XImageButton_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XImageButton_stated_gradient_radius" format="dimension"/>
+    <attr name="XImageButton_stated_stroke_color" format="color" />
+    <attr name="XImageButton_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XImageButton -->
+
 <!-- XImageView -->
 <declare-styleable name="XImageView" >
     <attr name="XImageView_corner" format="dimension" />
@@ -268,6 +569,14 @@
     <attr name="XImageView_shadow_dx" format="dimension"/>
     <attr name="XImageView_shadow_dy" format="dimension"/>
     <attr name="XImageView_shadow_color" format="color"/>
+    <attr name="XImageView_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XImageView_blur_radius" format="dimension"/>
+    <attr name="XImageView_blur_color" format="color"/>
     <attr name="XImageView_solid_color" format="color" />
     <attr name="XImageView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -300,6 +609,14 @@
     <attr name="XImageView_stated_shadow_dx" format="dimension"/>
     <attr name="XImageView_stated_shadow_dy" format="dimension"/>
     <attr name="XImageView_stated_shadow_color" format="color"/>
+    <attr name="XImageView_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XImageView_stated_blur_radius" format="dimension"/>
+    <attr name="XImageView_stated_blur_color" format="color"/>
     <attr name="XImageView_stated_solid_color" format="color"/>
     <attr name="XImageView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -331,6 +648,14 @@
     <attr name="XLinearLayout_shadow_dx" format="dimension"/>
     <attr name="XLinearLayout_shadow_dy" format="dimension"/>
     <attr name="XLinearLayout_shadow_color" format="color"/>
+    <attr name="XLinearLayout_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XLinearLayout_blur_radius" format="dimension"/>
+    <attr name="XLinearLayout_blur_color" format="color"/>
     <attr name="XLinearLayout_solid_color" format="color" />
     <attr name="XLinearLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -363,6 +688,14 @@
     <attr name="XLinearLayout_stated_shadow_dx" format="dimension"/>
     <attr name="XLinearLayout_stated_shadow_dy" format="dimension"/>
     <attr name="XLinearLayout_stated_shadow_color" format="color"/>
+    <attr name="XLinearLayout_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XLinearLayout_stated_blur_radius" format="dimension"/>
+    <attr name="XLinearLayout_stated_blur_color" format="color"/>
     <attr name="XLinearLayout_stated_solid_color" format="color"/>
     <attr name="XLinearLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -380,6 +713,85 @@
 </declare-styleable>
 <!-- XLinearLayout -->
 
+<!-- XCheckBox -->
+<declare-styleable name="XCheckBox" >
+    <attr name="XCheckBox_corner" format="dimension" />
+    <attr name="XCheckBox_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XCheckBox_shadow_radius" format="dimension"/>
+    <attr name="XCheckBox_shadow_dx" format="dimension"/>
+    <attr name="XCheckBox_shadow_dy" format="dimension"/>
+    <attr name="XCheckBox_shadow_color" format="color"/>
+    <attr name="XCheckBox_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XCheckBox_blur_radius" format="dimension"/>
+    <attr name="XCheckBox_blur_color" format="color"/>
+    <attr name="XCheckBox_solid_color" format="color" />
+    <attr name="XCheckBox_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XCheckBox_gradient_start_color" format="color"/>
+    <attr name="XCheckBox_gradient_end_color" format="color"/>
+    <attr name="XCheckBox_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XCheckBox_gradient_radius" format="dimension"/>
+    <attr name="XCheckBox_stroke_color" format="color" />
+    <attr name="XCheckBox_stroke_border" format="dimension"/>
+    <attr name="XCheckBox_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+    <attr name="XCheckBox_stated_corner" format="dimension" />
+    <attr name="XCheckBox_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XCheckBox_stated_shadow_radius" format="dimension"/>
+    <attr name="XCheckBox_stated_shadow_dx" format="dimension"/>
+    <attr name="XCheckBox_stated_shadow_dy" format="dimension"/>
+    <attr name="XCheckBox_stated_shadow_color" format="color"/>
+    <attr name="XCheckBox_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XCheckBox_stated_blur_radius" format="dimension"/>
+    <attr name="XCheckBox_stated_blur_color" format="color"/>
+    <attr name="XCheckBox_stated_solid_color" format="color"/>
+    <attr name="XCheckBox_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="sweep" value="1"/>
+    </attr>
+    <attr name="XCheckBox_stated_gradient_start_color" format="color"/>
+    <attr name="XCheckBox_stated_gradient_end_color" format="color"/>
+    <attr name="XCheckBox_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+    </attr>
+    <attr name="XCheckBox_stated_gradient_radius" format="dimension"/>
+    <attr name="XCheckBox_stated_stroke_color" format="color" />
+    <attr name="XCheckBox_stated_stroke_border" format="dimension"/>
+</declare-styleable>
+<!-- XCheckBox -->
+
 <!-- XConstraintLayout -->
 <declare-styleable name="XConstraintLayout" >
     <attr name="XConstraintLayout_corner" format="dimension" />
@@ -394,6 +806,14 @@
     <attr name="XConstraintLayout_shadow_dx" format="dimension"/>
     <attr name="XConstraintLayout_shadow_dy" format="dimension"/>
     <attr name="XConstraintLayout_shadow_color" format="color"/>
+    <attr name="XConstraintLayout_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XConstraintLayout_blur_radius" format="dimension"/>
+    <attr name="XConstraintLayout_blur_color" format="color"/>
     <attr name="XConstraintLayout_solid_color" format="color" />
     <attr name="XConstraintLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -426,6 +846,14 @@
     <attr name="XConstraintLayout_stated_shadow_dx" format="dimension"/>
     <attr name="XConstraintLayout_stated_shadow_dy" format="dimension"/>
     <attr name="XConstraintLayout_stated_shadow_color" format="color"/>
+    <attr name="XConstraintLayout_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XConstraintLayout_stated_blur_radius" format="dimension"/>
+    <attr name="XConstraintLayout_stated_blur_color" format="color"/>
     <attr name="XConstraintLayout_stated_solid_color" format="color"/>
     <attr name="XConstraintLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -457,6 +885,14 @@
     <attr name="XEditText_shadow_dx" format="dimension"/>
     <attr name="XEditText_shadow_dy" format="dimension"/>
     <attr name="XEditText_shadow_color" format="color"/>
+    <attr name="XEditText_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XEditText_blur_radius" format="dimension"/>
+    <attr name="XEditText_blur_color" format="color"/>
     <attr name="XEditText_solid_color" format="color" />
     <attr name="XEditText_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
@@ -489,6 +925,14 @@
     <attr name="XEditText_stated_shadow_dx" format="dimension"/>
     <attr name="XEditText_stated_shadow_dy" format="dimension"/>
     <attr name="XEditText_stated_shadow_color" format="color"/>
+    <attr name="XEditText_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XEditText_stated_blur_radius" format="dimension"/>
+    <attr name="XEditText_stated_blur_color" format="color"/>
     <attr name="XEditText_stated_solid_color" format="color"/>
     <attr name="XEditText_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
