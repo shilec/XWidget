@@ -56,6 +56,8 @@
                 android:text="渐变背景TextView"
                 android:gravity="center"
                 android:textSize="14sp"
+                app:XTextView_gradient_radius="100dp"
+                app:XTextView_solid_gradient="radial"
                 app:XTextView_stroke_color="#ff0000"
                 app:XTextView_stroke_border="1dp"
                 app:XTextView_gradient_end_color="@color/colorAccent"

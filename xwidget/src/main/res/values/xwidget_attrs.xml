@@ -27,7 +27,8 @@
     <attr name="XFrameLayout_solid_color" format="color" />
     <attr name="XFrameLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XFrameLayout_gradient_start_color" format="color"/>
     <attr name="XFrameLayout_gradient_end_color" format="color"/>
@@ -67,7 +68,8 @@
     <attr name="XFrameLayout_stated_solid_color" format="color"/>
     <attr name="XFrameLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XFrameLayout_stated_gradient_start_color" format="color"/>
     <attr name="XFrameLayout_stated_gradient_end_color" format="color"/>
@@ -106,7 +108,8 @@
     <attr name="XRadioButton_solid_color" format="color" />
     <attr name="XRadioButton_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XRadioButton_gradient_start_color" format="color"/>
     <attr name="XRadioButton_gradient_end_color" format="color"/>
@@ -146,7 +149,8 @@
     <attr name="XRadioButton_stated_solid_color" format="color"/>
     <attr name="XRadioButton_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XRadioButton_stated_gradient_start_color" format="color"/>
     <attr name="XRadioButton_stated_gradient_end_color" format="color"/>
@@ -185,7 +189,8 @@
     <attr name="XView_solid_color" format="color" />
     <attr name="XView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XView_gradient_start_color" format="color"/>
     <attr name="XView_gradient_end_color" format="color"/>
@@ -225,7 +230,8 @@
     <attr name="XView_stated_solid_color" format="color"/>
     <attr name="XView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XView_stated_gradient_start_color" format="color"/>
     <attr name="XView_stated_gradient_end_color" format="color"/>
@@ -264,7 +270,8 @@
     <attr name="XTextView_solid_color" format="color" />
     <attr name="XTextView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XTextView_gradient_start_color" format="color"/>
     <attr name="XTextView_gradient_end_color" format="color"/>
@@ -304,7 +311,8 @@
     <attr name="XTextView_stated_solid_color" format="color"/>
     <attr name="XTextView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XTextView_stated_gradient_start_color" format="color"/>
     <attr name="XTextView_stated_gradient_end_color" format="color"/>
@@ -343,7 +351,8 @@
     <attr name="XButton_solid_color" format="color" />
     <attr name="XButton_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XButton_gradient_start_color" format="color"/>
     <attr name="XButton_gradient_end_color" format="color"/>
@@ -383,7 +392,8 @@
     <attr name="XButton_stated_solid_color" format="color"/>
     <attr name="XButton_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XButton_stated_gradient_start_color" format="color"/>
     <attr name="XButton_stated_gradient_end_color" format="color"/>
@@ -422,7 +432,8 @@
     <attr name="XRelativeLayout_solid_color" format="color" />
     <attr name="XRelativeLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XRelativeLayout_gradient_start_color" format="color"/>
     <attr name="XRelativeLayout_gradient_end_color" format="color"/>
@@ -462,7 +473,8 @@
     <attr name="XRelativeLayout_stated_solid_color" format="color"/>
     <attr name="XRelativeLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XRelativeLayout_stated_gradient_start_color" format="color"/>
     <attr name="XRelativeLayout_stated_gradient_end_color" format="color"/>
@@ -501,7 +513,8 @@
     <attr name="XImageButton_solid_color" format="color" />
     <attr name="XImageButton_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XImageButton_gradient_start_color" format="color"/>
     <attr name="XImageButton_gradient_end_color" format="color"/>
@@ -541,7 +554,8 @@
     <attr name="XImageButton_stated_solid_color" format="color"/>
     <attr name="XImageButton_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XImageButton_stated_gradient_start_color" format="color"/>
     <attr name="XImageButton_stated_gradient_end_color" format="color"/>
@@ -580,7 +594,8 @@
     <attr name="XImageView_solid_color" format="color" />
     <attr name="XImageView_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XImageView_gradient_start_color" format="color"/>
     <attr name="XImageView_gradient_end_color" format="color"/>
@@ -620,7 +635,8 @@
     <attr name="XImageView_stated_solid_color" format="color"/>
     <attr name="XImageView_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XImageView_stated_gradient_start_color" format="color"/>
     <attr name="XImageView_stated_gradient_end_color" format="color"/>
@@ -659,7 +675,8 @@
     <attr name="XLinearLayout_solid_color" format="color" />
     <attr name="XLinearLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XLinearLayout_gradient_start_color" format="color"/>
     <attr name="XLinearLayout_gradient_end_color" format="color"/>
@@ -699,7 +716,8 @@
     <attr name="XLinearLayout_stated_solid_color" format="color"/>
     <attr name="XLinearLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XLinearLayout_stated_gradient_start_color" format="color"/>
     <attr name="XLinearLayout_stated_gradient_end_color" format="color"/>
@@ -738,7 +756,8 @@
     <attr name="XCheckBox_solid_color" format="color" />
     <attr name="XCheckBox_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XCheckBox_gradient_start_color" format="color"/>
     <attr name="XCheckBox_gradient_end_color" format="color"/>
@@ -778,7 +797,8 @@
     <attr name="XCheckBox_stated_solid_color" format="color"/>
     <attr name="XCheckBox_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XCheckBox_stated_gradient_start_color" format="color"/>
     <attr name="XCheckBox_stated_gradient_end_color" format="color"/>
@@ -817,7 +837,8 @@
     <attr name="XConstraintLayout_solid_color" format="color" />
     <attr name="XConstraintLayout_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XConstraintLayout_gradient_start_color" format="color"/>
     <attr name="XConstraintLayout_gradient_end_color" format="color"/>
@@ -857,7 +878,8 @@
     <attr name="XConstraintLayout_stated_solid_color" format="color"/>
     <attr name="XConstraintLayout_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XConstraintLayout_stated_gradient_start_color" format="color"/>
     <attr name="XConstraintLayout_stated_gradient_end_color" format="color"/>
@@ -896,7 +918,8 @@
     <attr name="XEditText_solid_color" format="color" />
     <attr name="XEditText_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XEditText_gradient_start_color" format="color"/>
     <attr name="XEditText_gradient_end_color" format="color"/>
@@ -936,7 +959,8 @@
     <attr name="XEditText_stated_solid_color" format="color"/>
     <attr name="XEditText_stated_solid_gradient" format="enum">
         <enum name="linear" value="0"/>
-        <enum name="sweep" value="1"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
     </attr>
     <attr name="XEditText_stated_gradient_start_color" format="color"/>
     <attr name="XEditText_stated_gradient_end_color" format="color"/>

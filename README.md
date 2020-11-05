@@ -22,7 +22,7 @@
 **XButtonCustom_shadow_radius**|**外阴影半径**
 **XButtonCustom_shadow_dx**|**外阴影x方向偏移**
 **XButtonCustom_shadow_dy**|**外阴影y方向偏移**
-**XButtonCustom_solid_gradient**|**渐变类型，linear or sweep**
+**XButtonCustom_solid_gradient**|**渐变类型，linear, radial, sweep**
 **XButtonCustom_gradient_start_color**|**渐变起始颜色**
 **XButtonCustom_gradient_end_color**|**渐变结束颜色**
 **XButtonCustom_gradient_orientation**|**渐变的方向**
@@ -43,7 +43,7 @@
 **XButtonCustom_stated_blur_type**|**模糊类型，默认为normal。outer,solid,inner**
 **XButtonCustom_stated_blur_radius**|**模糊半径**
 **XButtonCustom_stated_blur_color**|**模糊颜色**
-**XButtonCustom_stated_solid_gradient**|**渐变类型，linear or sweep**
+**XButtonCustom_stated_solid_gradient**|**渐变类型，linear, radial, sweep**
 **XButtonCustom_stated_gradient_start_color**|**渐变起始颜色**
 **XButtonCustom_stated_gradient_end_color**|**渐变结束颜色**
 **XButtonCustom_stated_gradient_orientation**|**渐变的方向**
@@ -63,7 +63,12 @@
 
 2. 在要使用的module 的 build.gradle 中加入
 
-         implementation 'com.github.shilec:XWidget:1.0.9'
+         implementation 'com.github.shilec:XWidget:1.1.0'
+         
+3. 添加混淆
+        
+        -keep public class com.scott.xwidget.parser.**{*;}
+
 
 #### 扩展
 
@@ -72,8 +77,8 @@
         XWidgetParser.addParser(XButton::class.java, XButtonParser2())
 
 #### 插件及注解解析器介绍
-1. 使用`kapt 'com.github.shilec:XWidget:1.0.9'`时，可以为`XWidget`注解的View生成drawable解析器，用来生成模板代码，也可继承自模板代码进行扩展。
-2. 使用`apply plugin: "com.scott.xwidget-gradle-plugin"`时，可以自动生成`XWidget`注解的View的attr属性定义，生成文件为**res/values/xwidget_attrs.xml**。(使用插件时，需要在根目录下的build.gradle文件中配置插件的`classpath:'com.github.shilec:XWidget:1.0.9'`)
+1. 使用`kapt 'com.github.shilec:XWidget:1.1.0'`时，可以为`XWidget`注解的View生成drawable解析器，用来生成模板代码，也可继承自模板代码进行扩展。
+2. 使用`apply plugin: "com.scott.xwidget-gradle-plugin"`时，可以自动生成`XWidget`注解的View的attr属性定义，生成文件为**res/values/xwidget_attrs.xml**。(使用插件时，需要在根目录下的build.gradle文件中配置插件的`classpath:'com.github.shilec:XWidget:1.1.0'`)
 
 
 

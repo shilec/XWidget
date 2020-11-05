@@ -99,7 +99,8 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_solid_color\" format=\"color\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_solid_gradient\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
-            builder.append("        <enum name=\"sweep\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"radial\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"sweep\" value=\"2\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_gradient_start_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_gradient_end_color\" format=\"color\"/>").append(NEW_LINE);
@@ -144,7 +145,8 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stated_solid_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_solid_gradient\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
-            builder.append("        <enum name=\"sweep\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"radial\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"sweep\" value=\"2\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_start_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_end_color\" format=\"color\"/>").append(NEW_LINE);
