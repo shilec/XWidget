@@ -16,9 +16,6 @@ class XButtonParser2: `XButton$$WidgetParser`() {
         drawable: Drawable?
     ): Drawable? {
         val ret = super.parseDrawable(context, attrs, drawable)
-        if (ret is GradientDrawable) {
-            ret.setColor(Color.GREEN)
-        }
         return ret
     }
 }

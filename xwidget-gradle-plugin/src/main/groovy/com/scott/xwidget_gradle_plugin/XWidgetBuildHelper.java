@@ -102,6 +102,7 @@ public class XWidgetBuildHelper {
             builder.append("        <enum name=\"radial\" value=\"1\"/>").append(NEW_LINE);
             builder.append("        <enum name=\"sweep\" value=\"2\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_gradient_center_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_gradient_start_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_gradient_end_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_gradient_orientation\" format=\"enum\">").append(NEW_LINE);
@@ -148,6 +149,8 @@ public class XWidgetBuildHelper {
             builder.append("        <enum name=\"radial\" value=\"1\"/>").append(NEW_LINE);
             builder.append("        <enum name=\"sweep\" value=\"2\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_stated_gradient_center_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_start_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_end_color\" format=\"color\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_orientation\" format=\"enum\">").append(NEW_LINE);
@@ -157,6 +160,9 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_radius\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_color\" format=\"color\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_border\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_drawable\" format=\"reference\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_drawable\" format=\"reference\"/>").append(NEW_LINE);
 
             builder.append("</declare-styleable>").append(NEW_LINE);
             builder.append("<!-- ").append(name).append(" -->").append(NEW_LINE);

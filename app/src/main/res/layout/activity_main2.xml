@@ -127,6 +127,8 @@
                 android:layout_height="30dp"/>
         </LinearLayout>
 
+
+
         <LinearLayout
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
@@ -160,7 +162,41 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+        <com.scott.xwidget.widget.XButton
+            app:XButton_stated_solid_gradient="linear"
+            android:layout_marginBottom="20dp"
+            app:XButton_corner="22dp"
+            app:XButton_gradient_center_color="#FFF654D0"
+            app:XButton_gradient_end_color="#FF3DB2FF"
+            app:XButton_gradient_start_color="#FF3DB2FF"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"/>
+       <LinearLayout
+           android:orientation="horizontal"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:text="图片切换"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+           <com.scott.xwidget.widget.XButton
+               app:XButton_state="pressed"
+               app:XButton_stated_drawable="@color/colorPrimary"
+               app:XButton_drawable="@color/colorAccent"
+               android:layout_width="100dp"
+               android:layout_height="100dp"/>
 
+           <com.scott.xwidget.widget.XButton
+               android:layout_marginLeft="20dp"
+               app:XButton_state="pressed"
+               app:XButton_stated_drawable="@drawable/ic_launcher_background"
+               app:XButton_drawable="@mipmap/ic_launcher_round"
+               android:layout_width="100dp"
+               android:layout_height="100dp"/>
+       </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"

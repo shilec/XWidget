@@ -7,6 +7,9 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
+
+import androidx.annotation.DrawableRes;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -74,6 +77,7 @@ public class XViewParserTemplate implements IWidgetParser {
         }
         float statedGradientRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_radius, 0F);
         int statedStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_start_color, Color.TRANSPARENT);
+        int statedCenterColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_center_color, Color.TRANSPARENT);
         int statedEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_end_color, Color.TRANSPARENT);
         int statedGradientType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_solid_gradient, 0);
         int statedGradientOrientation = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_orientation, 0);
@@ -106,7 +110,12 @@ public class XViewParserTemplate implements IWidgetParser {
             gradientDrawable.setGradientRadius(statedGradientRadius);
         }
         if (statedStartColor != Color.TRANSPARENT && statedEndColor != Color.TRANSPARENT) {
-            gradientDrawable.setColors(new int[] {statedStartColor, statedEndColor});
+            // 如果只设置了渐变开始和渐变结束，则不使用渐变中心色值
+            if (statedCenterColor == Color.TRANSPARENT) {
+                gradientDrawable.setColors(new int[]{statedStartColor, statedEndColor});
+            } else {
+                gradientDrawable.setColors(new int[]{statedStartColor, statedCenterColor, statedEndColor});
+            }
         }
         if (statedGradientType != 0) {
             gradientDrawable.setGradientType(statedGradientType);
@@ -159,12 +168,19 @@ public class XViewParserTemplate implements IWidgetParser {
     }
 
     private GradientDrawable buildNormalGradientDrawable(GradientDrawable gradientDrawable, TypedArray arr) {
+        // 填充色
         int statedSoldColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_solid_color, Color.TRANSPARENT);
+        // 角度
         float statedCorner = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_corner, 0F);
+        // 描边的宽度
         float statedBorder = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_border, 0F);
+        // 描边颜色
         int statedBorderColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stroke_color, Color.TRANSPARENT);
+        // 渐变填充的角度
         float statedGradientRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_gradient_radius, 0F);
+        // 渐变开始颜色
         int statedStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_start_color, Color.TRANSPARENT);
+        int statedCenterColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_center_color, Color.TRANSPARENT);
         int statedEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_end_color, Color.TRANSPARENT);
         int statedGradientType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_solid_gradient, 0);
         int statedGradientOrientation = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_gradient_orientation, 0);
@@ -187,8 +203,13 @@ public class XViewParserTemplate implements IWidgetParser {
         gradientDrawable.setColor(statedSoldColor);
         gradientDrawable.setStroke((int) statedBorder, statedBorderColor);
         gradientDrawable.setGradientRadius(statedGradientRadius);
+        // 如果只设置了渐变开始和渐变结束，则不使用渐变中心色值
         if (statedStartColor != Color.TRANSPARENT && statedEndColor != Color.TRANSPARENT) {
-            gradientDrawable.setColors(new int[] {statedStartColor, statedEndColor});
+            if (statedCenterColor == Color.TRANSPARENT) {
+                gradientDrawable.setColors(new int[]{statedStartColor, statedEndColor});
+            } else {
+                gradientDrawable.setColors(new int[]{statedStartColor, statedCenterColor, statedEndColor});
+            }
         }
         gradientDrawable.setGradientType(statedGradientType);
         gradientDrawable.setOrientation(gradientOrientation);
@@ -218,12 +239,12 @@ public class XViewParserTemplate implements IWidgetParser {
 
     private Drawable parseStateListDrawable(StateListDrawable stateListDrawable, TypedArray arr, int stateType) {
         GradientDrawable normaDrawable = buildNormalGradientDrawable(new GradientDrawableDecorator(), arr);
+        // 如果不是selector, 直接返回
         if (stateType == 0)
             return normaDrawable;
 
         int[] state_arr = null;
         int[] state_normal = null;
-
 
         if (stateType == 1) {
             state_arr = new int[] {android.R.attr.state_pressed};
@@ -236,6 +257,16 @@ public class XViewParserTemplate implements IWidgetParser {
             state_normal = new int[] {-android.R.attr.state_checked};
         }
 
+        // 如果指定了俩个drawable 用于切换，直接使用
+        Drawable customDrawableDefault = arr.getDrawable(R.styleable.XTextViewCustom_XTextViewCustom_drawable);
+        Drawable customStateDrawable = arr.getDrawable(R.styleable.XTextViewCustom_XTextViewCustom_stated_drawable);
+        if (customDrawableDefault != null && customStateDrawable != null) {
+            stateListDrawable.addState(state_arr, customStateDrawable);
+            stateListDrawable.addState(state_normal, customDrawableDefault);
+            return stateListDrawable;
+        }
+
+        // 从默认的drawable继承属性或者扩展
         GradientDrawable statedDrawable = buildStatedGradientDrawable((GradientDrawableDecorator) buildNormalGradientDrawable(new GradientDrawableDecorator(), arr), arr);
         stateListDrawable.addState(state_arr, statedDrawable);
         stateListDrawable.addState(state_normal, normaDrawable);

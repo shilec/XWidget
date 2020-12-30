@@ -30,6 +30,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XFrameLayout_gradient_center_color" format="color"/>
     <attr name="XFrameLayout_gradient_start_color" format="color"/>
     <attr name="XFrameLayout_gradient_end_color" format="color"/>
     <attr name="XFrameLayout_gradient_orientation" format="enum">
@@ -71,6 +72,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XFrameLayout_stated_gradient_center_color" format="color"/>
     <attr name="XFrameLayout_stated_gradient_start_color" format="color"/>
     <attr name="XFrameLayout_stated_gradient_end_color" format="color"/>
     <attr name="XFrameLayout_stated_gradient_orientation" format="enum">
@@ -80,6 +82,8 @@
     <attr name="XFrameLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XFrameLayout_stated_stroke_color" format="color" />
     <attr name="XFrameLayout_stated_stroke_border" format="dimension"/>
+    <attr name="XFrameLayout_drawable" format="reference"/>
+    <attr name="XFrameLayout_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XFrameLayout -->
 
@@ -111,6 +115,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XRadioButton_gradient_center_color" format="color"/>
     <attr name="XRadioButton_gradient_start_color" format="color"/>
     <attr name="XRadioButton_gradient_end_color" format="color"/>
     <attr name="XRadioButton_gradient_orientation" format="enum">
@@ -152,6 +157,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XRadioButton_stated_gradient_center_color" format="color"/>
     <attr name="XRadioButton_stated_gradient_start_color" format="color"/>
     <attr name="XRadioButton_stated_gradient_end_color" format="color"/>
     <attr name="XRadioButton_stated_gradient_orientation" format="enum">
@@ -161,6 +167,8 @@
     <attr name="XRadioButton_stated_gradient_radius" format="dimension"/>
     <attr name="XRadioButton_stated_stroke_color" format="color" />
     <attr name="XRadioButton_stated_stroke_border" format="dimension"/>
+    <attr name="XRadioButton_drawable" format="reference"/>
+    <attr name="XRadioButton_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XRadioButton -->
 
@@ -192,6 +200,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XView_gradient_center_color" format="color"/>
     <attr name="XView_gradient_start_color" format="color"/>
     <attr name="XView_gradient_end_color" format="color"/>
     <attr name="XView_gradient_orientation" format="enum">
@@ -233,6 +242,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XView_stated_gradient_center_color" format="color"/>
     <attr name="XView_stated_gradient_start_color" format="color"/>
     <attr name="XView_stated_gradient_end_color" format="color"/>
     <attr name="XView_stated_gradient_orientation" format="enum">
@@ -242,6 +252,8 @@
     <attr name="XView_stated_gradient_radius" format="dimension"/>
     <attr name="XView_stated_stroke_color" format="color" />
     <attr name="XView_stated_stroke_border" format="dimension"/>
+    <attr name="XView_drawable" format="reference"/>
+    <attr name="XView_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XView -->
 
@@ -273,6 +285,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XTextView_gradient_center_color" format="color"/>
     <attr name="XTextView_gradient_start_color" format="color"/>
     <attr name="XTextView_gradient_end_color" format="color"/>
     <attr name="XTextView_gradient_orientation" format="enum">
@@ -314,6 +327,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XTextView_stated_gradient_center_color" format="color"/>
     <attr name="XTextView_stated_gradient_start_color" format="color"/>
     <attr name="XTextView_stated_gradient_end_color" format="color"/>
     <attr name="XTextView_stated_gradient_orientation" format="enum">
@@ -323,6 +337,8 @@
     <attr name="XTextView_stated_gradient_radius" format="dimension"/>
     <attr name="XTextView_stated_stroke_color" format="color" />
     <attr name="XTextView_stated_stroke_border" format="dimension"/>
+    <attr name="XTextView_drawable" format="reference"/>
+    <attr name="XTextView_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XTextView -->
 
@@ -354,6 +370,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XButton_gradient_center_color" format="color"/>
     <attr name="XButton_gradient_start_color" format="color"/>
     <attr name="XButton_gradient_end_color" format="color"/>
     <attr name="XButton_gradient_orientation" format="enum">
@@ -395,6 +412,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XButton_stated_gradient_center_color" format="color"/>
     <attr name="XButton_stated_gradient_start_color" format="color"/>
     <attr name="XButton_stated_gradient_end_color" format="color"/>
     <attr name="XButton_stated_gradient_orientation" format="enum">
@@ -404,6 +422,8 @@
     <attr name="XButton_stated_gradient_radius" format="dimension"/>
     <attr name="XButton_stated_stroke_color" format="color" />
     <attr name="XButton_stated_stroke_border" format="dimension"/>
+    <attr name="XButton_drawable" format="reference"/>
+    <attr name="XButton_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XButton -->
 
@@ -435,6 +455,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XRelativeLayout_gradient_center_color" format="color"/>
     <attr name="XRelativeLayout_gradient_start_color" format="color"/>
     <attr name="XRelativeLayout_gradient_end_color" format="color"/>
     <attr name="XRelativeLayout_gradient_orientation" format="enum">
@@ -476,6 +497,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XRelativeLayout_stated_gradient_center_color" format="color"/>
     <attr name="XRelativeLayout_stated_gradient_start_color" format="color"/>
     <attr name="XRelativeLayout_stated_gradient_end_color" format="color"/>
     <attr name="XRelativeLayout_stated_gradient_orientation" format="enum">
@@ -485,6 +507,8 @@
     <attr name="XRelativeLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XRelativeLayout_stated_stroke_color" format="color" />
     <attr name="XRelativeLayout_stated_stroke_border" format="dimension"/>
+    <attr name="XRelativeLayout_drawable" format="reference"/>
+    <attr name="XRelativeLayout_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XRelativeLayout -->
 
@@ -516,6 +540,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XImageButton_gradient_center_color" format="color"/>
     <attr name="XImageButton_gradient_start_color" format="color"/>
     <attr name="XImageButton_gradient_end_color" format="color"/>
     <attr name="XImageButton_gradient_orientation" format="enum">
@@ -557,6 +582,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XImageButton_stated_gradient_center_color" format="color"/>
     <attr name="XImageButton_stated_gradient_start_color" format="color"/>
     <attr name="XImageButton_stated_gradient_end_color" format="color"/>
     <attr name="XImageButton_stated_gradient_orientation" format="enum">
@@ -566,6 +592,8 @@
     <attr name="XImageButton_stated_gradient_radius" format="dimension"/>
     <attr name="XImageButton_stated_stroke_color" format="color" />
     <attr name="XImageButton_stated_stroke_border" format="dimension"/>
+    <attr name="XImageButton_drawable" format="reference"/>
+    <attr name="XImageButton_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XImageButton -->
 
@@ -597,6 +625,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XImageView_gradient_center_color" format="color"/>
     <attr name="XImageView_gradient_start_color" format="color"/>
     <attr name="XImageView_gradient_end_color" format="color"/>
     <attr name="XImageView_gradient_orientation" format="enum">
@@ -638,6 +667,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XImageView_stated_gradient_center_color" format="color"/>
     <attr name="XImageView_stated_gradient_start_color" format="color"/>
     <attr name="XImageView_stated_gradient_end_color" format="color"/>
     <attr name="XImageView_stated_gradient_orientation" format="enum">
@@ -647,6 +677,8 @@
     <attr name="XImageView_stated_gradient_radius" format="dimension"/>
     <attr name="XImageView_stated_stroke_color" format="color" />
     <attr name="XImageView_stated_stroke_border" format="dimension"/>
+    <attr name="XImageView_drawable" format="reference"/>
+    <attr name="XImageView_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XImageView -->
 
@@ -678,6 +710,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XLinearLayout_gradient_center_color" format="color"/>
     <attr name="XLinearLayout_gradient_start_color" format="color"/>
     <attr name="XLinearLayout_gradient_end_color" format="color"/>
     <attr name="XLinearLayout_gradient_orientation" format="enum">
@@ -719,6 +752,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XLinearLayout_stated_gradient_center_color" format="color"/>
     <attr name="XLinearLayout_stated_gradient_start_color" format="color"/>
     <attr name="XLinearLayout_stated_gradient_end_color" format="color"/>
     <attr name="XLinearLayout_stated_gradient_orientation" format="enum">
@@ -728,6 +762,8 @@
     <attr name="XLinearLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XLinearLayout_stated_stroke_color" format="color" />
     <attr name="XLinearLayout_stated_stroke_border" format="dimension"/>
+    <attr name="XLinearLayout_drawable" format="reference"/>
+    <attr name="XLinearLayout_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XLinearLayout -->
 
@@ -759,6 +795,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XCheckBox_gradient_center_color" format="color"/>
     <attr name="XCheckBox_gradient_start_color" format="color"/>
     <attr name="XCheckBox_gradient_end_color" format="color"/>
     <attr name="XCheckBox_gradient_orientation" format="enum">
@@ -800,6 +837,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XCheckBox_stated_gradient_center_color" format="color"/>
     <attr name="XCheckBox_stated_gradient_start_color" format="color"/>
     <attr name="XCheckBox_stated_gradient_end_color" format="color"/>
     <attr name="XCheckBox_stated_gradient_orientation" format="enum">
@@ -809,6 +847,8 @@
     <attr name="XCheckBox_stated_gradient_radius" format="dimension"/>
     <attr name="XCheckBox_stated_stroke_color" format="color" />
     <attr name="XCheckBox_stated_stroke_border" format="dimension"/>
+    <attr name="XCheckBox_drawable" format="reference"/>
+    <attr name="XCheckBox_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XCheckBox -->
 
@@ -840,6 +880,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XConstraintLayout_gradient_center_color" format="color"/>
     <attr name="XConstraintLayout_gradient_start_color" format="color"/>
     <attr name="XConstraintLayout_gradient_end_color" format="color"/>
     <attr name="XConstraintLayout_gradient_orientation" format="enum">
@@ -881,6 +922,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XConstraintLayout_stated_gradient_center_color" format="color"/>
     <attr name="XConstraintLayout_stated_gradient_start_color" format="color"/>
     <attr name="XConstraintLayout_stated_gradient_end_color" format="color"/>
     <attr name="XConstraintLayout_stated_gradient_orientation" format="enum">
@@ -890,6 +932,8 @@
     <attr name="XConstraintLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XConstraintLayout_stated_stroke_color" format="color" />
     <attr name="XConstraintLayout_stated_stroke_border" format="dimension"/>
+    <attr name="XConstraintLayout_drawable" format="reference"/>
+    <attr name="XConstraintLayout_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XConstraintLayout -->
 
@@ -921,6 +965,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XEditText_gradient_center_color" format="color"/>
     <attr name="XEditText_gradient_start_color" format="color"/>
     <attr name="XEditText_gradient_end_color" format="color"/>
     <attr name="XEditText_gradient_orientation" format="enum">
@@ -962,6 +1007,7 @@
         <enum name="radial" value="1"/>
         <enum name="sweep" value="2"/>
     </attr>
+    <attr name="XEditText_stated_gradient_center_color" format="color"/>
     <attr name="XEditText_stated_gradient_start_color" format="color"/>
     <attr name="XEditText_stated_gradient_end_color" format="color"/>
     <attr name="XEditText_stated_gradient_orientation" format="enum">
@@ -971,6 +1017,8 @@
     <attr name="XEditText_stated_gradient_radius" format="dimension"/>
     <attr name="XEditText_stated_stroke_color" format="color" />
     <attr name="XEditText_stated_stroke_border" format="dimension"/>
+    <attr name="XEditText_drawable" format="reference"/>
+    <attr name="XEditText_stated_drawable" format="reference"/>
 </declare-styleable>
 <!-- XEditText -->
 </resources>

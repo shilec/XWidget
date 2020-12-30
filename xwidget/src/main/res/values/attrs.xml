@@ -17,6 +17,9 @@
             <enum name="inner" value="3"/>
         </attr>
 
+        <attr name="XTextViewCustom_drawable" format="reference"/>
+        <attr name="XTextViewCustom_stated_drawable" format="reference"/>
+
         <attr name="XTextViewCustom_blur_radius" format="dimension"/>
         <attr name="XTextViewCustom_blur_color" format="color"/>
 
@@ -31,6 +34,7 @@
             <enum name="sweep" value="1"/>
         </attr>
         <attr name="XTextViewCustom_gradient_start_color" format="color"/>
+        <attr name="XTextViewCustom_gradient_center_color" format="color"/>
         <attr name="XTextViewCustom_gradient_end_color" format="color"/>
         <attr name="XTextViewCustom_gradient_orientation" format="enum">
             <enum name="top_bottom" value="2"/>
@@ -75,6 +79,7 @@
             <enum name="sweep" value="1"/>
         </attr>
         <attr name="XTextViewCustom_stated_gradient_start_color" format="color"/>
+        <attr name="XTextViewCustom_stated_gradient_center_color" format="color"/>
         <attr name="XTextViewCustom_stated_gradient_end_color" format="color"/>
         <attr name="XTextViewCustom_stated_gradient_orientation" format="enum">
             <enum name="top_bottom" value="2"/>
