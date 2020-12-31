@@ -143,6 +143,7 @@
                 android:layout_height="wrap_content"/>
 
             <com.scott.xwidget.widget.XTextView
+                android:id="@+id/tv_test"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:text="点我"
@@ -163,12 +164,13 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <com.scott.xwidget.widget.XButton
+            android:id="@+id/xb_text"
             app:XButton_stated_solid_gradient="linear"
             android:layout_marginBottom="20dp"
             app:XButton_corner="22dp"
             app:XButton_gradient_center_color="#FFF654D0"
             app:XButton_gradient_end_color="#FF3DB2FF"
-            app:XButton_gradient_start_color="#FF3DB2FF"
+            app:XButton_gradient_start_color="@color/colorPrimary"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="40dp"
             android:layout_marginStart="40dp"

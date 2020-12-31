@@ -5,6 +5,13 @@ import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+import com.scott.xwidget.drawable.GradientDrawableDecorator;
+import com.scott.xwidget.drawable.StateListDrawableDecorator;
+import com.scott.xwidget.drawable.WidgetEditorTransition;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,5 +61,21 @@ public class XWidgetParser {
 
     public static <T extends View> void inject(T t, AttributeSet attrs) throws ClassNotFoundException {
         inject(t, attrs, null);
+    }
+
+    public @Nullable static <T extends View> WidgetEditorTransition getDrawableEditTransition(@NonNull T v) {
+        Drawable drawable = v.getBackground();
+        if (drawable == null) return null;
+
+        if (drawable instanceof GradientDrawableDecorator) {
+            return new WidgetEditorTransition(((GradientDrawableDecorator) drawable).beginTransition(), null);
+        }
+
+        if (drawable instanceof StateListDrawableDecorator) {
+            GradientDrawableDecorator normal = (GradientDrawableDecorator) ((StateListDrawableDecorator) drawable).getNormalDrawable();
+            GradientDrawableDecorator state = (GradientDrawableDecorator) ((StateListDrawableDecorator) drawable).getStateDrawable();
+            return new WidgetEditorTransition(normal.beginTransition(), state.beginTransition());
+        }
+        return null;
     }
 }

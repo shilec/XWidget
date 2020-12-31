@@ -24,6 +24,7 @@
 **XButtonCustom_shadow_dy**|**外阴影y方向偏移**
 **XButtonCustom_solid_gradient**|**渐变类型，linear, radial, sweep**
 **XButtonCustom_gradient_start_color**|**渐变起始颜色**
+**XButtonCustom_gradient_center_color**|**渐变中间颜色**
 **XButtonCustom_gradient_end_color**|**渐变结束颜色**
 **XButtonCustom_gradient_orientation**|**渐变的方向**
 **XButtonCustom_gradient_radius**|**渐变角度**
@@ -45,11 +46,25 @@
 **XButtonCustom_stated_blur_color**|**模糊颜色**
 **XButtonCustom_stated_solid_gradient**|**渐变类型，linear, radial, sweep**
 **XButtonCustom_stated_gradient_start_color**|**渐变起始颜色**
+**XButtonCustom_stated_gradient_center_color**|**渐变中间颜色**
 **XButtonCustom_stated_gradient_end_color**|**渐变结束颜色**
 **XButtonCustom_stated_gradient_orientation**|**渐变的方向**
 **XButtonCustom_stated_gradient_radius**|**渐变角度**
 **XButtonCustom_stated_stroke_color**|**描边颜色**
 **XButtonCustom_stated_stroke_border**|**描边宽度**
+**XButtonCustom_drawable**|**正常情况下显示的drawable**
+**XButtonCustom_stated_drawable**|**在特定状态下显示的drawable, 如: selector**
+
+
+> 上述的字段在代码中的修改方式，支持的修改的字段在`IDrawableEditTransition` 接口中定义
+
+```
+    // 获取IDrawbleEditTransition
+    XWidgetParser.getDrawableEditTransition(v)
+            ?.beginNormalTransition
+            ?.setCorner(10)
+            ?.commit()   
+```
 
 #### 集成
 
@@ -63,7 +78,7 @@
 
 2. 在要使用的module 的 build.gradle 中加入
 
-         implementation 'com.github.shilec:XWidget:1.1.1'
+         implementation 'com.github.shilec:XWidget:1.1.2'
          
 3. 添加混淆
         
@@ -77,8 +92,8 @@
         XWidgetParser.addParser(XButton::class.java, XButtonParser2())
 
 #### 插件及注解解析器介绍
-1. 使用`kapt 'com.github.shilec:XWidget:1.1.1'`时，可以为`XWidget`注解的View生成drawable解析器，用来生成模板代码，也可继承自模板代码进行扩展。
-2. 使用`apply plugin: "com.scott.xwidget-gradle-plugin"`时，可以自动生成`XWidget`注解的View的attr属性定义，生成文件为**res/values/xwidget_attrs.xml**。(使用插件时，需要在根目录下的build.gradle文件中配置插件的`classpath:'com.github.shilec:XWidget:1.1.1'`)
+1. 使用`kapt 'com.github.shilec:XWidget:1.1.2'`时，可以为`XWidget`注解的View生成drawable解析器，用来生成模板代码，也可继承自模板代码进行扩展。
+2. 使用`apply plugin: "com.scott.xwidget-gradle-plugin"`时，可以自动生成`XWidget`注解的View的attr属性定义，生成文件为**res/values/xwidget_attrs.xml**。(使用插件时，需要在根目录下的build.gradle文件中配置插件的`classpath:'com.github.shilec:XWidget:1.1.2'`)
 
 
 
