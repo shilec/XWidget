@@ -2,6 +2,7 @@ package com.scott.xwidget.parser;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
@@ -37,13 +38,13 @@ public class XViewParserTemplate implements IWidgetParser {
             return new StateListDrawableDecorator(type, normalDrawable, stateDrawable);
         }
 
-        DrawableInfo normalDrawableInfo = DrawableInfo.fromNormalTypeArray(arr);
+        DrawableInfo normalDrawableInfo = fromNormalTypeArray(arr);
         if (type == 0) {
             return new GradientDrawableDecorator(normalDrawableInfo);
         }
 
         // 默认所有属性copy自normal, 只修改差异化部分
-        DrawableInfo stateDrawableInfo = DrawableInfo.fromStatedTypeArray(arr);
+        DrawableInfo stateDrawableInfo = fromStatedTypeArray(arr);
         stateDrawableInfo.merge(normalDrawableInfo);
 
         normalDrawable = new GradientDrawableDecorator(normalDrawableInfo);
@@ -51,5 +52,73 @@ public class XViewParserTemplate implements IWidgetParser {
 
         arr.recycle();
         return new StateListDrawableDecorator(type, normalDrawable, stateDrawable);
+    }
+
+    public DrawableInfo fromNormalTypeArray(TypedArray arr) {
+        DrawableInfo drawableInfo = new DrawableInfo();
+
+        // 填充色
+        drawableInfo.solidColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_solid_color, Color.TRANSPARENT);
+        // 角度
+        drawableInfo.corner = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_corner, 0F);
+        // 描边的宽度
+        drawableInfo.strokeBorderWith = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_border, 0F);
+        // 描边颜色
+        drawableInfo.strokeBorderColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stroke_color, Color.TRANSPARENT);
+        // 渐变填充的角度
+        drawableInfo.gradientRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_gradient_radius, 0F);
+        // 渐变开始颜色
+        drawableInfo.gradientStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_start_color, Color.TRANSPARENT);
+        drawableInfo.gradientCenterColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_center_color, Color.TRANSPARENT);
+        drawableInfo.gradientEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_gradient_end_color, Color.TRANSPARENT);
+        drawableInfo.gradientType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_solid_gradient, 0);
+        drawableInfo.gradientOrientation = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_gradient_orientation, 0);
+        drawableInfo.cornerType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_corner_type, 0);
+        drawableInfo.shadowRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_shadow_radius, 0f);
+
+        drawableInfo.shadowColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_shadow_color, 0);
+        drawableInfo.shadowDx = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_shadow_dx, 0f);
+        drawableInfo.shadowDy = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_shadow_dy, 0f);
+
+        drawableInfo.blurRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_blur_radius, 0f);
+        drawableInfo.blurColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_blur_color, 0);
+        drawableInfo.blurType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_blur_type, 0);
+
+        drawableInfo.normalDrawable = arr.getDrawable(R.styleable.XTextViewCustom_XTextViewCustom_drawable);
+        return drawableInfo;
+    }
+
+    public DrawableInfo fromStatedTypeArray(TypedArray arr) {
+        DrawableInfo drawableInfo = new DrawableInfo();
+
+        // 填充色
+        drawableInfo.solidColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_solid_color, Color.TRANSPARENT);
+        // 角度
+        drawableInfo.corner = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_corner, 0F);
+        // 描边的宽度
+        drawableInfo.strokeBorderWith = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_border, 0F);
+        // 描边颜色
+        drawableInfo.strokeBorderColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_color, Color.TRANSPARENT);
+        // 渐变填充的角度
+        drawableInfo.gradientRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_radius, 0F);
+        // 渐变开始颜色
+        drawableInfo.gradientStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_start_color, Color.TRANSPARENT);
+        drawableInfo.gradientCenterColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_center_color, Color.TRANSPARENT);
+        drawableInfo.gradientEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_end_color, Color.TRANSPARENT);
+        drawableInfo.gradientType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_solid_gradient, 0);
+        drawableInfo.gradientOrientation = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_gradient_orientation, 0);
+        drawableInfo.cornerType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_corner_type, 0);
+        drawableInfo.shadowRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_radius, 0f);
+
+        drawableInfo. shadowColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_color, 0);
+        drawableInfo.shadowDx = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_dx, 0f);
+        drawableInfo.shadowDy = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_shadow_dy, 0f);
+
+        drawableInfo.blurRadius = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_blur_radius, 0f);
+        drawableInfo.blurColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_blur_color, 0);
+        drawableInfo.blurType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_blur_type, 0);
+
+        drawableInfo.normalDrawable = arr.getDrawable(R.styleable.XTextViewCustom_XTextViewCustom_stated_drawable);
+        return drawableInfo;
     }
 }
