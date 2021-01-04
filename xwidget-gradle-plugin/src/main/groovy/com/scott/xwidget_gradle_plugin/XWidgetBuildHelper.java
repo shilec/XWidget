@@ -108,6 +108,8 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_gradient_orientation\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"top_bottom\" value=\"2\"/>").append(NEW_LINE);
             builder.append("        <enum name=\"left_right\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"top_left_bottom_right\" value=\"3\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"top_right_bottom_left\" value=\"4\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_gradient_radius\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stroke_color\" format=\"color\" />").append(NEW_LINE);
@@ -156,6 +158,8 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_orientation\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"top_bottom\" value=\"2\"/>").append(NEW_LINE);
             builder.append("        <enum name=\"left_right\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"top_left_bottom_right\" value=\"3\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"top_right_bottom_left\" value=\"4\"/>").append(NEW_LINE);
             builder.append("    </attr>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_radius\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_color\" format=\"color\" />").append(NEW_LINE);

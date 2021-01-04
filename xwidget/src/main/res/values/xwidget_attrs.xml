@@ -36,6 +36,8 @@
     <attr name="XFrameLayout_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XFrameLayout_gradient_radius" format="dimension"/>
     <attr name="XFrameLayout_stroke_color" format="color" />
@@ -78,6 +80,8 @@
     <attr name="XFrameLayout_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XFrameLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XFrameLayout_stated_stroke_color" format="color" />
@@ -121,6 +125,8 @@
     <attr name="XRadioButton_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XRadioButton_gradient_radius" format="dimension"/>
     <attr name="XRadioButton_stroke_color" format="color" />
@@ -163,6 +169,8 @@
     <attr name="XRadioButton_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XRadioButton_stated_gradient_radius" format="dimension"/>
     <attr name="XRadioButton_stated_stroke_color" format="color" />
@@ -206,6 +214,8 @@
     <attr name="XView_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XView_gradient_radius" format="dimension"/>
     <attr name="XView_stroke_color" format="color" />
@@ -248,6 +258,8 @@
     <attr name="XView_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XView_stated_gradient_radius" format="dimension"/>
     <attr name="XView_stated_stroke_color" format="color" />
@@ -291,6 +303,8 @@
     <attr name="XTextView_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XTextView_gradient_radius" format="dimension"/>
     <attr name="XTextView_stroke_color" format="color" />
@@ -333,6 +347,8 @@
     <attr name="XTextView_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XTextView_stated_gradient_radius" format="dimension"/>
     <attr name="XTextView_stated_stroke_color" format="color" />
@@ -376,6 +392,8 @@
     <attr name="XButton_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XButton_gradient_radius" format="dimension"/>
     <attr name="XButton_stroke_color" format="color" />
@@ -418,6 +436,8 @@
     <attr name="XButton_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XButton_stated_gradient_radius" format="dimension"/>
     <attr name="XButton_stated_stroke_color" format="color" />
@@ -461,6 +481,8 @@
     <attr name="XRelativeLayout_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XRelativeLayout_gradient_radius" format="dimension"/>
     <attr name="XRelativeLayout_stroke_color" format="color" />
@@ -503,6 +525,8 @@
     <attr name="XRelativeLayout_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XRelativeLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XRelativeLayout_stated_stroke_color" format="color" />
@@ -546,6 +570,8 @@
     <attr name="XImageButton_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XImageButton_gradient_radius" format="dimension"/>
     <attr name="XImageButton_stroke_color" format="color" />
@@ -588,6 +614,8 @@
     <attr name="XImageButton_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XImageButton_stated_gradient_radius" format="dimension"/>
     <attr name="XImageButton_stated_stroke_color" format="color" />
@@ -631,6 +659,8 @@
     <attr name="XImageView_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XImageView_gradient_radius" format="dimension"/>
     <attr name="XImageView_stroke_color" format="color" />
@@ -673,6 +703,8 @@
     <attr name="XImageView_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XImageView_stated_gradient_radius" format="dimension"/>
     <attr name="XImageView_stated_stroke_color" format="color" />
@@ -716,6 +748,8 @@
     <attr name="XLinearLayout_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XLinearLayout_gradient_radius" format="dimension"/>
     <attr name="XLinearLayout_stroke_color" format="color" />
@@ -758,6 +792,8 @@
     <attr name="XLinearLayout_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XLinearLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XLinearLayout_stated_stroke_color" format="color" />
@@ -801,6 +837,8 @@
     <attr name="XCheckBox_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XCheckBox_gradient_radius" format="dimension"/>
     <attr name="XCheckBox_stroke_color" format="color" />
@@ -843,6 +881,8 @@
     <attr name="XCheckBox_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XCheckBox_stated_gradient_radius" format="dimension"/>
     <attr name="XCheckBox_stated_stroke_color" format="color" />
@@ -886,6 +926,8 @@
     <attr name="XConstraintLayout_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XConstraintLayout_gradient_radius" format="dimension"/>
     <attr name="XConstraintLayout_stroke_color" format="color" />
@@ -928,6 +970,8 @@
     <attr name="XConstraintLayout_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XConstraintLayout_stated_gradient_radius" format="dimension"/>
     <attr name="XConstraintLayout_stated_stroke_color" format="color" />
@@ -971,6 +1015,8 @@
     <attr name="XEditText_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XEditText_gradient_radius" format="dimension"/>
     <attr name="XEditText_stroke_color" format="color" />
@@ -1013,6 +1059,8 @@
     <attr name="XEditText_stated_gradient_orientation" format="enum">
         <enum name="top_bottom" value="2"/>
         <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
     </attr>
     <attr name="XEditText_stated_gradient_radius" format="dimension"/>
     <attr name="XEditText_stated_stroke_color" format="color" />

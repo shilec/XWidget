@@ -163,7 +163,29 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="渐变方向"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.scott.xwidget.widget.XFrameLayout
+                app:XFrameLayout_corner="8dp"
+                app:XFrameLayout_state="pressed"
+                app:XFrameLayout_stated_gradient_orientation="top_right_bottom_left"
+                app:XFrameLayout_gradient_orientation="top_left_bottom_right"
+                app:XFrameLayout_gradient_center_color="#FFF654D0"
+                app:XFrameLayout_gradient_end_color="#FF3DB2FF"
+                app:XFrameLayout_gradient_start_color="@color/colorPrimary"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+        </LinearLayout>
+
         <com.scott.xwidget.widget.XButton
+            app:XButton_gradient_orientation="top_right_bottom_left"
             android:id="@+id/xb_text"
             app:XButton_stated_solid_gradient="linear"
             android:layout_marginBottom="20dp"

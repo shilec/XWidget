@@ -109,6 +109,12 @@ public class DrawableInfo {
             case 2:
                 gradientOrientation = GradientDrawable.Orientation.TOP_BOTTOM;
                 break;
+            case 3:
+                gradientOrientation = GradientDrawable.Orientation.TL_BR;
+                break;
+            case 4:
+                gradientOrientation = GradientDrawable.Orientation.TR_BL;
+                break;
         }
         return gradientOrientation;
     }
