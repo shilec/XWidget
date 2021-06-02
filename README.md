@@ -7,12 +7,94 @@
 ## 示例
 <img src="images/1.jpg"/>
 
+## 示例代码
+```
+    <com.scott.xwidget.widget.XFrameLayout
+        app:XFrameLayout_corner="8dp"
+        app:XFrameLayout_state="pressed"
+        app:XFrameLayout_gradient_center_color="#FFF654D0"
+        app:XFrameLayout_gradient_end_color="#FF3DB2FF"
+        app:XFrameLayout_gradient_start_color="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+```
+
 ## 支持的控件
 `XButton, XConstraintLayout, XEditText, XFrameLayout, XImageView, XLinearLayout, XRelativeLayout, XTextView, XCheckBox, XView, XRadioButton `...
 
->上面的所有的控件都支持下面表格中的属性，表格中仅以XButtonCustom举例。
+> 如果没有自己想要的控件，可以按照下面的 "扩展 2" 配置gradle插件，一键生成。
+
+#### 集成
+
+1. 在project build.gradle 中加入
+
+        allprojects {
+            repositories {
+                maven { url 'https://jitpack.io' }
+            }
+        }
+
+2. 在要使用的module 的 build.gradle 中加入
+
+         implementation 'com.github.shilec:XWidget:1.2.2'
+
+3. 添加混淆
+
+        -keep public class com.scott.xwidget.parser.**{*;}
+
+
+#### 扩展
+
+1. 自定义解析器
+
+        XWidgetParser.addParser(XButton::class.java, XButtonParser2())
+
+
+2. 扩展自定义View
+
+    2.1 自定义View增加注解
+    ```
+        // 这里的包名是你的R文件的包名，例如: 你的R文件为 com.scott.demo.R; ,这里就是 com.scott.demo
+        @XWidget("com.example.viewdemo")
+        class XButtonCustom(context: Context, attrs: AttributeSet?) : AppCompatButton(context, attrs) {
+            init {
+                XWidgetParser.inject(this, attrs)
+            }
+        }
+    ```
+
+    2.2 要创建自定义View的module下的build.gradle配置
+
+    ```
+        plugins {
+            ...... // 省略其他配置
+            id 'kotlin-kapt'
+            id 'com.scott.xwidget-gradle-plugin'
+        }
+
+        depenencies {
+              ...... // 省略其他配置
+              implementation 'com.github.shilec:XWidget:1.2.2'
+            kapt('com.github.shilec:XWidget:1.2.2')
+        }
+    ```
+
+    2.3 根build.gradle配置插件
+    ```
+           dependencies {
+                ...... // 省略其他配置
+                classpath 'com.github.shilec.XWidget:xwidget-gradle-plugin:1.2.2'
+            }
+    ```
+
+
+    2.4 选择module, Build -> Make module xxx。在values下将生成自定义View的属性，`xwidget_attrs.xml`, 此时就可以在布局中直接引用 `XButtonCustom` 啦。
+
 
 ## 支持属性名称
+
+> 上面列出的控件都支持下表所列的属性，通过gradle插件一键生成的自定义View也支持这些属性。此处仅以XButtonCustom举例。
+
 | 属性名称 | 示例
 --------| ---
 **XButtonCustom_corner**|**圆角度数**
@@ -59,41 +141,29 @@
 > 上述的字段在代码中的修改方式，支持的修改的字段在`IDrawableEditTransition` 接口中定义
 
 ```
-    // 获取IDrawbleEditTransition
+    // 获取IDrawableEditTransition
     XWidgetParser.getDrawableEditTransition(v)
             ?.beginNormalTransition
             ?.setCorner(10)
-            ?.commit()   
+            ?.commit()
 ```
 
-#### 集成
+## XWidget框架介绍
 
-1. 在project build.gradle 中加入
+#### 1.开发过程中Drawable xml文件膨胀问题
+    开发过程中，为了实现UX设计的好看的效果，通常避免不了去写很多的Drawable xml文件。比如: 圆角Shape， 渐变，Selector等等。
+由于UX效果复杂多变，UI元素的尺寸形状必定会存在很多差异，所以就要编写很多Drawable xml文件去实现效果。加之多个开发人员并行开发过程中，如果没有较强的文件命名
+规定约束，其他人也会加入相同的Drawable xml文件。导致越来越多的xml文件加入到项目中，不仅会增加应用包体积，也不利于后续复用。
 
-        allprojects {
-            repositories {
-                maven { url 'https://jitpack.io' }
-            }
-        }
+#### 2.通常解决方案
+    1.通常的解决方案是自定义View代替，用代码去绘制相应效果。但是不能保证代码实现的效率，且常用的View较多，挨个实现自定义View较大。
+    2.约定文件命名，保证同样的Drawable xml只能存在一份，这样只能避免冗余的Drawable xml 存在，并不能减少必要的Drawable文件的生成。况且，没有程序去约束，光靠人
+    去遵循约定是不可靠的。
 
-2. 在要使用的module 的 build.gradle 中加入
+#### 3.XWidget解决方案
 
-         implementation 'com.github.shilec:XWidget:1.2.2'
-         
-3. 添加混淆
-        
-        -keep public class com.scott.xwidget.parser.**{*;}
-
-
-#### 扩展
-
-1. 自定义解析器
-
-        XWidgetParser.addParser(XButton::class.java, XButtonParser2())
-
-#### 插件及注解解析器介绍
-1. 使用`kapt 'com.github.shilec:XWidget:1.2.2'`时，可以为`XWidget`注解的View生成drawable解析器，用来生成模板代码，也可继承自模板代码进行扩展。
-2. 使用`apply plugin: "com.scott.xwidget-gradle-plugin"`时，可以自动生成`XWidget`注解的View的attr属性定义，生成文件为**res/values/xwidget_attrs.xml**。(使用插件时，需要在根目录下的build.gradle文件中配置插件的`classpath:'com.github.shilec:XWidget:1.2.2'`)
-
+`XWidget`提供丰富的 "自定View"，且基本包含常用的Drawable 属性。虽然'XWidget'也是自定义View，但是其只是作为一个载体，真正绘制是和我们写的Drawable xml
+原理一样，用自定义属性构造出对应的`GradientDrawable` or `StateListDrawable`对象，设置到View中。这样的实现方案既保证了绘制时的性能，又能够在布局中高度定制化，
+实现复杂的UI效果。
 
 
