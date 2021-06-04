@@ -33,6 +33,7 @@
                 maven { url 'https://jitpack.io' }
             }
         }
+> 注意: 如果AS中无法实时预览，请升级android构建插件的版本至`classpath 'com.android.tools.build:gradle:4.1.2'`或者以上, 同时升级至对应的gradle版本。
 
 2. 在要使用的module 的 build.gradle 中加入
 
