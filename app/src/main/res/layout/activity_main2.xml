@@ -38,6 +38,57 @@
         </LinearLayout>
 
         <LinearLayout
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.scott.xwidget.widget.XTextView
+                app:XTextView_state="pressed"
+                app:XTextView_solid_color="#0000ff"
+                app:XTextView_corner="10dp"
+                android:gravity="center"
+                android:textColor="#fff"
+                app:XTextView_stated_solid_color="#00ff00"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Pressed"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <com.scott.xwidget.widget.XCheckBox
+                app:XCheckBox_state="checked"
+                app:XCheckBox_solid_color="#0000ff"
+                app:XCheckBox_corner="10dp"
+                android:gravity="center"
+                android:textColor="#fff"
+                app:XCheckBox_stated_solid_color="#00ff00"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Checked"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <com.scott.xwidget.widget.XTextView
+                app:XTextView_state="selected"
+                app:XTextView_solid_color="#0000ff"
+                app:XTextView_corner="10dp"
+                android:gravity="center"
+                android:textColor="#fff"
+                app:XTextView_stated_solid_color="@color/colorPrimary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Selected"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"

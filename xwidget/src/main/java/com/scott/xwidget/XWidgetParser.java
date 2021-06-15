@@ -41,7 +41,8 @@ public class XWidgetParser {
             throw new ClassNotFoundException("Parser not found, did you declared public constructor with empty params?");
         }
         Drawable drawable = parser.parseDrawable(t.getContext(), attrs, t.getBackground());
-        if (drawable instanceof StateListDrawable) {
+        if (drawable instanceof StateListDrawableDecorator
+                && ((StateListDrawableDecorator) drawable).getStateType() == StateListDrawableDecorator.STATE_TYPE_PRESSED) {
             t.setClickable(true);
         }
         t.setBackground(drawable);
