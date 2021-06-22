@@ -37,6 +37,9 @@ public class DrawableInfo {
 
     public int strokeGradientType;
 
+    public int state;
+    public int textColor; // 仅支持TextView及其子View
+
     public DrawableInfo() {
 
     }
@@ -140,6 +143,10 @@ public class DrawableInfo {
 
         if (strokeGradientType == 0 && drawableInfo.strokeGradientType != 0) {
             strokeGradientType = drawableInfo.strokeGradientType;
+        }
+
+        if (textColor == 0 && drawableInfo.textColor != 0) {
+            textColor = drawableInfo.textColor;
         }
     }
 

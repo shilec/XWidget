@@ -1,16 +1,18 @@
 package com.scott.xwidget;
 
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.scott.xwidget.drawable.DrawableInfo;
 import com.scott.xwidget.drawable.GradientDrawableDecorator;
 import com.scott.xwidget.drawable.StateListDrawableDecorator;
 import com.scott.xwidget.drawable.WidgetEditorTransition;
+import com.scott.xwidget.widget.decorator.IWidgetDecorator;
+import com.scott.xwidget.widget.decorator.WidgetDecoratorFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +47,26 @@ public class XWidgetParser {
                 && ((StateListDrawableDecorator) drawable).getStateType() == StateListDrawableDecorator.STATE_TYPE_PRESSED) {
             t.setClickable(true);
         }
+
         t.setBackground(drawable);
+
+        decorateWidget(parser, t);
+    }
+
+    private static <T extends View> void decorateWidget(IWidgetParser parser, T t) {
+        IWidgetDecorator<? extends View> decorator = WidgetDecoratorFactory.INSTANCE.getWidgetDecorator(t.getClass());
+        if (decorator != null) {
+            IWidgetDecorator<T> decorator1 = (IWidgetDecorator<T>) decorator;
+            DrawableInfo drawableInfo = parser.getNormalDrawableInfo();
+            DrawableInfo statedInfo = parser.getStatedDrawableInfo();
+
+            if (drawableInfo != null) {
+                if (statedInfo == null) {
+                    statedInfo = drawableInfo;
+                }
+                decorator1.decorate(t, drawableInfo, statedInfo);
+            }
+        }
     }
 
     private static IWidgetParser getDefaultParser(String vName) {

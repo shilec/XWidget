@@ -20,6 +20,9 @@ public class XViewParserTemplate implements IWidgetParser {
     public XViewParserTemplate() {
     }
 
+    private DrawableInfo mNormal;
+    private DrawableInfo mStated;
+
     @Nullable
     @Override
     public Drawable parseDrawable(@NotNull Context context, @Nullable AttributeSet attrs, @Nullable Drawable drawable) {
@@ -38,17 +41,19 @@ public class XViewParserTemplate implements IWidgetParser {
             return new StateListDrawableDecorator(type, normalDrawable, stateDrawable);
         }
 
-        DrawableInfo normalDrawableInfo = fromNormalTypeArray(arr);
+        mNormal = fromNormalTypeArray(arr);
+        mNormal.state = type;
         if (type == 0) {
-            return new GradientDrawableDecorator(normalDrawableInfo);
+            return new GradientDrawableDecorator(mNormal);
         }
 
         // 默认所有属性copy自normal, 只修改差异化部分
-        DrawableInfo stateDrawableInfo = fromStatedTypeArray(arr);
-        stateDrawableInfo.merge(normalDrawableInfo);
+        mStated = fromStatedTypeArray(arr);
+        mStated.merge(mNormal);
+        mStated.state = type;
 
-        normalDrawable = new GradientDrawableDecorator(normalDrawableInfo);
-        stateDrawable = new GradientDrawableDecorator(stateDrawableInfo);
+        normalDrawable = new GradientDrawableDecorator(mNormal);
+        stateDrawable = new GradientDrawableDecorator(mStated);
 
         arr.recycle();
         return new StateListDrawableDecorator(type, normalDrawable, stateDrawable);
@@ -95,6 +100,8 @@ public class XViewParserTemplate implements IWidgetParser {
         drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y, 0f);
         drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y1, 0f);
 
+        drawableInfo.textColor = arr.getColor(R.styleable.XTextView_XTextView_text_color, 0);
+
         return drawableInfo;
     }
 
@@ -138,6 +145,20 @@ public class XViewParserTemplate implements IWidgetParser {
         drawableInfo.strokeGradientOffsetX1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_x1, 0f);
         drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y, 0f);
         drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y1, 0f);
+
+        drawableInfo.textColor = arr.getColor(R.styleable.XTextView_XTextView_stated_text_color, 0);
         return drawableInfo;
+    }
+
+    @NotNull
+    @Override
+    public DrawableInfo getNormalDrawableInfo() {
+        return mNormal;
+    }
+
+    @NotNull
+    @Override
+    public DrawableInfo getStatedDrawableInfo() {
+        return mStated;
     }
 }

@@ -42,11 +42,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-//   implementation project(":xwidget")
-//    implementation project(":xwidget-annotation")
+   implementation project(":xwidget")
+    implementation project(":xwidget-annotation")
 
     //kapt project(':xwidget-processor')
-    implementation 'com.github.shilec:XWidget:1.2.4'
+    //implementation 'com.github.shilec:XWidget:1.2.4'
     //implementation 'com.github.shilec:XWidget:1.0.9'
     //kapt 'com.github.shilec:XWidget:1.0.3'
 }

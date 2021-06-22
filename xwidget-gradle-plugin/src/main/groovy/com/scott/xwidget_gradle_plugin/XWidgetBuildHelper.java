@@ -123,6 +123,8 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stroke_gradient_offset_x1\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stroke_gradient_offset_y1\" format=\"dimension\"/>").append(NEW_LINE);
 
+            builder.append("    <attr name=\"").append(name).append("_text_color\" format=\"color\" />").append(NEW_LINE);
+
             builder.append("    <attr name=\"").append(name).append("_stroke_gradient\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
             builder.append("        <enum name=\"radial\" value=\"1\"/>").append(NEW_LINE);
@@ -186,6 +188,8 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_offset_y\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_offset_x1\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_offset_y1\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_stated_text_color\" format=\"color\" />").append(NEW_LINE);
 
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
