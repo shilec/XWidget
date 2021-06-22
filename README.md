@@ -5,7 +5,7 @@
 ### 一个扩展的控件库，扩展了一些常用控件的属性，减少开发过程中的drawable文件膨胀。
 
 ## 示例
-<img src="images/1.jpg"/>
+<img src="images/2.jpg"/>
 
 ## 示例代码
 ```
