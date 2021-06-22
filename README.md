@@ -37,7 +37,7 @@
 
 2. 在要使用的module 的 build.gradle 中加入
 
-         implementation 'com.github.shilec:XWidget:1.2.2'
+         implementation 'com.github.shilec:XWidget:1.2.4'
 
 3. 添加混淆
 
@@ -75,8 +75,8 @@
 
         depenencies {
               ...... // 省略其他配置
-              implementation 'com.github.shilec:XWidget:1.2.2'
-            kapt('com.github.shilec:XWidget:1.2.2')
+              implementation 'com.github.shilec:XWidget:1.2.4'
+            kapt('com.github.shilec:XWidget:1.2.4')
         }
     ```
 
@@ -84,7 +84,7 @@
     ```
            dependencies {
                 ...... // 省略其他配置
-                classpath 'com.github.shilec.XWidget:xwidget-gradle-plugin:1.2.2'
+                classpath 'com.github.shilec.XWidget:xwidget-gradle-plugin:1.2.4'
             }
     ```
 
@@ -113,6 +113,13 @@
 **XButtonCustom_gradient_radius**|**渐变角度**
 **XButtonCustom_stroke_color**|**描边颜色**
 **XButtonCustom_stroke_border**|**描边宽度**
+**XButtonCustom_stroke_gradient_start_color**|**描边渐变起始颜色**
+**XButtonCustom_stroke_gradient_end_color**|**描边渐变结束颜色**
+**XButtonCustom_stroke_gradient_middle_color**|**描边渐变中间颜色**
+**XButtonCustom_stroke_gradient_offset_x**|**描边渐变Linear shader 起始x (参见: LinearGradient 参数, 默认为0)**
+**XButtonCustom_stroke_gradient_offset_x1**|**描边渐变Linear shader 截止x1 (参见: LinearGradient 参数, 默认为视图宽度)**
+**XButtonCustom_stroke_gradient_offset_y**|**描边渐变Linear shader 起始y (参见: LinearGradient 参数, 默认为0 )**
+**XButtonCustom_stroke_gradient_offset_y1**|**描边渐变Linear shader 截止y1 (参见: LinearGradient 参数, 默认为0 )**
 **XButtonCustom_blur_type**|**模糊类型，默认为normal。outer,solid,inner**
 **XButtonCustom_blur_radius**|**模糊半径**
 **XButtonCustom_blur_color**|**模糊颜色**
@@ -135,6 +142,13 @@
 **XButtonCustom_stated_gradient_radius**|**渐变角度**
 **XButtonCustom_stated_stroke_color**|**描边颜色**
 **XButtonCustom_stated_stroke_border**|**描边宽度**
+**XButtonCustom_stated_stroke_gradient_start_color**|**描边渐变起始颜色**
+**XButtonCustom_stated_stroke_gradient_end_color**|**描边渐变结束颜色**
+**XButtonCustom_stated_stroke_gradient_middle_color**|**描边渐变中间颜色**
+**XButtonCustom_stated_stroke_gradient_offset_x**|**描边渐变Linear shader 起始x (参见: LinearGradient 参数, 默认为0)**
+**XButtonCustom_stated_stroke_gradient_offset_x1**|**描边渐变Linear shader 截止x1 (参见: LinearGradient 参数, 默认为视图宽度)**
+**XButtonCustom_stated_stroke_gradient_offset_y**|**描边渐变Linear shader 起始y (参见: LinearGradient 参数, 默认为0 )**
+**XButtonCustom_stated_stroke_gradient_offset_y1**|**描边渐变Linear shader 截止y1 (参见: LinearGradient 参数, 默认为0 )**
 **XButtonCustom_drawable**|**正常情况下显示的drawable**
 **XButtonCustom_stated_drawable**|**在特定状态下显示的drawable, 如: selector**
 

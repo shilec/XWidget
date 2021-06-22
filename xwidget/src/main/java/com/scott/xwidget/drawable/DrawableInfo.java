@@ -25,6 +25,18 @@ public class DrawableInfo {
     public int blurType;
     public Drawable normalDrawable;
 
+    public int strokeGradientStartColor;
+    public int strokeGradientMiddleColor;
+    public int strokeGradientEndColor;
+
+    public float strokeGradientOffsetX;
+    public float strokeGradientOffsetY;
+
+    public float strokeGradientOffsetX1;
+    public float strokeGradientOffsetY1;
+
+    public int strokeGradientType;
+
     public DrawableInfo() {
 
     }
@@ -96,6 +108,38 @@ public class DrawableInfo {
 
         if (drawableInfo.normalDrawable != null) {
             normalDrawable = drawableInfo.normalDrawable;
+        }
+
+        if (strokeGradientStartColor == 0 && drawableInfo.strokeGradientStartColor != 0) {
+            strokeGradientStartColor = drawableInfo.strokeGradientStartColor;
+        }
+
+        if (strokeGradientMiddleColor == 0 && drawableInfo.strokeGradientMiddleColor != 0) {
+            strokeGradientMiddleColor = drawableInfo.strokeGradientMiddleColor;
+        }
+
+        if (strokeGradientEndColor == 0 && drawableInfo.strokeGradientEndColor != 0) {
+            strokeGradientEndColor = drawableInfo.strokeGradientEndColor;
+        }
+
+        if (strokeGradientOffsetX == 0f && drawableInfo.strokeGradientOffsetX != 0f) {
+            strokeGradientOffsetX = drawableInfo.strokeGradientOffsetX;
+        }
+
+        if (strokeGradientOffsetY == 0f && drawableInfo.strokeGradientOffsetY != 0f) {
+            strokeGradientOffsetY = drawableInfo.strokeGradientOffsetY;
+        }
+
+        if (strokeGradientOffsetX1 == 0f && drawableInfo.strokeGradientOffsetX1 != 0f) {
+            strokeGradientOffsetX1 = drawableInfo.strokeGradientOffsetX1;
+        }
+
+        if (strokeGradientOffsetY1 == 0f && drawableInfo.strokeGradientOffsetY1 != 0f) {
+            strokeGradientOffsetY1 = drawableInfo.strokeGradientOffsetY1;
+        }
+
+        if (strokeGradientType == 0 && drawableInfo.strokeGradientType != 0) {
+            strokeGradientType = drawableInfo.strokeGradientType;
         }
     }
 

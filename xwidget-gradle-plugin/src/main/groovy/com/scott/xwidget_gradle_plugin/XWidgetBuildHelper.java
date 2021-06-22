@@ -115,6 +115,20 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stroke_color\" format=\"color\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stroke_border\" format=\"dimension\"/>").append(NEW_LINE);
 
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient_start_color\" format=\"color\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient_middle_color\" format=\"color\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient_end_color\" format=\"color\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient_offset_x\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient_offset_y\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient_offset_x1\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient_offset_y1\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_stroke_gradient\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"radial\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"sweep\" value=\"2\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+
             builder.append("    <attr name=\"").append(name).append("_state\" format=\"enum\">").append(NEW_LINE);
             builder.append("        <enum name=\"none\" value=\"0\"/>").append(NEW_LINE);
             builder.append("        <enum name=\"pressed\" value=\"1\"/>").append(NEW_LINE);
@@ -164,6 +178,20 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_stated_gradient_radius\" format=\"dimension\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_color\" format=\"color\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_stroke_border\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_start_color\" format=\"color\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_middle_color\" format=\"color\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_end_color\" format=\"color\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_offset_x\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_offset_y\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_offset_x1\" format=\"dimension\"/>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient_offset_y1\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_stated_stroke_gradient\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"linear\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"radial\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"sweep\" value=\"2\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
 
             builder.append("    <attr name=\"").append(name).append("_drawable\" format=\"reference\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_drawable\" format=\"reference\"/>").append(NEW_LINE);

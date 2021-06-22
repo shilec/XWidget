@@ -43,6 +43,15 @@
         <attr name="XTextViewCustom_gradient_radius" format="dimension"/>
         <attr name="XTextViewCustom_stroke_color" format="color" />
         <attr name="XTextViewCustom_stroke_border" format="dimension"/>
+
+        <attr name="XTextViewCustom_stroke_gradient_start_color" format="color"/>
+        <attr name="XTextViewCustom_stroke_gradient_middle_color" format="color"/>
+        <attr name="XTextViewCustom_stroke_gradient_end_color" format="color"/>
+        <attr name="XTextViewCustom_stroke_gradient_offset_x" format="dimension"/>
+        <attr name="XTextViewCustom_stroke_gradient_offset_y" format="dimension"/>
+        <attr name="XTextViewCustom_stroke_gradient_offset_x1" format="dimension"/>
+        <attr name="XTextViewCustom_stroke_gradient_offset_y1" format="dimension"/>
+
         <attr name="XTextViewCustom_state" format="enum">
             <enum name="none" value="0"/>
             <enum name="pressed" value="1"/>
@@ -88,5 +97,13 @@
         <attr name="XTextViewCustom_stated_gradient_radius" format="dimension"/>
         <attr name="XTextViewCustom_stated_stroke_color" format="color" />
         <attr name="XTextViewCustom_stated_stroke_border" format="dimension"/>
+
+        <attr name="XTextViewCustom_stated_stroke_gradient_start_color" format="color"/>
+        <attr name="XTextViewCustom_stated_stroke_gradient_middle_color" format="color"/>
+        <attr name="XTextViewCustom_stated_stroke_gradient_end_color" format="color"/>
+        <attr name="XTextViewCustom_stated_stroke_gradient_offset_x" format="dimension"/>
+        <attr name="XTextViewCustom_stated_stroke_gradient_offset_y" format="dimension"/>
+        <attr name="XTextViewCustom_stated_stroke_gradient_offset_x1" format="dimension"/>
+        <attr name="XTextViewCustom_stated_stroke_gradient_offset_y1" format="dimension"/>
     </declare-styleable>
 </resources>

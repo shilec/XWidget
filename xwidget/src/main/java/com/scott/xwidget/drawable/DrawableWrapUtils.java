@@ -69,6 +69,11 @@ public class DrawableWrapUtils {
             drawable.addRender(new BlurDrawableRender(drawableInfo.blurColor, drawableInfo.blurType,
                     drawableInfo.corner, (int) drawableInfo.blurRadius, drawableInfo.cornerType));
         }
+
+        // 渐变边框
+        if (drawableInfo.strokeBorderWith != 0 && drawableInfo.strokeGradientStartColor != 0 && drawableInfo.strokeGradientEndColor != 0) {
+            drawable.addRender(new GradientStrokeRender(drawableInfo));
+        }
         return drawable;
     }
 }

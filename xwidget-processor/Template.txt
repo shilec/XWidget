@@ -85,6 +85,16 @@ public class XViewParserTemplate implements IWidgetParser {
         drawableInfo.blurType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_blur_type, 0);
 
         drawableInfo.normalDrawable = arr.getDrawable(R.styleable.XTextViewCustom_XTextViewCustom_drawable);
+
+        drawableInfo.strokeGradientStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_start_color, 0);
+        drawableInfo.strokeGradientEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_end_color, 0);
+        drawableInfo.strokeGradientMiddleColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_middle_color, 0);
+
+        drawableInfo.strokeGradientOffsetX = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_x, 0f);
+        drawableInfo.strokeGradientOffsetX1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_x1, 0f);
+        drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y, 0f);
+        drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y1, 0f);
+
         return drawableInfo;
     }
 
@@ -119,6 +129,15 @@ public class XViewParserTemplate implements IWidgetParser {
         drawableInfo.blurType = arr.getInt(R.styleable.XTextViewCustom_XTextViewCustom_stated_blur_type, 0);
 
         drawableInfo.normalDrawable = arr.getDrawable(R.styleable.XTextViewCustom_XTextViewCustom_stated_drawable);
+
+        drawableInfo.strokeGradientStartColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_start_color, 0);
+        drawableInfo.strokeGradientEndColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_end_color, 0);
+        drawableInfo.strokeGradientMiddleColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_middle_color, 0);
+
+        drawableInfo.strokeGradientOffsetX = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_x, 0f);
+        drawableInfo.strokeGradientOffsetX1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_x1, 0f);
+        drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y, 0f);
+        drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y1, 0f);
         return drawableInfo;
     }
 }
