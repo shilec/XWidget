@@ -40,6 +40,8 @@ public class DrawableInfo {
     public int state;
     public int textColor; // 仅支持TextView及其子View
 
+    public int colorFilter; // ImageView使用
+
     public DrawableInfo() {
 
     }

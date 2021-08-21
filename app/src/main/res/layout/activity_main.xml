@@ -7,47 +7,55 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
-    <com.scott.xwidget.widget.XTextView
-        app:XTextView_text_color="#ff0000"
-        app:XTextView_stated_text_color="#00ff00"
-        app:XTextView_stroke_gradient_start_color="#FF2AABFF"
-        app:XTextView_stroke_gradient_end_color="#FFFF60DE"
+<!--    <com.scott.xwidget.widget.XTextView-->
+<!--        app:XTextView_text_color="#ff0000"-->
+<!--        app:XTextView_stated_text_color="#00ff00"-->
+<!--        app:XTextView_stroke_gradient_start_color="#FF2AABFF"-->
+<!--        app:XTextView_stroke_gradient_end_color="#FFFF60DE"-->
 
-        app:XTextView_stated_stroke_gradient_start_color="#00ff00"
-        app:XTextView_stated_stroke_gradient_end_color="#0000ff"
-        app:XTextView_state="pressed"
+<!--        app:XTextView_stated_stroke_gradient_start_color="#00ff00"-->
+<!--        app:XTextView_stated_stroke_gradient_end_color="#0000ff"-->
+<!--        app:XTextView_state="pressed"-->
 
-        app:XTextView_stroke_border="2dp"
-        app:XTextView_corner="25dp"
-        android:textColor="#000"
-        android:text="123"
-        android:gravity="center"
-        android:layout_width="200dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_height="50dp"/>
+<!--        app:XTextView_stroke_border="2dp"-->
+<!--        app:XTextView_corner="25dp"-->
+<!--        android:textColor="#000"-->
+<!--        android:text="123"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        android:layout_height="50dp"/>-->
 
-    <com.scott.xwidget.widget.XTextView
-        app:XTextView_text_color="#222200"
-        app:XTextView_stated_text_color="#8d2d30"
-        app:XTextView_stroke_gradient_start_color="#FF2AAB33"
-        app:XTextView_stroke_gradient_end_color="#FFFF6033"
+<!--    <com.scott.xwidget.widget.XTextView-->
+<!--        app:XTextView_text_color="#222200"-->
+<!--        app:XTextView_stated_text_color="#8d2d30"-->
+<!--        app:XTextView_stroke_gradient_start_color="#FF2AAB33"-->
+<!--        app:XTextView_stroke_gradient_end_color="#FFFF6033"-->
 
-        app:XTextView_stated_stroke_gradient_start_color="#00ff00"
-        app:XTextView_stated_stroke_gradient_end_color="#0000ff"
-        app:XTextView_state="pressed"
+<!--        app:XTextView_stated_stroke_gradient_start_color="#00ff00"-->
+<!--        app:XTextView_stated_stroke_gradient_end_color="#0000ff"-->
+<!--        app:XTextView_state="pressed"-->
 
-        app:XTextView_stroke_border="2dp"
-        app:XTextView_corner="25dp"
-        android:textColor="#000"
-        android:text="123"
-        android:gravity="center"
-        android:layout_width="200dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_height="50dp"/>
+<!--        app:XTextView_stroke_border="2dp"-->
+<!--        app:XTextView_corner="25dp"-->
+<!--        android:textColor="#000"-->
+<!--        android:text="123"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        android:layout_height="50dp"/>-->
+        <com.scott.xwidget.widget.XImageView
+            android:id="@+id/btn_test"
+            android:clickable="true"
+            app:XImageView_state="selected"
+            app:XImageView_stated_color_filter="#ff0000"
+            android:layout_width="300dp"
+            android:src="@drawable/ic_protect"
+            android:layout_height="300dp"/>
 </LinearLayout>

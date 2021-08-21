@@ -11,4 +11,11 @@ class XImageView(context: Context, attrs: AttributeSet?) : AppCompatImageView(co
     init {
         XWidgetParser.inject(this, attrs)
     }
+
+    var onDrawableStateChanged: ((IntArray) -> Unit)? = null
+
+    override fun drawableStateChanged() {
+        super.drawableStateChanged()
+        onDrawableStateChanged?.invoke(drawableState)
+    }
 }

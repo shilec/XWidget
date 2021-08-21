@@ -37,7 +37,7 @@
 
 2. 在要使用的module 的 build.gradle 中加入
 
-         implementation 'com.github.shilec:XWidget:1.2.4'
+         implementation 'com.github.shilec:XWidget:1.2.6'
 
 3. 添加混淆
 
@@ -75,8 +75,8 @@
 
         depenencies {
               ...... // 省略其他配置
-              implementation 'com.github.shilec:XWidget:1.2.4'
-            kapt('com.github.shilec:XWidget:1.2.4')
+              implementation 'com.github.shilec:XWidget:1.2.6'
+            kapt('com.github.shilec:XWidget:1.2.6')
         }
     ```
 
@@ -84,7 +84,7 @@
     ```
            dependencies {
                 ...... // 省略其他配置
-                classpath 'com.github.shilec.XWidget:xwidget-gradle-plugin:1.2.4'
+                classpath 'com.github.shilec.XWidget:xwidget-gradle-plugin:1.2.6'
             }
     ```
 
@@ -123,7 +123,11 @@
 **XButtonCustom_blur_type**|**模糊类型，默认为normal。outer,solid,inner**
 **XButtonCustom_blur_radius**|**模糊半径**
 **XButtonCustom_blur_color**|**模糊颜色**
+**XButtonCustom_text_color**|**文本颜色**
+**XButtonCustom_color_filter**|**颜色过滤器**
 **XButtonCustom_state**|**selector类型，默认none。pressed, selected, checked。选定上述状态时，触发state前缀的属性**
+**XButtonCustom_stated_text_color**|**文本颜色**
+**XButtonCustom_stated__color_filter**|**颜色过滤器**
 **XButtonCustom_stated_corner**|**state触发的圆角**
 **XButtonCustom_corner_type**|**state触发时的圆角类型，默认 all。left_top,left_bottom,right_top,right_bottom**
 **XButtonCustom_stated_solid_color**|**state出发时背景填充颜色，当没有设置渐变填充时生效**

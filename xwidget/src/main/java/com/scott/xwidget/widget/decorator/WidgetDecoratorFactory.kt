@@ -3,6 +3,7 @@ package com.scott.xwidget.widget.decorator
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
+import com.scott.xwidget.widget.XImageView
 
 /**
  * @Author:      shijiale
@@ -16,6 +17,7 @@ object WidgetDecoratorFactory {
     init {
         addWidgetDecorator(TextView::class.java, TextViewWidgetDecorator())
         addWidgetDecorator(AppCompatTextView::class.java, TextViewWidgetDecorator())
+        addWidgetDecorator(XImageView::class.java, ImageViewWidgetDecorator())
     }
 
     @Suppress("UNCHECKED_CAST")

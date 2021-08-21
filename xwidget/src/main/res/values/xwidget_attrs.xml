@@ -50,6 +50,7 @@
     <attr name="XFrameLayout_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XFrameLayout_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XFrameLayout_text_color" format="color" />
+    <attr name="XFrameLayout_color_filter" format="color" />
     <attr name="XFrameLayout_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -107,6 +108,7 @@
     <attr name="XFrameLayout_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XFrameLayout_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XFrameLayout_stated_text_color" format="color" />
+    <attr name="XFrameLayout_stated_color_filter" format="color" />
     <attr name="XFrameLayout_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -165,6 +167,7 @@
     <attr name="XRadioButton_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XRadioButton_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XRadioButton_text_color" format="color" />
+    <attr name="XRadioButton_color_filter" format="color" />
     <attr name="XRadioButton_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -222,6 +225,7 @@
     <attr name="XRadioButton_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XRadioButton_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XRadioButton_stated_text_color" format="color" />
+    <attr name="XRadioButton_stated_color_filter" format="color" />
     <attr name="XRadioButton_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -280,6 +284,7 @@
     <attr name="XView_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XView_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XView_text_color" format="color" />
+    <attr name="XView_color_filter" format="color" />
     <attr name="XView_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -337,6 +342,7 @@
     <attr name="XView_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XView_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XView_stated_text_color" format="color" />
+    <attr name="XView_stated_color_filter" format="color" />
     <attr name="XView_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -395,6 +401,7 @@
     <attr name="XTextView_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XTextView_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XTextView_text_color" format="color" />
+    <attr name="XTextView_color_filter" format="color" />
     <attr name="XTextView_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -452,6 +459,7 @@
     <attr name="XTextView_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XTextView_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XTextView_stated_text_color" format="color" />
+    <attr name="XTextView_stated_color_filter" format="color" />
     <attr name="XTextView_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -510,6 +518,7 @@
     <attr name="XButton_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XButton_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XButton_text_color" format="color" />
+    <attr name="XButton_color_filter" format="color" />
     <attr name="XButton_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -567,6 +576,7 @@
     <attr name="XButton_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XButton_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XButton_stated_text_color" format="color" />
+    <attr name="XButton_stated_color_filter" format="color" />
     <attr name="XButton_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -625,6 +635,7 @@
     <attr name="XRelativeLayout_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XRelativeLayout_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XRelativeLayout_text_color" format="color" />
+    <attr name="XRelativeLayout_color_filter" format="color" />
     <attr name="XRelativeLayout_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -682,6 +693,7 @@
     <attr name="XRelativeLayout_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XRelativeLayout_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XRelativeLayout_stated_text_color" format="color" />
+    <attr name="XRelativeLayout_stated_color_filter" format="color" />
     <attr name="XRelativeLayout_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -740,6 +752,7 @@
     <attr name="XImageButton_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XImageButton_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XImageButton_text_color" format="color" />
+    <attr name="XImageButton_color_filter" format="color" />
     <attr name="XImageButton_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -797,6 +810,7 @@
     <attr name="XImageButton_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XImageButton_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XImageButton_stated_text_color" format="color" />
+    <attr name="XImageButton_stated_color_filter" format="color" />
     <attr name="XImageButton_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -855,6 +869,7 @@
     <attr name="XImageView_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XImageView_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XImageView_text_color" format="color" />
+    <attr name="XImageView_color_filter" format="color" />
     <attr name="XImageView_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -912,6 +927,7 @@
     <attr name="XImageView_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XImageView_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XImageView_stated_text_color" format="color" />
+    <attr name="XImageView_stated_color_filter" format="color" />
     <attr name="XImageView_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -970,6 +986,7 @@
     <attr name="XLinearLayout_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XLinearLayout_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XLinearLayout_text_color" format="color" />
+    <attr name="XLinearLayout_color_filter" format="color" />
     <attr name="XLinearLayout_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -1027,6 +1044,7 @@
     <attr name="XLinearLayout_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XLinearLayout_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XLinearLayout_stated_text_color" format="color" />
+    <attr name="XLinearLayout_stated_color_filter" format="color" />
     <attr name="XLinearLayout_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -1085,6 +1103,7 @@
     <attr name="XCheckBox_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XCheckBox_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XCheckBox_text_color" format="color" />
+    <attr name="XCheckBox_color_filter" format="color" />
     <attr name="XCheckBox_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -1142,6 +1161,7 @@
     <attr name="XCheckBox_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XCheckBox_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XCheckBox_stated_text_color" format="color" />
+    <attr name="XCheckBox_stated_color_filter" format="color" />
     <attr name="XCheckBox_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -1200,6 +1220,7 @@
     <attr name="XConstraintLayout_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XConstraintLayout_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XConstraintLayout_text_color" format="color" />
+    <attr name="XConstraintLayout_color_filter" format="color" />
     <attr name="XConstraintLayout_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -1257,6 +1278,7 @@
     <attr name="XConstraintLayout_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XConstraintLayout_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XConstraintLayout_stated_text_color" format="color" />
+    <attr name="XConstraintLayout_stated_color_filter" format="color" />
     <attr name="XConstraintLayout_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -1315,6 +1337,7 @@
     <attr name="XEditText_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XEditText_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XEditText_text_color" format="color" />
+    <attr name="XEditText_color_filter" format="color" />
     <attr name="XEditText_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>
@@ -1372,6 +1395,7 @@
     <attr name="XEditText_stated_stroke_gradient_offset_x1" format="dimension"/>
     <attr name="XEditText_stated_stroke_gradient_offset_y1" format="dimension"/>
     <attr name="XEditText_stated_text_color" format="color" />
+    <attr name="XEditText_stated_color_filter" format="color" />
     <attr name="XEditText_stated_stroke_gradient" format="enum">
         <enum name="linear" value="0"/>
         <enum name="radial" value="1"/>

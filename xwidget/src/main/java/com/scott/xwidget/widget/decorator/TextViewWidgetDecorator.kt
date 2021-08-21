@@ -2,6 +2,7 @@ package com.scott.xwidget.widget.decorator
 
 import android.content.res.ColorStateList
 import android.widget.TextView
+import com.scott.xwidget.Cons
 import com.scott.xwidget.drawable.DrawableInfo
 
 /**
@@ -20,15 +21,15 @@ open class TextViewWidgetDecorator<T: TextView> : IWidgetDecorator<T> {
         var stateNormal: IntArray? = null
 
         when (normalInfo.state) {
-            1 -> {
+            Cons.DrawableState.PRESSED -> {
                 stateArr = intArrayOf(android.R.attr.state_pressed)
                 stateNormal = intArrayOf(-android.R.attr.state_pressed)
             }
-            2 -> {
+            Cons.DrawableState.SELECTED -> {
                 stateArr = intArrayOf(android.R.attr.state_selected)
                 stateNormal = intArrayOf(-android.R.attr.state_selected)
             }
-            3 -> {
+            Cons.DrawableState.CHECKED -> {
                 stateArr = intArrayOf(android.R.attr.state_checked)
                 stateNormal = intArrayOf(-android.R.attr.state_checked)
             }

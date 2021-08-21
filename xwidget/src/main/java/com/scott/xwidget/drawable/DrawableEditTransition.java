@@ -127,6 +127,8 @@ public class DrawableEditTransition implements IDrawableEditTransition {
     }
 
     public void commit() {
-        drawableEditor.commit(this.drawableInfo);
+        if (drawableEditor != null) {
+            drawableEditor.commit(this.drawableInfo);
+        }
     }
 }

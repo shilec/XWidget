@@ -105,7 +105,8 @@ class Template {
         template.append("        drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y, 0f);\n");
         template.append("        drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y1, 0f);\n");
         template.append("\n");
-        template.append("        drawableInfo.textColor = arr.getColor(R.styleable.XTextView_XTextView_text_color, 0);\n");
+        template.append("        drawableInfo.textColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_text_color, 0);\n");
+        template.append("        drawableInfo.colorFilter = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_color_filter, -1);\n");
         template.append("\n");
         template.append("        return drawableInfo;\n");
         template.append("    }\n");
@@ -151,7 +152,8 @@ class Template {
         template.append("        drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y, 0f);\n");
         template.append("        drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y1, 0f);\n");
         template.append("\n");
-        template.append("        drawableInfo.textColor = arr.getColor(R.styleable.XTextView_XTextView_stated_text_color, 0);\n");
+        template.append("        drawableInfo.textColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_text_color, 0);\n");
+        template.append("        drawableInfo.colorFilter = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_color_filter, -1);\n");
         template.append("        return drawableInfo;\n");
         template.append("    }\n");
         template.append("\n");

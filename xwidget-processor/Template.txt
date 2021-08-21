@@ -100,7 +100,8 @@ public class XViewParserTemplate implements IWidgetParser {
         drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y, 0f);
         drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stroke_gradient_offset_y1, 0f);
 
-        drawableInfo.textColor = arr.getColor(R.styleable.XTextView_XTextView_text_color, 0);
+        drawableInfo.textColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_text_color, 0);
+        drawableInfo.colorFilter = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_color_filter, -1);
 
         return drawableInfo;
     }
@@ -146,7 +147,8 @@ public class XViewParserTemplate implements IWidgetParser {
         drawableInfo.strokeGradientOffsetY = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y, 0f);
         drawableInfo.strokeGradientOffsetY1 = arr.getDimension(R.styleable.XTextViewCustom_XTextViewCustom_stated_stroke_gradient_offset_y1, 0f);
 
-        drawableInfo.textColor = arr.getColor(R.styleable.XTextView_XTextView_stated_text_color, 0);
+        drawableInfo.textColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_text_color, 0);
+        drawableInfo.colorFilter = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_stated_color_filter, -1);
         return drawableInfo;
     }
 
