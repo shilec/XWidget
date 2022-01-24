@@ -4,6 +4,8 @@
 
 <!-- XFrameLayout -->
 <declare-styleable name="XFrameLayout" >
+    <attr name="XFrameLayout_ripple_enable" format="boolean" />
+    <attr name="XFrameLayout_ripple_color" format="color" />
     <attr name="XFrameLayout_corner" format="dimension" />
     <attr name="XFrameLayout_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -121,6 +123,8 @@
 
 <!-- XRadioButton -->
 <declare-styleable name="XRadioButton" >
+    <attr name="XRadioButton_ripple_enable" format="boolean" />
+    <attr name="XRadioButton_ripple_color" format="color" />
     <attr name="XRadioButton_corner" format="dimension" />
     <attr name="XRadioButton_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -238,6 +242,8 @@
 
 <!-- XView -->
 <declare-styleable name="XView" >
+    <attr name="XView_ripple_enable" format="boolean" />
+    <attr name="XView_ripple_color" format="color" />
     <attr name="XView_corner" format="dimension" />
     <attr name="XView_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -355,6 +361,8 @@
 
 <!-- XTextView -->
 <declare-styleable name="XTextView" >
+    <attr name="XTextView_ripple_enable" format="boolean" />
+    <attr name="XTextView_ripple_color" format="color" />
     <attr name="XTextView_corner" format="dimension" />
     <attr name="XTextView_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -472,6 +480,8 @@
 
 <!-- XButton -->
 <declare-styleable name="XButton" >
+    <attr name="XButton_ripple_enable" format="boolean" />
+    <attr name="XButton_ripple_color" format="color" />
     <attr name="XButton_corner" format="dimension" />
     <attr name="XButton_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -589,6 +599,8 @@
 
 <!-- XRelativeLayout -->
 <declare-styleable name="XRelativeLayout" >
+    <attr name="XRelativeLayout_ripple_enable" format="boolean" />
+    <attr name="XRelativeLayout_ripple_color" format="color" />
     <attr name="XRelativeLayout_corner" format="dimension" />
     <attr name="XRelativeLayout_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -706,6 +718,8 @@
 
 <!-- XImageButton -->
 <declare-styleable name="XImageButton" >
+    <attr name="XImageButton_ripple_enable" format="boolean" />
+    <attr name="XImageButton_ripple_color" format="color" />
     <attr name="XImageButton_corner" format="dimension" />
     <attr name="XImageButton_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -823,6 +837,8 @@
 
 <!-- XImageView -->
 <declare-styleable name="XImageView" >
+    <attr name="XImageView_ripple_enable" format="boolean" />
+    <attr name="XImageView_ripple_color" format="color" />
     <attr name="XImageView_corner" format="dimension" />
     <attr name="XImageView_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -940,6 +956,8 @@
 
 <!-- XLinearLayout -->
 <declare-styleable name="XLinearLayout" >
+    <attr name="XLinearLayout_ripple_enable" format="boolean" />
+    <attr name="XLinearLayout_ripple_color" format="color" />
     <attr name="XLinearLayout_corner" format="dimension" />
     <attr name="XLinearLayout_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -1057,6 +1075,8 @@
 
 <!-- XCheckBox -->
 <declare-styleable name="XCheckBox" >
+    <attr name="XCheckBox_ripple_enable" format="boolean" />
+    <attr name="XCheckBox_ripple_color" format="color" />
     <attr name="XCheckBox_corner" format="dimension" />
     <attr name="XCheckBox_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -1174,6 +1194,8 @@
 
 <!-- XConstraintLayout -->
 <declare-styleable name="XConstraintLayout" >
+    <attr name="XConstraintLayout_ripple_enable" format="boolean" />
+    <attr name="XConstraintLayout_ripple_color" format="color" />
     <attr name="XConstraintLayout_corner" format="dimension" />
     <attr name="XConstraintLayout_corner_type">
         <flag name="left_top" value="0x01"/>
@@ -1291,6 +1313,8 @@
 
 <!-- XEditText -->
 <declare-styleable name="XEditText" >
+    <attr name="XEditText_ripple_enable" format="boolean" />
+    <attr name="XEditText_ripple_color" format="color" />
     <attr name="XEditText_corner" format="dimension" />
     <attr name="XEditText_corner_type">
         <flag name="left_top" value="0x01"/>

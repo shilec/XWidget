@@ -1,13 +1,14 @@
-package com.scott.xwidget.parser;
+package com.example.viewdemo;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.RippleDrawable;
 import android.util.AttributeSet;
 
 import com.scott.xwidget.IWidgetParser;
-import com.scott.xwidget.R;
 import com.scott.xwidget.drawable.DrawableInfo;
 import com.scott.xwidget.drawable.GradientDrawableDecorator;
 import com.scott.xwidget.drawable.StateListDrawableDecorator;
@@ -16,8 +17,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 
-public class XViewParserTemplate implements IWidgetParser {
-    public XViewParserTemplate() {
+public class XViewParserTemplateTest implements IWidgetParser {
+    public XViewParserTemplateTest() {
     }
 
     private DrawableInfo mNormal;
@@ -41,10 +42,19 @@ public class XViewParserTemplate implements IWidgetParser {
             return new StateListDrawableDecorator(type, normalDrawable, stateDrawable);
         }
 
+        boolean rippleEnable = arr.getBoolean(R.styleable.XTextViewCustom_XTextViewCustom_ripple_enable, false);
+        int rippleColor = arr.getColor(R.styleable.XTextViewCustom_XTextViewCustom_ripple_color, 0);
+
         mNormal = fromNormalTypeArray(arr);
         mNormal.state = type;
+
+
         if (type == 0) {
-            return new GradientDrawableDecorator(mNormal);
+            if (rippleEnable) {
+                return new RippleDrawable(ColorStateList.valueOf(rippleColor), new GradientDrawableDecorator(mNormal), null);
+            } else {
+                return new GradientDrawableDecorator(mNormal);
+            }
         }
 
         // 默认所有属性copy自normal, 只修改差异化部分
@@ -56,7 +66,11 @@ public class XViewParserTemplate implements IWidgetParser {
         stateDrawable = new GradientDrawableDecorator(mStated);
 
         arr.recycle();
-        return new StateListDrawableDecorator(type, normalDrawable, stateDrawable);
+        if (!rippleEnable) {
+            return new StateListDrawableDecorator(type, normalDrawable, stateDrawable);
+        } else {
+            return new RippleDrawable(ColorStateList.valueOf(rippleColor), new StateListDrawableDecorator(type, normalDrawable, stateDrawable), null);
+        }
     }
 
     public DrawableInfo fromNormalTypeArray(TypedArray arr) {

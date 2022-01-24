@@ -1,6 +1,7 @@
 package com.scott.xwidget;
 
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.RippleDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -45,6 +46,10 @@ public class XWidgetParser {
         Drawable drawable = parser.parseDrawable(t.getContext(), attrs, t.getBackground());
         if (drawable instanceof StateListDrawableDecorator
                 && ((StateListDrawableDecorator) drawable).getStateType() == StateListDrawableDecorator.STATE_TYPE_PRESSED) {
+            t.setClickable(true);
+        }
+
+        if (drawable instanceof RippleDrawable) {
             t.setClickable(true);
         }
 

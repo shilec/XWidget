@@ -73,6 +73,10 @@ public class XWidgetBuildHelper {
             builder.append(NEW_LINE);
             builder.append("<!-- ").append(name).append(" -->").append(NEW_LINE);
             builder.append("<declare-styleable name=\"").append(name).append("\" >").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_ripple_enable\" format=\"boolean\" />").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_ripple_color\" format=\"color\" />").append(NEW_LINE);
+
             builder.append("    <attr name=\"").append(name).append("_corner\" format=\"dimension\" />").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_corner_type\">").append(NEW_LINE);
             builder.append("        <flag name=\"left_top\" value=\"0x01\"/>").append(NEW_LINE);
