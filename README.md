@@ -98,6 +98,8 @@
 
 | 属性名称 | 示例
 --------| ---
+**XButtonCustom_ripple_enable**|**允许按压波纹**
+**XButtonCustom_ripple_color**|**按压波纹颜色**
 **XButtonCustom_corner**|**圆角度数**
 **XButtonCustom_corner_type**|**圆角类型，默认 all。left_top,left_bottom,right_top,right_bottom**
 **XButtonCustom_solid_color**|**背景填充颜色，当没有设置渐变填充时生效**
