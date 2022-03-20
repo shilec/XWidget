@@ -7,7 +7,7 @@ import android.graphics.drawable.GradientDrawable
 /**
  *  gradient drawable with shadow
  */
-class GradientDrawableDecorator(drawableInfo: DrawableInfo) : GradientDrawable() ,
+class GradientDrawableDecorator(private val drawableInfo: DrawableInfo) : GradientDrawable() ,
     IDrawableEditor {
     private val renderHead: IRender = FirstDrawableRender()
 
@@ -18,14 +18,18 @@ class GradientDrawableDecorator(drawableInfo: DrawableInfo) : GradientDrawable()
     }
 
     private val editor =
-        DrawableEditTransition(drawableInfo, this)
+        DrawableEditBuilder(drawableInfo, this)
 
     init {
         commit(drawableInfo)
     }
 
-    fun beginTransition(): IDrawableEditTransition {
+    override fun newBuilder(): IDrawableEditBuilder {
         return editor
+    }
+
+    override fun getXDrawableInfo(): DrawableInfo {
+        return drawableInfo
     }
 
     fun addRender(render: IRender) {

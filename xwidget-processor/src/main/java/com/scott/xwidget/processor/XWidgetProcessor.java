@@ -60,13 +60,11 @@ public class XWidgetProcessor extends AbstractProcessor {
 
     private boolean handleProcess(RoundEnvironment roundEnv) {
         Set<? extends Element> elements = roundEnv.getElementsAnnotatedWith(XWidget.class);
-        Iterator<? extends Element> iterator = elements.iterator();
 
         //List<String> names = new ArrayList<>();
         //List<String> widgetCls = new ArrayList<>();
 
-        while (iterator.hasNext()) {
-            Element element = iterator.next();
+        for (Element element : elements) {
             String name = element.getSimpleName().toString();
             String fullViewClsName = element.toString();
             String packageName = element.getAnnotation(XWidget.class).resourcePackageName();
@@ -82,7 +80,8 @@ public class XWidgetProcessor extends AbstractProcessor {
 
     private void generateParser(String fullClsName, String name, String packageName) {
         StringBuilder builder = Template.template;
-        String s = builder.toString().replace("XTextViewCustom", name);
+        String s = builder.toString().replace("XViewTemplate", name);
+        s = s.replace("xwidget.template;", "xwidget.parser;");
         s = s.replace("XViewParserTemplate", name + "$$WidgetParser");
         s = s.replace("com.scott.xwidget.R", packageName + ".R");
 

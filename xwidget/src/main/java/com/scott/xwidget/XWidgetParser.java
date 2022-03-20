@@ -1,7 +1,6 @@
 package com.scott.xwidget;
 
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.RippleDrawable;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -10,8 +9,9 @@ import androidx.annotation.Nullable;
 
 import com.scott.xwidget.drawable.DrawableInfo;
 import com.scott.xwidget.drawable.GradientDrawableDecorator;
+import com.scott.xwidget.drawable.RippleDrawableDecorator;
 import com.scott.xwidget.drawable.StateListDrawableDecorator;
-import com.scott.xwidget.drawable.WidgetEditorTransition;
+import com.scott.xwidget.drawable.XWidgetEditor;
 import com.scott.xwidget.widget.decorator.IWidgetDecorator;
 import com.scott.xwidget.widget.decorator.WidgetDecoratorFactory;
 
@@ -49,7 +49,7 @@ public class XWidgetParser {
             t.setClickable(true);
         }
 
-        if (drawable instanceof RippleDrawable) {
+        if (drawable instanceof RippleDrawableDecorator) {
             t.setClickable(true);
         }
 
@@ -90,18 +90,22 @@ public class XWidgetParser {
         inject(t, attrs, null);
     }
 
-    public @Nullable static <T extends View> WidgetEditorTransition getDrawableEditTransition(@NonNull T v) {
+    public @Nullable static <T extends View> XWidgetEditor getWidgetEditor(@NonNull T v) {
         Drawable drawable = v.getBackground();
         if (drawable == null) return null;
 
         if (drawable instanceof GradientDrawableDecorator) {
-            return new WidgetEditorTransition(((GradientDrawableDecorator) drawable).beginTransition(), null);
+            return new XWidgetEditor(((GradientDrawableDecorator) drawable).newBuilder(), null);
         }
 
         if (drawable instanceof StateListDrawableDecorator) {
             GradientDrawableDecorator normal = (GradientDrawableDecorator) ((StateListDrawableDecorator) drawable).getNormalDrawable();
             GradientDrawableDecorator state = (GradientDrawableDecorator) ((StateListDrawableDecorator) drawable).getStateDrawable();
-            return new WidgetEditorTransition(normal.beginTransition(), state.beginTransition());
+            return new XWidgetEditor(normal.newBuilder(), state.newBuilder());
+        }
+
+        if (drawable instanceof RippleDrawableDecorator) {
+            return new XWidgetEditor(((RippleDrawableDecorator) drawable).newBuilder(), ((RippleDrawableDecorator) drawable).newBuilder());
         }
         return null;
     }

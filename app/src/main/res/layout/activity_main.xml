@@ -51,11 +51,24 @@
 <!--        app:layout_constraintLeft_toLeftOf="parent"-->
 <!--        android:layout_height="50dp"/>-->
         <com.scott.xwidget.widget.XView
+            app:XView_stroke_border="2dp"
+            app:XView_stroke_color="#ff0000"
+            android:id="@+id/v_test"
             android:layout_gravity="center"
             app:XView_corner="200dp"
             app:XView_solid_color="@color/colorAccent"
             app:XView_ripple_enable="true"
             app:XView_ripple_color="#FFFFFF"
+            app:XView_state="pressed"
+            app:XView_stated_solid_color="#000"
             android:layout_width="200dp"
             android:layout_height="200dp"/>
+
+        <Button
+            android:text="CHANGE"
+            android:layout_marginBottom="100dp"
+            android:layout_gravity="center|bottom"
+            android:id="@+id/btn_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 </FrameLayout>

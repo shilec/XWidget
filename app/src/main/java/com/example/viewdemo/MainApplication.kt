@@ -7,7 +7,5 @@ import com.scott.xwidget.widget.XButton
 class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-
-        XWidgetParser.addParser(XButton::class.java, XButtonParser2())
     }
 }

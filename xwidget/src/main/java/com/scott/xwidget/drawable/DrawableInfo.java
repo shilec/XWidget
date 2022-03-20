@@ -38,9 +38,15 @@ public class DrawableInfo {
     public int strokeGradientType;
 
     public int state;
+
     public int textColor; // 仅支持TextView及其子View
 
-    public int colorFilter; // ImageView使用
+    public int colorFilter; // ImageView使
+
+    /*--- Use for ripple ---*/
+    public boolean rippleEnable;
+    public int rippleColor;
+    /*----------------------*/
 
     public DrawableInfo() {
 
@@ -149,6 +155,14 @@ public class DrawableInfo {
 
         if (textColor == 0 && drawableInfo.textColor != 0) {
             textColor = drawableInfo.textColor;
+        }
+
+        if (rippleColor == 0 && drawableInfo.rippleColor != 0) {
+            rippleColor = drawableInfo.rippleColor;
+        }
+
+        if (rippleEnable != drawableInfo.rippleEnable) {
+            rippleEnable = drawableInfo.rippleEnable;
         }
     }
 
