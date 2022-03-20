@@ -1,0 +1,101 @@
+<!-- XView -->
+<declare-styleable name="XView" >
+    <attr name="XView_corner" format="dimension" />
+    <attr name="XView_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XView_shadow_radius" format="dimension"/>
+    <attr name="XView_shadow_dx" format="dimension"/>
+    <attr name="XView_shadow_dy" format="dimension"/>
+    <attr name="XView_shadow_color" format="color"/>
+    <attr name="XView_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XView_blur_radius" format="dimension"/>
+    <attr name="XView_blur_color" format="color"/>
+    <attr name="XView_solid_color" format="color" />
+    <attr name="XView_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
+    </attr>
+    <attr name="XView_gradient_center_color" format="color"/>
+    <attr name="XView_gradient_start_color" format="color"/>
+    <attr name="XView_gradient_end_color" format="color"/>
+    <attr name="XView_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
+    </attr>
+    <attr name="XView_gradient_radius" format="dimension"/>
+    <attr name="XView_stroke_color" format="color" />
+    <attr name="XView_stroke_border" format="dimension"/>
+
+    <attr name="XView_stroke_gradient_start_color" format="color"/>
+    <attr name="XView_stroke_gradient_end_color" format="color"/>
+    <attr name="XView_stroke_gradient_middle_color" format="color"/>
+    <attr name="XView_stroke_gradient_offset_x" format="dimension"/>
+    <attr name="XView_stroke_gradient_offset_y" format="dimension"/>
+
+    <attr name="XView_state" format="enum">
+        <enum name="none" value="0"/>
+        <enum name="pressed" value="1"/>
+        <enum name="selected" value="2"/>
+        <enum name="checked" value="3"/>
+    </attr>
+
+    <attr name="XView_stated_stroke_gradient_start_color" format="color"/>
+    <attr name="XView_stated_stroke_gradient_end_color" format="color"/>
+    <attr name="XView_stated_stroke_gradient_middle_color" format="color"/>
+    <attr name="XView_stated_stroke_gradient_offset_x" format="dimension"/>
+    <attr name="XView_stated_stroke_gradient_offset_y" format="dimension"/>
+
+    <attr name="XView_stated_corner" format="dimension" />
+    <attr name="XView_stated_corner_type">
+        <flag name="left_top" value="0x01"/>
+        <flag name="right_top" value="0x08"/>
+        <flag name="left_bottom" value="0x16"/>
+        <flag name="right_bottom" value="0x32"/>
+        <flag name="all" value="0"/>
+    </attr>
+    <attr name="XView_stated_shadow_radius" format="dimension"/>
+    <attr name="XView_stated_shadow_dx" format="dimension"/>
+    <attr name="XView_stated_shadow_dy" format="dimension"/>
+    <attr name="XView_stated_shadow_color" format="color"/>
+    <attr name="XView_stated_blur_type" format="enum">
+        <enum name="normal" value="0"/>
+        <enum name="outer" value="1"/>
+        <enum name="solid" value="2"/>
+        <enum name="inner" value="3"/>
+    </attr>
+    <attr name="XView_stated_blur_radius" format="dimension"/>
+    <attr name="XView_stated_blur_color" format="color"/>
+    <attr name="XView_stated_solid_color" format="color"/>
+    <attr name="XView_stated_solid_gradient" format="enum">
+        <enum name="linear" value="0"/>
+        <enum name="radial" value="1"/>
+        <enum name="sweep" value="2"/>
+    </attr>
+    <attr name="XView_stated_gradient_center_color" format="color"/>
+    <attr name="XView_stated_gradient_start_color" format="color"/>
+    <attr name="XView_stated_gradient_end_color" format="color"/>
+    <attr name="XView_stated_gradient_orientation" format="enum">
+        <enum name="top_bottom" value="2"/>
+        <enum name="left_right" value="1"/>
+        <enum name="top_left_bottom_right" value="3"/>
+        <enum name="top_right_bottom_left" value="4"/>
+    </attr>
+    <attr name="XView_stated_gradient_radius" format="dimension"/>
+    <attr name="XView_stated_stroke_color" format="color" />
+    <attr name="XView_stated_stroke_border" format="dimension"/>
+    <attr name="XView_drawable" format="reference"/>
+    <attr name="XView_stated_drawable" format="reference"/>
+</declare-styleable> <!-- XView -->
