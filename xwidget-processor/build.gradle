@@ -1,7 +1,5 @@
 apply plugin: 'java-library'
 apply plugin: "com.scott.xwidget-template-plugin"
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.shilec.service'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
