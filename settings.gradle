@@ -1,7 +1,4 @@
-include ':xwidget-tempate-plugin'
-include ':xwidget-gradle-plugin'
 include ':xwidget-annotation'
-include ':xwidget-processor'
 include ':xwidget'
 include ':app'
 rootProject.name = "ViewDemo"

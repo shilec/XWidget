@@ -36,5 +36,5 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 
     implementation project(":xwidget-annotation")
-    kapt project(':xwidget-processor')
+//    kapt project(':xwidget-processor')
 }
