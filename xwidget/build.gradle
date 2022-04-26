@@ -7,12 +7,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.shilec'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
 
@@ -36,5 +36,5 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 
     implementation project(":xwidget-annotation")
-//    kapt project(':xwidget-processor')
+    kapt project(':xwidget-processor')
 }
