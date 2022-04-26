@@ -20,6 +20,7 @@ object WidgetDecoratorFactory {
         addWidgetDecorator(XImageView::class.java, ImageViewWidgetDecorator())
     }
 
+    @JvmStatic
     @Suppress("UNCHECKED_CAST")
     fun <V: View> getWidgetDecorator(cls: Class<V>): IWidgetDecorator<V>? {
         val decorator = decorators[cls]
@@ -39,6 +40,7 @@ object WidgetDecoratorFactory {
         return null
     }
 
+    @JvmStatic
     fun <V: View> addWidgetDecorator(cls: Class<V>, decorator: IWidgetDecorator<V>) {
         decorators[cls] = decorator
     }

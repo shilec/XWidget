@@ -2,6 +2,7 @@ package com.scott.xwidget;
 
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Pair;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.scott.xwidget.drawable.DrawableInfo;
 import com.scott.xwidget.drawable.GradientDrawableDecorator;
+import com.scott.xwidget.drawable.IDrawableEditor;
 import com.scott.xwidget.drawable.RippleDrawableDecorator;
 import com.scott.xwidget.drawable.StateListDrawableDecorator;
 import com.scott.xwidget.drawable.XWidgetEditor;
@@ -27,7 +29,15 @@ public class XWidgetParser {
         }
     }
 
-    public static <T extends View> void inject(T t, AttributeSet attrs, IWidgetParser customParser) throws ClassNotFoundException {
+    public static <T extends View> void inject(T t, AttributeSet attrs, IWidgetParser customParser) {
+        try {
+            injectInternal(t, attrs, customParser);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static <T extends View> void injectInternal(T t, AttributeSet attrs, IWidgetParser customParser) throws ClassNotFoundException {
         IWidgetParser parser = customParser;
         if (parser == null) {
             parser = DEFAULT_PARSERS.get(t.getClass());
@@ -55,23 +65,50 @@ public class XWidgetParser {
 
         t.setBackground(drawable);
 
-        decorateWidget(parser, t);
+        decorateWidget(drawable, t);
     }
 
-    private static <T extends View> void decorateWidget(IWidgetParser parser, T t) {
-        IWidgetDecorator<? extends View> decorator = WidgetDecoratorFactory.INSTANCE.getWidgetDecorator(t.getClass());
+    private static <T extends View> void decorateWidget(Drawable drawable, T t) {
+        IWidgetDecorator<T> decorator = (IWidgetDecorator<T>) WidgetDecoratorFactory.getWidgetDecorator(t.getClass());
         if (decorator != null) {
-            IWidgetDecorator<T> decorator1 = (IWidgetDecorator<T>) decorator;
-            DrawableInfo drawableInfo = parser.getNormalDrawableInfo();
-            DrawableInfo statedInfo = parser.getStatedDrawableInfo();
 
-            if (drawableInfo != null) {
-                if (statedInfo == null) {
-                    statedInfo = drawableInfo;
-                }
-                decorator1.decorate(t, drawableInfo, statedInfo);
+            Pair<DrawableInfo, DrawableInfo> drawableInfo = getNormalDrawableInfo(drawable);
+            if (drawableInfo == null) {
+                return;
+            }
+
+            DrawableInfo normalInfo = drawableInfo.first;
+            DrawableInfo statedInfo = drawableInfo.second;
+
+            decorator.decorate(t, normalInfo, statedInfo);
+        }
+    }
+
+    private static Pair<DrawableInfo, DrawableInfo> getNormalDrawableInfo(Drawable drawable) {
+        if (drawable == null) return null;
+
+        DrawableInfo normal = null;
+        DrawableInfo state = null;
+
+        if (drawable instanceof IDrawableEditor) {
+            normal = ((IDrawableEditor) drawable).getXDrawableInfo();
+        } else if (drawable instanceof StateListDrawableDecorator) {
+            Drawable normaDrawable = ((StateListDrawableDecorator) drawable).getNormalDrawable();
+            if (normaDrawable instanceof IDrawableEditor) {
+                normal = ((IDrawableEditor) normaDrawable).getXDrawableInfo();
+            }
+
+            Drawable stateDrawable = ((StateListDrawableDecorator) drawable).getStateDrawable();
+            if (stateDrawable instanceof IDrawableEditor) {
+                state = ((IDrawableEditor) stateDrawable).getXDrawableInfo();
             }
         }
+
+        if (normal != null && state == null) {
+            state = new DrawableInfo();
+            state.merge(normal);
+        }
+        return new Pair<>(normal, state);
     }
 
     private static IWidgetParser getDefaultParser(String vName) {
@@ -86,7 +123,7 @@ public class XWidgetParser {
         return null;
     }
 
-    public static <T extends View> void inject(T t, AttributeSet attrs) throws ClassNotFoundException {
+    public static <T extends View> void inject(T t, AttributeSet attrs) {
         inject(t, attrs, null);
     }
 

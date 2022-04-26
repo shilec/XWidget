@@ -1,7 +1,6 @@
 package com.scott.xwidget.drawable
 
 import android.graphics.*
-import android.util.Log
 import com.scott.xwidget.utils.ParseUtils
 
 class ShadowDrawableRender(
@@ -41,11 +40,11 @@ class ShadowDrawableRender(
     override var next: IRender? = null
 
     override fun draw(canvas: Canvas, bounds: Rect) {
-        val start = System.currentTimeMillis()
+        //val start = System.currentTimeMillis()
         if (shadowR != 0) {
             drawShadowBackground(canvas, bounds)
         }
-        Log.d(TAG, "-- render spend time - ${System.currentTimeMillis() - start}")
+        // Log.d(TAG, "-- render spend time - ${System.currentTimeMillis() - start}")
     }
 
     override fun onBoundsChanged(left: Int, top: Int, right: Int, bottom: Int): Rect {

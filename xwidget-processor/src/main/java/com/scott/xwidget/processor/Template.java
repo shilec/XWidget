@@ -28,9 +28,6 @@ class Template {
         template.append("    public XViewParserTemplate() {\n");
         template.append("    }\n");
         template.append("\n");
-        template.append("    private DrawableInfo mNormal;\n");
-        template.append("    private DrawableInfo mStated;\n");
-        template.append("\n");
         template.append("    @Nullable\n");
         template.append("    @Override\n");
         template.append("    public Drawable parseDrawable(@NotNull Context context, @Nullable AttributeSet attrs, @Nullable Drawable drawable) {\n");
@@ -52,7 +49,7 @@ class Template {
         template.append("        boolean rippleEnable = arr.getBoolean(R.styleable.XViewTemplate_XViewTemplate_ripple_enable, false);\n");
         template.append("        int rippleColor = arr.getColor(R.styleable.XViewTemplate_XViewTemplate_ripple_color, 0);\n");
         template.append("\n");
-        template.append("        mNormal = fromNormalTypeArray(arr);\n");
+        template.append("        DrawableInfo mNormal = fromNormalTypeArray(arr);\n");
         template.append("        mNormal.state = type;\n");
         template.append("        mNormal.rippleEnable = rippleEnable;\n");
         template.append("        mNormal.rippleColor = rippleColor;\n");
@@ -66,7 +63,7 @@ class Template {
         template.append("        }\n");
         template.append("\n");
         template.append("        // 默认所有属性copy自normal, 只修改差异化部分\n");
-        template.append("        mStated = fromStatedTypeArray(arr);\n");
+        template.append("        DrawableInfo mStated = fromStatedTypeArray(arr);\n");
         template.append("        mStated.merge(mNormal);\n");
         template.append("        mStated.state = type;\n");
         template.append("\n");
@@ -172,18 +169,6 @@ class Template {
         template.append("        drawableInfo.textColor = arr.getColor(R.styleable.XViewTemplate_XViewTemplate_stated_text_color, 0);\n");
         template.append("        drawableInfo.colorFilter = arr.getColor(R.styleable.XViewTemplate_XViewTemplate_stated_color_filter, -1);\n");
         template.append("        return drawableInfo;\n");
-        template.append("    }\n");
-        template.append("\n");
-        template.append("    @NotNull\n");
-        template.append("    @Override\n");
-        template.append("    public DrawableInfo getNormalDrawableInfo() {\n");
-        template.append("        return mNormal;\n");
-        template.append("    }\n");
-        template.append("\n");
-        template.append("    @NotNull\n");
-        template.append("    @Override\n");
-        template.append("    public DrawableInfo getStatedDrawableInfo() {\n");
-        template.append("        return mStated;\n");
         template.append("    }\n");
         template.append("}\n");
     }

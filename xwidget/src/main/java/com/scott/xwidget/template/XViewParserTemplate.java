@@ -23,9 +23,6 @@ public class XViewParserTemplate implements IWidgetParser {
     public XViewParserTemplate() {
     }
 
-    private DrawableInfo mNormal;
-    private DrawableInfo mStated;
-
     @Nullable
     @Override
     public Drawable parseDrawable(@NotNull Context context, @Nullable AttributeSet attrs, @Nullable Drawable drawable) {
@@ -47,7 +44,7 @@ public class XViewParserTemplate implements IWidgetParser {
         boolean rippleEnable = arr.getBoolean(R.styleable.XViewTemplate_XViewTemplate_ripple_enable, false);
         int rippleColor = arr.getColor(R.styleable.XViewTemplate_XViewTemplate_ripple_color, 0);
 
-        mNormal = fromNormalTypeArray(arr);
+        DrawableInfo mNormal = fromNormalTypeArray(arr);
         mNormal.state = type;
         mNormal.rippleEnable = rippleEnable;
         mNormal.rippleColor = rippleColor;
@@ -61,7 +58,7 @@ public class XViewParserTemplate implements IWidgetParser {
         }
 
         // 默认所有属性copy自normal, 只修改差异化部分
-        mStated = fromStatedTypeArray(arr);
+        DrawableInfo mStated = fromStatedTypeArray(arr);
         mStated.merge(mNormal);
         mStated.state = type;
 
@@ -167,17 +164,5 @@ public class XViewParserTemplate implements IWidgetParser {
         drawableInfo.textColor = arr.getColor(R.styleable.XViewTemplate_XViewTemplate_stated_text_color, 0);
         drawableInfo.colorFilter = arr.getColor(R.styleable.XViewTemplate_XViewTemplate_stated_color_filter, -1);
         return drawableInfo;
-    }
-
-    @NotNull
-    @Override
-    public DrawableInfo getNormalDrawableInfo() {
-        return mNormal;
-    }
-
-    @NotNull
-    @Override
-    public DrawableInfo getStatedDrawableInfo() {
-        return mStated;
     }
 }
