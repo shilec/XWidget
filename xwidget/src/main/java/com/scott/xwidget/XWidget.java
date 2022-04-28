@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.util.Pair;
 import android.view.View;
 
+import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -24,6 +25,7 @@ import com.scott.xwidget.widget.decorator.WidgetDecoratorFactory;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Keep
 public class XWidget {
     private static final Map<Class<? extends View>, IWidgetParser> DEFAULT_PARSERS = new ConcurrentHashMap<>();
 

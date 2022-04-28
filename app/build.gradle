@@ -28,8 +28,10 @@ android {
     }
 }
 
-greendao {
-    schemaVersion 1000
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
@@ -41,10 +43,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation project(":xwidget")
+    //implementation project(":xwidget")
     implementation project(":xwidget-annotation")
 
-    kapt project(':xwidget-processor')
+   // kapt project(':xwidget-processor')
     //implementation 'com.github.shilec:XWidget:1.3.2'
 //    kapt 'com.github.shilec:XWidget:1.2.8-beta'
+
+    implementation (name: 'xwidget-release', ext: 'aar')
 }

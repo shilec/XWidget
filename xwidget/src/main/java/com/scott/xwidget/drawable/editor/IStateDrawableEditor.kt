@@ -1,5 +1,6 @@
 package com.scott.xwidget.drawable.editor
 
+import androidx.annotation.Keep
 import com.scott.xwidget.annotation.StateType
 import com.scott.xwidget.drawable.IDrawableDecorator
 
@@ -9,6 +10,7 @@ import com.scott.xwidget.drawable.IDrawableDecorator
  * @Email       :   shilec@126.com
  * @Description :
  */
+@Keep
 interface IStateDrawableEditor : IDrawableDecorator {
     val normalEditor: IDrawableEditor
 

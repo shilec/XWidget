@@ -2,6 +2,7 @@ package com.scott.xwidget.drawable.editor;
 
 
 import androidx.annotation.IntDef;
+import androidx.annotation.Keep;
 
 import com.scott.xwidget.drawable.DrawableInfo;
 
@@ -10,6 +11,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+@Keep
 public interface IDrawableEditTransaction {
     /**
      * 作为 transaction 代理类
