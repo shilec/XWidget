@@ -1,6 +1,7 @@
-package com.scott.xwidget.drawable
+package com.scott.xwidget.drawable.render
 
 import android.graphics.*
+import com.scott.xwidget.drawable.DrawableInfo
 import com.scott.xwidget.utils.ParseUtils
 
 /**
@@ -36,10 +37,10 @@ class GradientStrokeRender(private val drawableInfo: DrawableInfo) : IRender {
         val path = Path()
 
         val rectF = RectF()
-        rectF.left = bounds.left + drawableInfo.strokeBorderWith
-        rectF.top = bounds.top + drawableInfo.strokeBorderWith
-        rectF.right = bounds.right - drawableInfo.strokeBorderWith
-        rectF.bottom = bounds.bottom - drawableInfo.strokeBorderWith
+        rectF.left = bounds.left + drawableInfo.strokeBorderWith / 2
+        rectF.top = bounds.top + drawableInfo.strokeBorderWith / 2
+        rectF.right = bounds.right - drawableInfo.strokeBorderWith / 2
+        rectF.bottom = bounds.bottom - drawableInfo.strokeBorderWith / 2
 
         val corners = ParseUtils.getCornersByType(drawableInfo.cornerType, drawableInfo.corner)
         path.addRoundRect(rectF, corners, Path.Direction.CW)

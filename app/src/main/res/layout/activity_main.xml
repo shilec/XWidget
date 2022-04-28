@@ -53,8 +53,12 @@
         <com.scott.xwidget.widget.XView
             app:XView_stroke_border="2dp"
             app:XView_stroke_color="#ff0000"
+            app:XView_stated_corner="3dp"
+            app:XView_stated_stroke_border="20dp"
+            app:XView_stated_stroke_color="@color/colorPrimaryDark"
             android:id="@+id/v_test"
-            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
             app:XView_corner="200dp"
             app:XView_solid_color="@color/colorAccent"
             app:XView_ripple_enable="true"
@@ -63,6 +67,30 @@
             app:XView_stated_solid_color="#000"
             android:layout_width="200dp"
             android:layout_height="200dp"/>
+
+        <com.scott.xwidget.widget.XTextView
+            android:layout_gravity="center"
+            android:id="@+id/v_test2"
+            app:XTextView_corner="20dp"
+            app:XTextView_stroke_border="3dp"
+            app:XTextView_stroke_gradient_end_color="#2277aa"
+            app:XTextView_stroke_gradient_middle_color="#FFFF00"
+            app:XTextView_stroke_gradient_start_color="#445511"
+
+            app:XTextView_stated_stroke_gradient_end_color="#9988ff"
+            app:XTextView_stated_stroke_gradient_middle_color="#331122"
+            app:XTextView_stated_stroke_gradient_start_color="#006644"
+            app:XTextView_state="pressed"
+            app:XTextView_text_color="#000000"
+            app:XTextView_stated_text_color="#ff0000"
+
+            app:XTextView_stated_solid_color="#222222"
+            app:XTextView_solid_color="#eeeeee"
+            android:text="FUCK"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
 
         <Button
             android:text="CHANGE"

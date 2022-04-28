@@ -3,7 +3,7 @@ package com.scott.xwidget.template
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-import com.scott.xwidget.XWidgetParser
+import com.scott.xwidget.XWidget
 
 /**
  * @Author:      shijiale
@@ -13,6 +13,6 @@ import com.scott.xwidget.XWidgetParser
  */
 class XViewTemplate(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
    init {
-       XWidgetParser.inject(this, attrs)
+       XWidget.inject(this, attrs)
    }
 }

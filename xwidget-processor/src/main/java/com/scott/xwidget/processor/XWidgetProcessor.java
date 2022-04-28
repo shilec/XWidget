@@ -1,15 +1,11 @@
 package com.scott.xwidget.processor;
 
 import com.google.auto.service.AutoService;
-import com.scott.xwidget.annotation.XWidget;
+import com.scott.xwidget.annotation.XWidgetView;
 
 import java.io.IOException;
-import java.io.StringReader;
-import java.io.StringWriter;
 import java.io.Writer;
-import java.util.Iterator;
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -39,7 +35,7 @@ public class XWidgetProcessor extends AbstractProcessor {
     @Override
     public Set<String> getSupportedAnnotationTypes() {
         Set<String> types = new LinkedHashSet<>(1);
-        types.add(XWidget.class.getCanonicalName());
+        types.add(XWidgetView.class.getCanonicalName());
         return types;
     }
 
@@ -59,7 +55,7 @@ public class XWidgetProcessor extends AbstractProcessor {
     }
 
     private boolean handleProcess(RoundEnvironment roundEnv) {
-        Set<? extends Element> elements = roundEnv.getElementsAnnotatedWith(XWidget.class);
+        Set<? extends Element> elements = roundEnv.getElementsAnnotatedWith(XWidgetView.class);
 
         //List<String> names = new ArrayList<>();
         //List<String> widgetCls = new ArrayList<>();
@@ -67,7 +63,7 @@ public class XWidgetProcessor extends AbstractProcessor {
         for (Element element : elements) {
             String name = element.getSimpleName().toString();
             String fullViewClsName = element.toString();
-            String packageName = element.getAnnotation(XWidget.class).resourcePackageName();
+            String packageName = element.getAnnotation(XWidgetView.class).resourcePackageName();
             generateParser(fullViewClsName, name, packageName);
 
             //names.add(name);

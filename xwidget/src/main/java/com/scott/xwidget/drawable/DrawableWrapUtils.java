@@ -2,43 +2,17 @@ package com.scott.xwidget.drawable;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 
+import com.scott.xwidget.drawable.render.BlurDrawableRender;
+import com.scott.xwidget.drawable.render.GradientStrokeRender;
+import com.scott.xwidget.drawable.render.ShadowDrawableRender;
 import com.scott.xwidget.utils.ParseUtils;
 
 public class DrawableWrapUtils {
 
     public static void wrap(DrawableInfo drawableInfo, RippleDrawableDecorator drawableDecorator) {
-        Drawable content = drawableDecorator.getContent();
-        if (content == null) {
-            return;
-        }
-
-        if (content instanceof StateListDrawableDecorator) {
-            Drawable normal = ((StateListDrawableDecorator) content).getNormalDrawable();
-            Drawable state = ((StateListDrawableDecorator) content).getStateDrawable();
-
-            if (normal instanceof GradientDrawableDecorator) {
-                normal.mutate();
-                DrawableInfo normalInfo = ((GradientDrawableDecorator) normal).getXDrawableInfo();
-                normalInfo.merge(drawableInfo);
-                wrap(normalInfo, (GradientDrawableDecorator) normal);
-            }
-
-            if (normal instanceof GradientDrawableDecorator) {
-                state.mutate();
-                DrawableInfo stateInfo = ((GradientDrawableDecorator) normal).getXDrawableInfo();
-                stateInfo.merge(drawableInfo);
-                wrap(stateInfo, (GradientDrawableDecorator) state);
-            }
-        } else if (content instanceof GradientDrawableDecorator) {
-            wrap(drawableInfo, (GradientDrawableDecorator) content);
-        } else {
-            throw new RuntimeException("Not support content type " + content.getClass().getSimpleName());
-        }
-
         if (!drawableInfo.rippleEnable) {
             drawableDecorator.setColor(ColorStateList.valueOf(Color.TRANSPARENT));
         } else {
@@ -47,6 +21,8 @@ public class DrawableWrapUtils {
     }
 
     public static void wrap(DrawableInfo drawableInfo, GradientDrawableDecorator drawable) {
+        drawable.mutate();
+
         // 填充色
         if (drawableInfo.solidColor != Color.TRANSPARENT) {
             drawable.setColor(drawableInfo.solidColor);

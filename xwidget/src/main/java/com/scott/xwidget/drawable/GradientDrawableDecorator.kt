@@ -2,7 +2,13 @@ package com.scott.xwidget.drawable
 
 import android.graphics.Canvas
 import android.graphics.Rect
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
+import com.scott.xwidget.drawable.editor.DrawableEditTransaction
+import com.scott.xwidget.drawable.editor.IDrawableEditTransaction
+import com.scott.xwidget.drawable.editor.IDrawableEditor
+import com.scott.xwidget.drawable.render.FirstDrawableRender
+import com.scott.xwidget.drawable.render.IRender
 
 /**
  *  gradient drawable with shadow
@@ -11,25 +17,35 @@ class GradientDrawableDecorator(private val drawableInfo: DrawableInfo) : Gradie
     IDrawableEditor {
     private val renderHead: IRender = FirstDrawableRender()
 
-    override fun commit(drawableInfo: DrawableInfo?) {
-        mutate()
+    var tag: String? = null
+
+    override fun commit(drawableInfo: DrawableInfo?): IDrawableEditor {
         renderHead.next = null
-        DrawableWrapUtils.wrap(drawableInfo, this)
+        this.drawableInfo.merge(drawableInfo)
+        DrawableWrapUtils.wrap(this.drawableInfo, this)
+        return this
     }
 
     private val editor =
-        DrawableEditBuilder(drawableInfo, this)
+        DrawableEditTransaction(
+            drawableInfo,
+            this
+        )
 
     init {
         commit(drawableInfo)
     }
 
-    override fun newBuilder(): IDrawableEditBuilder {
+    override fun edit(): IDrawableEditTransaction {
         return editor
     }
 
     override fun getXDrawableInfo(): DrawableInfo {
         return drawableInfo
+    }
+
+    override fun asDrawable(): Drawable {
+        return this
     }
 
     fun addRender(render: IRender) {
@@ -41,21 +57,24 @@ class GradientDrawableDecorator(private val drawableInfo: DrawableInfo) : Gradie
     }
 
     override fun draw(canvas: Canvas) {
+        super.draw(canvas)
+
         var head = renderHead.next
         while (head != null) {
             head.draw(canvas, bounds)
             head = head.next
         }
-        super.draw(canvas)
     }
 
-    override fun setBounds(left: Int, top: Int, right: Int, bottom: Int) {
+    override fun onBoundsChange(r: Rect?) {
+        if (r == null) return
+
         var head = renderHead.next
-        var rect = Rect(left, top, right, bottom)
+        var rect = Rect(r.left, r.top, r.right, r.bottom)
         while (head != null) {
-            rect = head.onBoundsChanged(left, top, right, bottom)
+            rect = head.onBoundsChanged(r.left, r.top, r.right, r.bottom)
             head = head.next
         }
-        super.setBounds(rect.left, rect.top, rect.right, rect.bottom)
+        super.onBoundsChange(rect)
     }
 }

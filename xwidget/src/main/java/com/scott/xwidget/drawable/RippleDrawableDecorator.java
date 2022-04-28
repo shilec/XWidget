@@ -8,6 +8,12 @@ import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.scott.xwidget.annotation.StateType;
+import com.scott.xwidget.drawable.editor.DrawableEditTransaction;
+import com.scott.xwidget.drawable.editor.IDrawableEditTransaction;
+import com.scott.xwidget.drawable.editor.IDrawableEditor;
+import com.scott.xwidget.drawable.editor.IStateDrawableEditor;
+
 /**
  * @Author: shijiale
  * @Email: shilec@126.com
@@ -34,32 +40,56 @@ public class RippleDrawableDecorator extends RippleDrawable implements IDrawable
      */
     public RippleDrawableDecorator(@NonNull ColorStateList color, @Nullable Drawable content, @Nullable Drawable mask, DrawableInfo drawableInfo) {
         super(color, content, mask);
-        mEditor = new DrawableEditBuilder(drawableInfo, this);
+        mEditor = new DrawableEditTransaction(drawableInfo, this);
         mContent = content;
         mDrawableInfo = drawableInfo;
     }
 
-    private final DrawableEditBuilder mEditor;
+    private final DrawableEditTransaction mEditor;
 
     @Override
-    public void commit(DrawableInfo drawableInfo) {
+    public IDrawableEditor commit(DrawableInfo drawableInfo) {
         mutate();
-        DrawableWrapUtils.wrap(drawableInfo, this);
+
+        this.mDrawableInfo.merge(drawableInfo);
+
+        if (mContent instanceof IDrawableEditor) {
+            ((IDrawableEditor) mContent).commit(drawableInfo);
+        } else if (mContent instanceof IStateDrawableEditor) {
+            IStateDrawableEditor stateDrawableEditor = (IStateDrawableEditor) mContent;
+            IDrawableEditor editor;
+            if (drawableInfo.currentState == StateType.TYPE_NONE) {
+                editor = stateDrawableEditor.getNormalEditor();
+            } else {
+                editor = stateDrawableEditor.getStateEditor();
+            }
+            editor.commit(drawableInfo);
+        }
+
+        DrawableWrapUtils.wrap(mDrawableInfo, this);
+
         int id = getId(0);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             setDrawable(0, mContent);
         } else {
             setDrawableByLayerId(id, mContent);
         }
+        return this;
     }
 
     @Override
-    public IDrawableEditBuilder newBuilder() {
+    public IDrawableEditTransaction edit() {
         return mEditor;
     }
 
     @Override
     public DrawableInfo getXDrawableInfo() {
         return mDrawableInfo;
+    }
+
+    @NonNull
+    @Override
+    public Drawable asDrawable() {
+        return this;
     }
 }

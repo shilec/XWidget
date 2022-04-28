@@ -1,4 +1,4 @@
-package com.scott.xwidget.drawable
+package com.scott.xwidget.drawable.render
 
 import android.graphics.Canvas
 import android.graphics.Rect

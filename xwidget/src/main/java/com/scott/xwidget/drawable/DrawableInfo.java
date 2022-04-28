@@ -48,11 +48,16 @@ public class DrawableInfo {
     public int rippleColor;
     /*----------------------*/
 
+    // Use for internal
+    public int currentState;
+
     public DrawableInfo() {
 
     }
 
     public void merge(DrawableInfo drawableInfo) {
+        if (drawableInfo == null) return;
+
         if (solidColor == 0 && drawableInfo.solidColor != 0) {
             solidColor = drawableInfo.solidColor;
         }

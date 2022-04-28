@@ -27,10 +27,6 @@
                 app:XTextView_stroke_gradient_start_color="#FF2AABFF"
                 app:XTextView_stroke_gradient_end_color="#FFFF60DE"
 
-                app:XTextView_stated_stroke_gradient_start_color="#00ff00"
-                app:XTextView_stated_stroke_gradient_end_color="#0000ff"
-                app:XTextView_state="pressed"
-
                 app:XTextView_stroke_border="2dp"
                 app:XTextView_corner="25dp"
                 android:textColor="#000"

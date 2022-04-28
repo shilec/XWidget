@@ -1,23 +1,31 @@
-package com.scott.xwidget.drawable;
+package com.scott.xwidget.drawable.editor;
 
 
 import androidx.annotation.IntDef;
+
+import com.scott.xwidget.drawable.DrawableInfo;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-public interface IDrawableEditBuilder {
+public interface IDrawableEditTransaction {
+    /**
+     * 作为 transaction 代理类
+     * @param transaction 可以传入一个其他的IDrawableEditTransaction，同步修改
+     */
+    IDrawableEditTransaction asProxy(IDrawableEditTransaction transaction);
+
     /**
      * @see DrawableInfo#corner
      */
-    IDrawableEditBuilder setCorner(float corner);
+    IDrawableEditTransaction setCorner(float corner);
 
     /**
      * @see DrawableInfo#cornerType
      */
-    IDrawableEditBuilder setCornerType(int cornerType);
+    IDrawableEditTransaction setCornerType(int cornerType);
 
     @IntDef({
 
@@ -41,7 +49,7 @@ public interface IDrawableEditBuilder {
     /**
      * @see DrawableInfo#blurType
      */
-    IDrawableEditBuilder setBlurType(@BlurType int blurType);
+    IDrawableEditTransaction setBlurType(@BlurType int blurType);
 
     @IntDef({
             BlurType.NORMAL,
@@ -61,37 +69,37 @@ public interface IDrawableEditBuilder {
     /**
      * @see DrawableInfo#blurRadius
      */
-    IDrawableEditBuilder setBlurRadius(float r);
+    IDrawableEditTransaction setBlurRadius(float r);
 
     /**
      * @see DrawableInfo#blurColor
      */
-    IDrawableEditBuilder setBlurColor(int color);
+    IDrawableEditTransaction setBlurColor(int color);
 
     /**
      * @see DrawableInfo#shadowRadius
      */
-    IDrawableEditBuilder setShadowRadius(float r);
+    IDrawableEditTransaction setShadowRadius(float r);
 
     /**
      * @see DrawableInfo#shadowDx
      */
-    IDrawableEditBuilder setShadowDx(int dx);
+    IDrawableEditTransaction setShadowDx(int dx);
 
     /**
      * @see DrawableInfo#shadowDy
      */
-    IDrawableEditBuilder setShadowDy(int dy);
+    IDrawableEditTransaction setShadowDy(int dy);
 
     /**
      * @see DrawableInfo#shadowColor
      */
-    IDrawableEditBuilder setShadowColor(int shadowColor);
+    IDrawableEditTransaction setShadowColor(int shadowColor);
 
     /**
      * @see DrawableInfo#solidColor
      */
-    IDrawableEditBuilder setSolidColor(int color);
+    IDrawableEditTransaction setSolidColor(int color);
 
     @IntDef({
             GradientType.LINEAR,
@@ -109,14 +117,14 @@ public interface IDrawableEditBuilder {
     /**
      * @see DrawableInfo#gradientType
      */
-    IDrawableEditBuilder setSolidGradient(@GradientType int type);
+    IDrawableEditTransaction setSolidGradient(@GradientType int type);
 
     /**
      * @see DrawableInfo#gradientStartColor
      * @see DrawableInfo#gradientCenterColor
      * @see DrawableInfo#gradientEndColor
      */
-    IDrawableEditBuilder setGradientColors(int[] colors);
+    IDrawableEditTransaction setGradientColors(int[] colors);
 
 
     @IntDef({
@@ -133,29 +141,29 @@ public interface IDrawableEditBuilder {
     /**
      * @see DrawableInfo#gradientOrientation
      */
-    IDrawableEditBuilder setGradientOrientation(@Orientation int orientation);
+    IDrawableEditTransaction setGradientOrientation(@Orientation int orientation);
 
     /**
      * @see DrawableInfo#gradientRadius
      */
-    IDrawableEditBuilder setGradientRadius(float r);
+    IDrawableEditTransaction setGradientRadius(float r);
 
     /**
      * @see DrawableInfo#strokeBorderColor
      */
-    IDrawableEditBuilder setStrokeBorderColor(int color);
+    IDrawableEditTransaction setStrokeBorderColor(int color);
 
     /**
      * @see DrawableInfo#strokeBorderWith
      */
-    IDrawableEditBuilder setStrokeBorder(float border);
+    IDrawableEditTransaction setStrokeBorder(float border);
 
     /**
      * @see DrawableInfo#strokeGradientStartColor
      * @see DrawableInfo#strokeGradientMiddleColor
      * @see DrawableInfo#strokeGradientEndColor
      */
-    IDrawableEditBuilder setStrokeGradientColors(int[] colors);
+    IDrawableEditTransaction setStrokeGradientColors(int[] colors);
 
     /**
      * @see DrawableInfo#strokeGradientOffsetX
@@ -163,35 +171,35 @@ public interface IDrawableEditBuilder {
      * @see DrawableInfo#strokeGradientOffsetX1
      * @see DrawableInfo#strokeGradientOffsetY1
      */
-    IDrawableEditBuilder setStrokeGradientOffset(float[] offset);
+    IDrawableEditTransaction setStrokeGradientOffset(float[] offset);
 
     /**
      * @see DrawableInfo#strokeGradientType
     */
-    IDrawableEditBuilder setStrokeGradientType(@GradientType int type);
+    IDrawableEditTransaction setStrokeGradientType(@GradientType int type);
 
     /**
      * @see DrawableInfo#textColor
      */
-    IDrawableEditBuilder setTextColor(int color);
+    IDrawableEditTransaction setTextColor(int color);
 
     /**
      * @see DrawableInfo#colorFilter
      */
-    IDrawableEditBuilder setImageColorFilter(int color);
+    IDrawableEditTransaction setImageColorFilter(int color);
 
     /**
      * @see DrawableInfo#rippleEnable
      */
-    IDrawableEditBuilder setRippleEnable(boolean enable);
+    IDrawableEditTransaction setRippleEnable(boolean enable);
 
     /**
      * @see DrawableInfo#rippleColor
      */
-    IDrawableEditBuilder setRippleColor(int color);
+    IDrawableEditTransaction setRippleColor(int color);
 
     /**
      *  commit the drawable changes
      */
-    void commit();
+    IDrawableEditor commit();
 }

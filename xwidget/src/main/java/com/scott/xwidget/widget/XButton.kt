@@ -2,12 +2,11 @@ package com.scott.xwidget.widget
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatButton
-import com.scott.xwidget.XWidgetParser
-import com.scott.xwidget.annotation.XWidget
+import com.scott.xwidget.annotation.XWidgetView
 
-@XWidget("com.scott.xwidget")
+@XWidgetView("com.scott.xwidget")
 class XButton(context: Context, attrs: AttributeSet?) : AppCompatButton(context, attrs) {
     init {
-        XWidgetParser.inject(this, attrs)
+        com.scott.xwidget.XWidget.inject(this, attrs)
     }
 }
