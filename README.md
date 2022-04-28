@@ -5,9 +5,7 @@
 ### 一个扩展的控件库，扩展了一些常用控件的属性，减少开发过程中的drawable文件膨胀。
 
 ## 示例
-<video id="video" controls="" preload="none" poster="images/1.jpg">
-      <source id="mp4" src="images/1.mp4" type="video/mp4">
-</video>
+<img src="images/1.gif"/>
 
 ## 示例代码
 ```
