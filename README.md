@@ -70,7 +70,7 @@
 
 1. 自定义解析器
 
-        XWidgetParser.addParser(XButton::class.java, XButtonParser2())
+        XWidget.addParser(XButton::class.java, XButtonParser2())
 
 
 2. 扩展自定义View
@@ -78,10 +78,10 @@
     2.1 自定义View增加注解
     ```
         // 这里的包名是你的R文件的包名，例如: 你的R文件为 com.scott.demo.R; ,这里就是 com.scott.demo
-        @XWidget("com.example.viewdemo")
+        @XWidgetView("com.example.viewdemo")
         class XButtonCustom(context: Context, attrs: AttributeSet?) : AppCompatButton(context, attrs) {
             init {
-                XWidgetParser.inject(this, attrs)
+                XWidget.inject(this, attrs)
             }
         }
     ```
@@ -185,7 +185,7 @@
 
 ```
     // 获取IDrawableEditTransition
-    XWidgetParser.getDrawableEditTransition(v)
+    XWidget.getDrawableEditTransition(v)
             ?.beginNormalTransition
             ?.setCorner(10)
             ?.commit()
