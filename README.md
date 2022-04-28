@@ -5,7 +5,9 @@
 ### 一个扩展的控件库，扩展了一些常用控件的属性，减少开发过程中的drawable文件膨胀。
 
 ## 示例
-<img src="images/2.jpg"/>
+<video id="video" controls="" preload="none" poster="images/1.jpg">
+      <source id="mp4" src="images/1.mp4" type="video/mp4">
+</video>
 
 ## 示例代码
 ```
@@ -37,7 +39,7 @@
 
 2. 在要使用的module 的 build.gradle 中加入
 
-         implementation 'com.github.shilec:XWidget:1.3.2'
+         implementation 'com.github.shilec:XWidget:1.3.5'
 
 3. 添加混淆
 
@@ -75,8 +77,8 @@
 
         depenencies {
               ...... // 省略其他配置
-              implementation 'com.github.shilec:XWidget:1.3.2'
-            kapt('com.github.shilec:XWidget:1.3.2')
+              implementation 'com.github.shilec:XWidget:1.3.5'
+            kapt('com.github.shilec:XWidget:1.3.5')
         }
     ```
 
@@ -84,7 +86,7 @@
     ```
            dependencies {
                 ...... // 省略其他配置
-                classpath 'com.github.shilec.XWidget:xwidget-gradle-plugin:1.3.2'
+                classpath 'com.github.shilec.XWidget:xwidget-gradle-plugin:1.3.5'
             }
     ```
 
