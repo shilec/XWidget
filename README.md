@@ -2,21 +2,43 @@
 
 [![](https://jitpack.io/v/shilec/XWidget.svg)](https://jitpack.io/#shilec/XWidget)
 
-### 一个扩展的控件库，扩展了一些常用控件的属性，减少开发过程中的drawable文件膨胀。
+### 一个轻量级的扩展的原生控件库，通过自定义属性的方式，解析为目标drawable。减少了自定义Drawable文件的生成。实现简单，使用简单。自定义View只是一个载体，View中无任何自定义绘制，完全由原生Drawable实现，不用担心性能损耗。
 
 ## 示例
 <img src="images/1.gif"/>
 
-## 示例代码
+### 使用示例
+
+> `XWidget`提供了丰富的属性，属性名称基本上和手写Drawable文件中所涉及的属性一致，所以不需要特殊记忆，即写即用。不过在使用前需要理解`XWidget`中的一个概念，`stated`。包含有`stated`的属性表示，只有当当前控件的状态和`XWidget_state`一致时，才会触发。 `XWidget_state`其实对应的就是我们通常编写`selector`时所指定的状态。例如：想实现一个TextView在按压时，背景变为红色，圆角度数为`8dp`。你可以这样写：
+ ```
+    <com.scott.xwidget.widget.XTextView
+            android:layout_gravity="center"
+            android:id="@+id/v_test2"
+            app:XTextView_corner="8dp"
+            app:XTextView_solid_color="#ffffff"
+            app:XTextView_stated_solid_color="#FF0000"
+            android:text="FUCK"
+            app:XTextView_state="pressed"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+ ```
+> 如果想当TextView被`select`时，背景颜色切换，可以这样实现：
+
 ```
-    <com.scott.xwidget.widget.XFrameLayout
-        app:XFrameLayout_corner="8dp"
-        app:XFrameLayout_state="pressed"
-        app:XFrameLayout_gradient_center_color="#FFF654D0"
-        app:XFrameLayout_gradient_end_color="#FF3DB2FF"
-        app:XFrameLayout_gradient_start_color="@color/colorPrimary"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+   <com.scott.xwidget.widget.XTextView
+            android:layout_gravity="center"
+            android:id="@+id/v_test2"
+            app:XTextView_corner="8dp"
+            app:XTextView_state="selected"
+            app:XTextView_solid_color="#ffffff"
+            app:XTextView_stated_solid_color="#FF0000"
+            android:text="FUCK"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
 ```
 
 ## 支持的控件
