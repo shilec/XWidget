@@ -57,24 +57,22 @@ class GradientDrawableDecorator(private val drawableInfo: DrawableInfo) : Gradie
     }
 
     override fun draw(canvas: Canvas) {
+        var head = renderHead.next
         super.draw(canvas)
 
-        var head = renderHead.next
         while (head != null) {
             head.draw(canvas, bounds)
             head = head.next
         }
     }
 
-    override fun onBoundsChange(r: Rect?) {
-        if (r == null) return
-
+    override fun setBounds(left: Int, top: Int, right: Int, bottom: Int) {
         var head = renderHead.next
-        var rect = Rect(r.left, r.top, r.right, r.bottom)
+        var rect = Rect(left, top, right, bottom)
         while (head != null) {
-            rect = head.onBoundsChanged(r.left, r.top, r.right, r.bottom)
+            rect = head.onBoundsChanged(left, top, right, bottom)
             head = head.next
         }
-        super.onBoundsChange(rect)
+        super.setBounds(rect.left, rect.top, rect.right, rect.bottom)
     }
 }
