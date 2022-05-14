@@ -32,19 +32,19 @@ public interface IDrawableEditTransaction {
     @IntDef({
 
             CornerType.ALL,
-            CornerType.LEFT_BOTTOM,
+            CornerType.RIGHT_BOTTOM,
             CornerType.LEFT_TOP,
             CornerType.RIGHT_TOP,
-            CornerType.RIGHT_BOTTOM,
-            CornerType.LEFT_TOP | CornerType.RIGHT_TOP | CornerType.LEFT_BOTTOM | CornerType.RIGHT_BOTTOM,
+            CornerType.LEFT_BOTTOM,
+            CornerType.LEFT_TOP | CornerType.RIGHT_TOP | CornerType.RIGHT_BOTTOM | CornerType.LEFT_BOTTOM,
     })
     @Retention(RetentionPolicy.SOURCE)
     @Target({ElementType.FIELD, ElementType.LOCAL_VARIABLE, ElementType.PARAMETER})
     @interface CornerType {
         int LEFT_TOP = 0X01;
         int RIGHT_TOP = 0X08;
-        int LEFT_BOTTOM = 0X16;
-        int RIGHT_BOTTOM = 0x32;
+        int RIGHT_BOTTOM = 0X16;
+        int LEFT_BOTTOM = 0x32;
         int ALL = 0;
     }
 
