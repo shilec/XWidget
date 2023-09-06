@@ -179,7 +179,23 @@
 **XButtonCustom_stated_stroke_gradient_offset_y1**|**描边渐变Linear shader 截止y1 (参见: LinearGradient 参数, 默认为0 )**
 **XButtonCustom_drawable**|**正常情况下显示的drawable**
 **XButtonCustom_stated_drawable**|**在特定状态下显示的drawable, 如: selector**
-
+**XViewTemplate_shaped**|**是否形状背景，可以支持切角、内切角下的渐变填充、描边等**
+**XViewTemplate_shaped_topLeftCornerType**|**左上角切角类型，支持圆角、切角（corner or cut）**
+**XViewTemplate_shaped_topRightCornerType**|**右上角切角类型，支持圆角、切角（corner or cut）**
+**XViewTemplate_shaped_bottomLeftCornerType**|**左下角切角类型，支持圆角、切角（corner or cut）**
+**XViewTemplate_shaped_bottomRightCornerType**|**右上角切角类型，支持圆角、切角（corner or cut）**
+**XViewTemplate_shaped_topLeftSize**|**左上角切角大小**
+**XViewTemplate_shaped_bottomLeftSize**|**左下角切角大小**
+**XViewTemplate_shaped_topRightSize**|**右上角切角大小**
+**XViewTemplate_shaped_bottomRightSize**|**右下角切角大小**
+**XViewTemplate_shaped_leftEdgeType**|**左边切角类型，目前仅支持三角**
+**XViewTemplate_shaped_rightEdgeType**|**右边切角类型，目前仅支持三角**
+**XViewTemplate_shaped_topEdgeType**|**上边切角类型，目前仅支持三角**
+**XViewTemplate_shaped_bottomEdgeType**|**下边切角类型，目前仅支持三角**
+**XViewTemplate_shaped_topEdgeSize**|**上边内切角大小**
+**XViewTemplate_shaped_bottomEdgeSize**|**下边内切角大小**
+**XViewTemplate_shaped_leftEdgeSize**|**左边内切角大小**
+**XViewTemplate_shaped_rightEdgeSize**|**右边内切角大小**
 
 > 上述的字段在代码中的修改方式，支持的修改的字段在`IDrawableEditTransition` 接口中定义
 

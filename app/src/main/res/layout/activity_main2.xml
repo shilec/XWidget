@@ -24,6 +24,34 @@
                 android:layout_width="100dp"
                 android:layout_height="100dp"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="切角or内三角："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.scott.xwidget.widget.XTextView
+                android:id="@+id/v_test"
+                app:XTextView_shaped="true"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:text="标签"
+                app:XTextView_shaped_bottomLeftCornerType="cut"
+                app:XTextView_shaped_bottomLeftSize="15dp"
+                app:XTextView_shaped_topRightCornerType="cut"
+                app:XTextView_shaped_topLeftSize="15dp"
+                app:XTextView_shaped_topLeftCornerType="cut"
+                app:XTextView_shaped_rightEdgeSize="15dp"
+                app:XTextView_gradient_start_color="#00FF00"
+                app:XTextView_gradient_end_color="#FF00FF"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
