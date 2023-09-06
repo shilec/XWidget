@@ -206,6 +206,32 @@ public class XWidgetBuildHelper {
             builder.append("    <attr name=\"").append(name).append("_drawable\" format=\"reference\"/>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_stated_drawable\" format=\"reference\"/>").append(NEW_LINE);
 
+            builder.append("    <attr name=\"").append(name).append("_shaped\" format=\"boolean\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_shaped_topLeftCornerType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"corner\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"cut\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_topLeftSize\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_shaped_topRightCornerType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"corner\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"cut\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_topRightSize\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_shaped_bottomLeftCornerType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"corner\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"cut\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_bottomLeftSize\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_shaped_bottomRightCornerType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"corner\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("        <enum name=\"cut\" value=\"1\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_bottomRightSize\" format=\"dimension\"/>").append(NEW_LINE);
+
             builder.append("</declare-styleable>").append(NEW_LINE);
             builder.append("<!-- ").append(name).append(" -->").append(NEW_LINE);
         }

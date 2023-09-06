@@ -48,6 +48,16 @@ public class DrawableInfo {
     public int rippleColor;
     /*----------------------*/
 
+    public boolean shaped = false;
+    public int shapedTopLeftType = 0;
+    public int shapedTopRightType = 0;
+    public int shapedBottomLeftType = 0;
+    public int shapedBottomRightType = 0;
+    public float shapedTopLeftSize = 0;
+    public float shapedTopRightSize = 0;
+    public float shapedBottomLeftSize = 0;
+    public float shapedBottomRightSize = 0;
+
     // Use for internal
     public int currentState;
 
@@ -169,10 +179,46 @@ public class DrawableInfo {
         if (rippleEnable != drawableInfo.rippleEnable) {
             rippleEnable = drawableInfo.rippleEnable;
         }
+
+        if (drawableInfo.shaped) {
+            shaped = true;
+        }
+
+        if (shapedTopLeftType != drawableInfo.shapedTopLeftType) {
+            shapedTopLeftType = drawableInfo.shapedTopLeftType;
+        }
+
+        if (shapedTopLeftSize != drawableInfo.shapedTopLeftSize) {
+            shapedTopLeftSize = drawableInfo.shapedTopLeftSize;
+        }
+
+        if (shapedTopRightType != drawableInfo.shapedTopRightType) {
+            shapedTopRightType = drawableInfo.shapedTopRightType;
+        }
+
+        if (shapedTopRightSize != drawableInfo.shapedTopRightSize) {
+            shapedTopRightSize = drawableInfo.shapedTopRightSize;
+        }
+
+        if (shapedBottomLeftType != drawableInfo.shapedBottomLeftType) {
+            shapedBottomLeftType = drawableInfo.shapedBottomLeftType;
+        }
+
+        if (shapedBottomLeftSize != drawableInfo.shapedBottomLeftSize) {
+            shapedBottomLeftSize = drawableInfo.shapedBottomLeftSize;
+        }
+
+        if (shapedBottomRightType != drawableInfo.shapedBottomRightType) {
+            shapedBottomRightType = drawableInfo.shapedBottomRightType;
+        }
+
+        if (shapedBottomRightSize != drawableInfo.shapedBottomRightSize) {
+            shapedBottomRightSize = drawableInfo.shapedBottomRightSize;
+        }
     }
 
 
-    static GradientDrawable.Orientation getOrientation(int orientation) {
+    public static GradientDrawable.Orientation getOrientation(int orientation) {
         GradientDrawable.Orientation gradientOrientation = GradientDrawable.Orientation.LEFT_RIGHT;
         switch (orientation) {
             case 1:

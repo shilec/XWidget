@@ -115,5 +115,31 @@
         </attr>
         <attr name="XViewTemplate_drawable" format="reference"/>
         <attr name="XViewTemplate_stated_drawable" format="reference"/>
+
+        <attr name="XViewTemplate_shaped" format="boolean"/>
+
+        <attr name="XViewTemplate_shaped_topLeftCornerType" format="enum">
+            <enum name="corner" value="0"/>
+            <enum name="cut" value="1"/>
+        </attr>
+        <attr name="XViewTemplate_shaped_topLeftSize" format="dimension"/>
+
+        <attr name="XViewTemplate_shaped_topRightCornerType" format="enum">
+            <enum name="corner" value="0"/>
+            <enum name="cut" value="1"/>
+        </attr>
+        <attr name="XViewTemplate_shaped_topRightSize" format="dimension"/>
+
+        <attr name="XViewTemplate_shaped_bottomLeftCornerType" format="enum">
+            <enum name="corner" value="0"/>
+            <enum name="cut" value="1"/>
+        </attr>
+        <attr name="XViewTemplate_shaped_bottomLeftSize" format="dimension"/>
+
+        <attr name="XViewTemplate_shaped_bottomRightCornerType" format="enum">
+            <enum name="corner" value="0"/>
+            <enum name="cut" value="1"/>
+        </attr>
+        <attr name="XViewTemplate_shaped_bottomRightSize" format="dimension"/>
     </declare-styleable>
 </resources>

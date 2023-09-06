@@ -8,6 +8,7 @@ import android.os.Build;
 import com.scott.xwidget.drawable.render.BlurDrawableRender;
 import com.scott.xwidget.drawable.render.GradientStrokeRender;
 import com.scott.xwidget.drawable.render.ShadowDrawableRender;
+import com.scott.xwidget.drawable.render.ShapedDrawableRender;
 import com.scott.xwidget.utils.ParseUtils;
 
 public class DrawableWrapUtils {
@@ -22,6 +23,11 @@ public class DrawableWrapUtils {
 
     public static void wrap(DrawableInfo drawableInfo, GradientDrawableDecorator drawable) {
         drawable.mutate();
+
+        if (drawableInfo.shaped) {
+            drawable.addRender(new ShapedDrawableRender(drawableInfo));
+            return;
+        }
 
         // 填充色
         if (drawableInfo.solidColor != Color.TRANSPARENT) {

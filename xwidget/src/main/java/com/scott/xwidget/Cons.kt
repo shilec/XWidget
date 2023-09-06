@@ -13,4 +13,9 @@ object Cons {
         const val SELECTED = 2
         const val CHECKED = 3
     }
+
+    object CutCornerType {
+        const val ROUND_CORNER = 0
+        const val CUT_CORNER = 1
+    }
 }

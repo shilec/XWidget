@@ -118,6 +118,27 @@
     </attr>
     <attr name="XFrameLayout_drawable" format="reference"/>
     <attr name="XFrameLayout_stated_drawable" format="reference"/>
+    <attr name="XFrameLayout_shaped" format="boolean"/>
+    <attr name="XFrameLayout_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_topLeftSize" format="dimension"/>
+    <attr name="XFrameLayout_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_topRightSize" format="dimension"/>
+    <attr name="XFrameLayout_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XFrameLayout_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XFrameLayout -->
 
@@ -237,6 +258,27 @@
     </attr>
     <attr name="XRadioButton_drawable" format="reference"/>
     <attr name="XRadioButton_stated_drawable" format="reference"/>
+    <attr name="XRadioButton_shaped" format="boolean"/>
+    <attr name="XRadioButton_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRadioButton_shaped_topLeftSize" format="dimension"/>
+    <attr name="XRadioButton_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRadioButton_shaped_topRightSize" format="dimension"/>
+    <attr name="XRadioButton_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRadioButton_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XRadioButton_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRadioButton_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XRadioButton -->
 
@@ -356,6 +398,27 @@
     </attr>
     <attr name="XView_drawable" format="reference"/>
     <attr name="XView_stated_drawable" format="reference"/>
+    <attr name="XView_shaped" format="boolean"/>
+    <attr name="XView_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XView_shaped_topLeftSize" format="dimension"/>
+    <attr name="XView_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XView_shaped_topRightSize" format="dimension"/>
+    <attr name="XView_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XView_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XView_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XView_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XView -->
 
@@ -475,6 +538,27 @@
     </attr>
     <attr name="XTextView_drawable" format="reference"/>
     <attr name="XTextView_stated_drawable" format="reference"/>
+    <attr name="XTextView_shaped" format="boolean"/>
+    <attr name="XTextView_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XTextView_shaped_topLeftSize" format="dimension"/>
+    <attr name="XTextView_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XTextView_shaped_topRightSize" format="dimension"/>
+    <attr name="XTextView_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XTextView_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XTextView_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XTextView_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XTextView -->
 
@@ -594,6 +678,27 @@
     </attr>
     <attr name="XButton_drawable" format="reference"/>
     <attr name="XButton_stated_drawable" format="reference"/>
+    <attr name="XButton_shaped" format="boolean"/>
+    <attr name="XButton_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XButton_shaped_topLeftSize" format="dimension"/>
+    <attr name="XButton_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XButton_shaped_topRightSize" format="dimension"/>
+    <attr name="XButton_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XButton_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XButton_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XButton_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XButton -->
 
@@ -713,6 +818,27 @@
     </attr>
     <attr name="XRelativeLayout_drawable" format="reference"/>
     <attr name="XRelativeLayout_stated_drawable" format="reference"/>
+    <attr name="XRelativeLayout_shaped" format="boolean"/>
+    <attr name="XRelativeLayout_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_topLeftSize" format="dimension"/>
+    <attr name="XRelativeLayout_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_topRightSize" format="dimension"/>
+    <attr name="XRelativeLayout_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XRelativeLayout_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XRelativeLayout -->
 
@@ -832,6 +958,27 @@
     </attr>
     <attr name="XImageButton_drawable" format="reference"/>
     <attr name="XImageButton_stated_drawable" format="reference"/>
+    <attr name="XImageButton_shaped" format="boolean"/>
+    <attr name="XImageButton_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageButton_shaped_topLeftSize" format="dimension"/>
+    <attr name="XImageButton_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageButton_shaped_topRightSize" format="dimension"/>
+    <attr name="XImageButton_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageButton_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XImageButton_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageButton_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XImageButton -->
 
@@ -951,6 +1098,27 @@
     </attr>
     <attr name="XImageView_drawable" format="reference"/>
     <attr name="XImageView_stated_drawable" format="reference"/>
+    <attr name="XImageView_shaped" format="boolean"/>
+    <attr name="XImageView_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageView_shaped_topLeftSize" format="dimension"/>
+    <attr name="XImageView_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageView_shaped_topRightSize" format="dimension"/>
+    <attr name="XImageView_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageView_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XImageView_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XImageView_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XImageView -->
 
@@ -1070,6 +1238,27 @@
     </attr>
     <attr name="XLinearLayout_drawable" format="reference"/>
     <attr name="XLinearLayout_stated_drawable" format="reference"/>
+    <attr name="XLinearLayout_shaped" format="boolean"/>
+    <attr name="XLinearLayout_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_topLeftSize" format="dimension"/>
+    <attr name="XLinearLayout_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_topRightSize" format="dimension"/>
+    <attr name="XLinearLayout_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XLinearLayout_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XLinearLayout -->
 
@@ -1189,6 +1378,27 @@
     </attr>
     <attr name="XCheckBox_drawable" format="reference"/>
     <attr name="XCheckBox_stated_drawable" format="reference"/>
+    <attr name="XCheckBox_shaped" format="boolean"/>
+    <attr name="XCheckBox_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XCheckBox_shaped_topLeftSize" format="dimension"/>
+    <attr name="XCheckBox_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XCheckBox_shaped_topRightSize" format="dimension"/>
+    <attr name="XCheckBox_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XCheckBox_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XCheckBox_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XCheckBox_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XCheckBox -->
 
@@ -1308,6 +1518,27 @@
     </attr>
     <attr name="XConstraintLayout_drawable" format="reference"/>
     <attr name="XConstraintLayout_stated_drawable" format="reference"/>
+    <attr name="XConstraintLayout_shaped" format="boolean"/>
+    <attr name="XConstraintLayout_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_topLeftSize" format="dimension"/>
+    <attr name="XConstraintLayout_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_topRightSize" format="dimension"/>
+    <attr name="XConstraintLayout_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XConstraintLayout_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XConstraintLayout -->
 
@@ -1427,6 +1658,27 @@
     </attr>
     <attr name="XEditText_drawable" format="reference"/>
     <attr name="XEditText_stated_drawable" format="reference"/>
+    <attr name="XEditText_shaped" format="boolean"/>
+    <attr name="XEditText_shaped_topLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XEditText_shaped_topLeftSize" format="dimension"/>
+    <attr name="XEditText_shaped_topRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XEditText_shaped_topRightSize" format="dimension"/>
+    <attr name="XEditText_shaped_bottomLeftCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XEditText_shaped_bottomLeftSize" format="dimension"/>
+    <attr name="XEditText_shaped_bottomRightCornerType" format="enum">
+        <enum name="corner" value="0"/>
+        <enum name="cut" value="1"/>
+    </attr>
+    <attr name="XEditText_shaped_bottomRightSize" format="dimension"/>
 </declare-styleable>
 <!-- XEditText -->
 </resources>
