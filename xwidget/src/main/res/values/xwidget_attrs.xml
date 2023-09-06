@@ -139,6 +139,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XFrameLayout_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XFrameLayout_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XFrameLayout_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XFrameLayout_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XFrameLayout_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XFrameLayout_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XFrameLayout -->
 
@@ -279,6 +295,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XRadioButton_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XRadioButton_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRadioButton_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XRadioButton_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRadioButton_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XRadioButton_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRadioButton_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XRadioButton_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRadioButton_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XRadioButton -->
 
@@ -419,6 +451,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XView_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XView_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XView_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XView_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XView_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XView_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XView_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XView_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XView_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XView -->
 
@@ -559,6 +607,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XTextView_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XTextView_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XTextView_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XTextView_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XTextView_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XTextView_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XTextView_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XTextView_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XTextView_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XTextView -->
 
@@ -699,6 +763,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XButton_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XButton_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XButton_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XButton_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XButton_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XButton_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XButton_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XButton_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XButton_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XButton -->
 
@@ -839,6 +919,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XRelativeLayout_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XRelativeLayout_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XRelativeLayout_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XRelativeLayout_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XRelativeLayout_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XRelativeLayout_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XRelativeLayout -->
 
@@ -979,6 +1075,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XImageButton_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XImageButton_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageButton_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XImageButton_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageButton_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XImageButton_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageButton_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XImageButton_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageButton_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XImageButton -->
 
@@ -1119,6 +1231,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XImageView_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XImageView_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageView_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XImageView_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageView_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XImageView_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageView_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XImageView_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XImageView_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XImageView -->
 
@@ -1259,6 +1387,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XLinearLayout_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XLinearLayout_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XLinearLayout_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XLinearLayout_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XLinearLayout_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XLinearLayout_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XLinearLayout -->
 
@@ -1399,6 +1543,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XCheckBox_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XCheckBox_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XCheckBox_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XCheckBox_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XCheckBox_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XCheckBox_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XCheckBox_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XCheckBox_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XCheckBox_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XCheckBox -->
 
@@ -1539,6 +1699,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XConstraintLayout_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XConstraintLayout_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XConstraintLayout_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XConstraintLayout_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XConstraintLayout_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XConstraintLayout_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XConstraintLayout -->
 
@@ -1679,6 +1855,22 @@
         <enum name="cut" value="1"/>
     </attr>
     <attr name="XEditText_shaped_bottomRightSize" format="dimension"/>
+    <attr name="XEditText_shaped_leftEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XEditText_shaped_leftEdgeSize" format="dimension"/>
+    <attr name="XEditText_shaped_rightEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XEditText_shaped_rightEdgeSize" format="dimension"/>
+    <attr name="XEditText_shaped_topEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XEditText_shaped_topEdgeSize" format="dimension"/>
+    <attr name="XEditText_shaped_bottomEdgeType" format="enum">
+        <enum name="triangle" value="0"/>
+    </attr>
+    <attr name="XEditText_shaped_bottomEdgeSize" format="dimension"/>
 </declare-styleable>
 <!-- XEditText -->
 </resources>

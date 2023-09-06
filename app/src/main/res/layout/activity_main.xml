@@ -51,15 +51,21 @@
 <!--        app:layout_constraintLeft_toLeftOf="parent"-->
 <!--        android:layout_height="50dp"/>-->
 
-    <com.scott.xwidget.widget.XView
+    <com.scott.xwidget.widget.XTextView
         android:id="@+id/v_test"
-        app:XView_shaped="true"
-        app:XView_shaped_bottomLeftCornerType="cut"
-        app:XView_shaped_bottomLeftSize="15dp"
-        app:XView_shaped_topRightCornerType="cut"
-        app:XView_shaped_topLeftSize="15dp"
-        app:XView_shaped_topLeftCornerType="cut"
-        app:XView_solid_color="#FF0000"
+        app:XTextView_shaped="true"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:text="标签"
+        app:XTextView_shaped_bottomLeftCornerType="cut"
+        app:XTextView_shaped_bottomLeftSize="15dp"
+        app:XTextView_shaped_topRightCornerType="cut"
+        app:XTextView_shaped_topLeftSize="15dp"
+        app:XTextView_shaped_topLeftCornerType="cut"
+        app:XTextView_shaped_rightEdgeSize="15dp"
+        app:XTextView_gradient_start_color="#00FF00"
+        app:XTextView_gradient_end_color="#FF00FF"
         android:layout_gravity="center"
         android:layout_width="100dp"
         android:layout_height="30dp"/>

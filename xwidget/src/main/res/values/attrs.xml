@@ -131,15 +131,35 @@
         <attr name="XViewTemplate_shaped_topRightSize" format="dimension"/>
 
         <attr name="XViewTemplate_shaped_bottomLeftCornerType" format="enum">
-            <enum name="corner" value="0"/>
-            <enum name="cut" value="1"/>
+            <enum name="corner" value="0" />
+            <enum name="cut" value="1" />
         </attr>
-        <attr name="XViewTemplate_shaped_bottomLeftSize" format="dimension"/>
+        <attr name="XViewTemplate_shaped_bottomLeftSize" format="dimension" />
 
         <attr name="XViewTemplate_shaped_bottomRightCornerType" format="enum">
-            <enum name="corner" value="0"/>
-            <enum name="cut" value="1"/>
+            <enum name="corner" value="0" />
+            <enum name="cut" value="1" />
         </attr>
-        <attr name="XViewTemplate_shaped_bottomRightSize" format="dimension"/>
+        <attr name="XViewTemplate_shaped_bottomRightSize" format="dimension" />
+
+        <attr name="XViewTemplate_shaped_leftEdgeType" format="enum">
+            <enum name="triangle" value="0" />
+        </attr>
+        <attr name="XViewTemplate_shaped_leftEdgeSize" format="dimension" />
+
+        <attr name="XViewTemplate_shaped_rightEdgeType" format="enum">
+            <enum name="triangle" value="0" />
+        </attr>
+        <attr name="XViewTemplate_shaped_rightEdgeSize" format="dimension" />
+
+        <attr name="XViewTemplate_shaped_topEdgeType" format="enum">
+            <enum name="triangle" value="0" />
+        </attr>
+        <attr name="XViewTemplate_shaped_topEdgeSize" format="dimension" />
+
+        <attr name="XViewTemplate_shaped_bottomEdgeType" format="enum">
+            <enum name="triangle" value="0" />
+        </attr>
+        <attr name="XViewTemplate_shaped_bottomEdgeSize" format="dimension" />
     </declare-styleable>
 </resources>

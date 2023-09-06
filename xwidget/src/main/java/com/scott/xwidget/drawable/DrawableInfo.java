@@ -57,6 +57,14 @@ public class DrawableInfo {
     public float shapedTopRightSize = 0;
     public float shapedBottomLeftSize = 0;
     public float shapedBottomRightSize = 0;
+    public int shapedLeftEdgeType = 0;
+    public float shapedLeftEdgeSize = 0;
+    public int shapedRightEdgeType = 0;
+    public float shapedRightEdgeSize = 0;
+    public int shapedTopEdgeType = 0;
+    public float shapedTopEdgeSize = 0;
+    public int shapedBottomEdgeType = 0;
+    public float shapedBottomEdgeSize = 0;
 
     // Use for internal
     public int currentState;
@@ -214,6 +222,38 @@ public class DrawableInfo {
 
         if (shapedBottomRightSize != drawableInfo.shapedBottomRightSize) {
             shapedBottomRightSize = drawableInfo.shapedBottomRightSize;
+        }
+        
+        if (shapedLeftEdgeType != drawableInfo.shapedLeftEdgeType) {
+            shapedLeftEdgeType = drawableInfo.shapedLeftEdgeType;
+        }
+        
+        if (shapedLeftEdgeSize != drawableInfo.shapedLeftEdgeSize) {
+            shapedLeftEdgeSize = drawableInfo.shapedLeftEdgeSize;
+        }
+
+        if (shapedRightEdgeType != drawableInfo.shapedRightEdgeType) {
+            shapedRightEdgeType = drawableInfo.shapedRightEdgeType;
+        }
+
+        if (shapedRightEdgeSize != drawableInfo.shapedRightEdgeSize) {
+            shapedRightEdgeSize = drawableInfo.shapedRightEdgeSize;
+        }
+
+        if (shapedTopEdgeType != drawableInfo.shapedTopEdgeType) {
+            shapedTopEdgeType = drawableInfo.shapedTopEdgeType;
+        }
+
+        if (shapedTopEdgeSize != drawableInfo.shapedTopEdgeSize) {
+            shapedTopEdgeSize = drawableInfo.shapedTopEdgeSize;
+        }
+
+        if (shapedBottomEdgeType != drawableInfo.shapedBottomEdgeType) {
+            shapedBottomEdgeType = drawableInfo.shapedBottomEdgeType;
+        }
+
+        if (shapedBottomEdgeSize != drawableInfo.shapedBottomEdgeSize) {
+            shapedBottomEdgeSize = drawableInfo.shapedBottomEdgeSize;
         }
     }
 

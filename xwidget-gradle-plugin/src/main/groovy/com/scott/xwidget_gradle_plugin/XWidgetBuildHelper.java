@@ -232,6 +232,26 @@ public class XWidgetBuildHelper {
             builder.append("    </attr>").append(NEW_LINE);
             builder.append("    <attr name=\"").append(name).append("_shaped_bottomRightSize\" format=\"dimension\"/>").append(NEW_LINE);
 
+            builder.append("    <attr name=\"").append(name).append("_shaped_leftEdgeType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"triangle\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_leftEdgeSize\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_shaped_rightEdgeType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"triangle\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_rightEdgeSize\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_shaped_topEdgeType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"triangle\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_topEdgeSize\" format=\"dimension\"/>").append(NEW_LINE);
+
+            builder.append("    <attr name=\"").append(name).append("_shaped_bottomEdgeType\" format=\"enum\">").append(NEW_LINE);
+            builder.append("        <enum name=\"triangle\" value=\"0\"/>").append(NEW_LINE);
+            builder.append("    </attr>").append(NEW_LINE);
+            builder.append("    <attr name=\"").append(name).append("_shaped_bottomEdgeSize\" format=\"dimension\"/>").append(NEW_LINE);
+
             builder.append("</declare-styleable>").append(NEW_LINE);
             builder.append("<!-- ").append(name).append(" -->").append(NEW_LINE);
         }

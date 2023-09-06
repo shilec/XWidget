@@ -6,6 +6,7 @@ import com.google.android.material.shape.CutCornerTreatment
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.RoundedCornerTreatment
 import com.google.android.material.shape.ShapePathModel
+import com.google.android.material.shape.TriangleEdgeTreatment
 import com.scott.xwidget.Cons
 import com.scott.xwidget.drawable.DrawableInfo
 
@@ -50,6 +51,10 @@ class ShapedDrawableRender(drawableInfo: DrawableInfo) : IRender {
                 RoundedCornerTreatment(drawableInfo.shapedBottomLeftSize)
             }
 
+        shapePathModel.leftEdge = TriangleEdgeTreatment(drawableInfo.shapedLeftEdgeSize, true)
+        shapePathModel.rightEdge = TriangleEdgeTreatment(drawableInfo.shapedRightEdgeSize, true)
+        shapePathModel.topEdge = TriangleEdgeTreatment(drawableInfo.shapedTopEdgeSize, true)
+        shapePathModel.bottomEdge = TriangleEdgeTreatment(drawableInfo.shapedBottomEdgeSize, true)
         shapeDrawableImpl = GradientMaterialShapeDrawable(drawableInfo, shapePathModel)
     }
 

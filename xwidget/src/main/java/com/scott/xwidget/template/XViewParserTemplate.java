@@ -129,6 +129,18 @@ public class XViewParserTemplate implements IWidgetParser {
 
         drawableInfo.shapedBottomRightType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomRightCornerType, 0);
         drawableInfo.shapedBottomRightSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomRightSize, 0);
+
+        drawableInfo.shapedLeftEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_leftEdgeType, 0);
+        drawableInfo.shapedLeftEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_leftEdgeSize, 0);
+
+        drawableInfo.shapedRightEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_rightEdgeType, 0);
+        drawableInfo.shapedRightEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_rightEdgeSize, 0);
+
+        drawableInfo.shapedTopEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_topEdgeType, 0);
+        drawableInfo.shapedTopEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_topEdgeSize, 0);
+
+        drawableInfo.shapedBottomEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomEdgeType, 0);
+        drawableInfo.shapedBottomEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomEdgeSize, 0);
         return drawableInfo;
     }
 
@@ -188,6 +200,18 @@ public class XViewParserTemplate implements IWidgetParser {
 
         drawableInfo.shapedBottomRightType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomRightCornerType, 0);
         drawableInfo.shapedBottomRightSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomRightSize, 0);
+
+        drawableInfo.shapedLeftEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_leftEdgeType, 0);
+        drawableInfo.shapedLeftEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_leftEdgeSize, 0);
+
+        drawableInfo.shapedRightEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_rightEdgeType, 0);
+        drawableInfo.shapedRightEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_rightEdgeSize, 0);
+
+        drawableInfo.shapedTopEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_topEdgeType, 0);
+        drawableInfo.shapedTopEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_topEdgeSize, 0);
+
+        drawableInfo.shapedBottomEdgeType = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomEdgeType, 0);
+        drawableInfo.shapedBottomEdgeSize = arr.getDimension(R.styleable.XViewTemplate_XViewTemplate_shaped_bottomEdgeSize, 0);
         return drawableInfo;
     }
 }
