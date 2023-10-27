@@ -31,7 +31,7 @@ class Template {
         template.append("    @Nullable\n");
         template.append("    @Override\n");
         template.append("    public Drawable parseDrawable(@NotNull Context context, @Nullable AttributeSet attrs, @Nullable Drawable drawable) {\n");
-        template.append("        TypedArray arr = context.getResources().obtainAttributes(attrs, R.styleable.XViewTemplate);\n");
+        template.append("        TypedArray arr = context.getTheme().obtainStyledAttributes(attrs, R.styleable.XViewTemplate, 0, 0);\n");
         template.append("\n");
         template.append("        int type = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_state, 0);\n");
         template.append("\n");

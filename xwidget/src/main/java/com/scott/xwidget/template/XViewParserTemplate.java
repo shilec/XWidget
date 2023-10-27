@@ -26,7 +26,7 @@ public class XViewParserTemplate implements IWidgetParser {
     @Nullable
     @Override
     public Drawable parseDrawable(@NotNull Context context, @Nullable AttributeSet attrs, @Nullable Drawable drawable) {
-        TypedArray arr = context.getResources().obtainAttributes(attrs, R.styleable.XViewTemplate);
+        TypedArray arr = context.getTheme().obtainStyledAttributes(attrs, R.styleable.XViewTemplate, 0, 0);
 
         int type = arr.getInt(R.styleable.XViewTemplate_XViewTemplate_state, 0);
 

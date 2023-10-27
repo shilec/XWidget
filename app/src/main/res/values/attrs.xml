@@ -8,4 +8,5 @@
 <!--        <attr name="checkbox_gradient_end_color" format="color" />-->
     </declare-styleable>
 
+    <attr name="test_color_attr" format="color"/>
 </resources>
