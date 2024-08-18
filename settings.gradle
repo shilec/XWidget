@@ -1,6 +1,8 @@
 include ':xwidget-annotation'
 include ':xwidget-processor'
 include ':xwidget'
+include ':xwidget-template-plugin'
+include ':xwidget-gradle-plugin'
 include ':app'
 include ':xwidget-gradle-plugin'
 include ':xwidget-tempate-plugin'

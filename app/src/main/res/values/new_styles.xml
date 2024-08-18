@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="XTextViewButton">
+        <item name="XTextView_corner">50dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FF161D46</item>
+        <item name="XTextView_solid_color">#FFFFFFFF</item>
+        <item name="XTextView_ripple_enable">true</item>
+        <item name="XTextView_ripple_color">#EEEEEE</item>
+        <item name="XTextView_shadow_color">#14183668</item>
+        <item name="XTextView_shadow_dy">1.5dp</item>
+        <item name="XTextView_shadow_radius">2.5dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">1.5dp</item>
+        <item name="android:paddingBottom">5.5dp</item>
+        <item name="android:gravity">center</item>
+</style>
+</resources>
