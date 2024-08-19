@@ -115,8 +115,7 @@
             tools:visibility="visible" />
 
         <com.scott.xwidget.widget.XTextView
-            app:XTextView_solid_color="?attr/colorAccent"
-            app:XTextView_corner="50dp"
+            style="@style/XTextViewButton"
             android:id="@+id/tv_batch2"
             android:layout_width="wrap_content"
             android:layout_height="36dp"

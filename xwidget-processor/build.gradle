@@ -1,5 +1,5 @@
 apply plugin: 'java-library'
-apply plugin: "com.scott.xwidget-template-plugin"
+//apply plugin: "com.scott.xwidget-template-plugin"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

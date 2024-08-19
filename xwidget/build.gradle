@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: "com.scott.xwidget-gradle-plugin"
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 group='com.github.shilec'
 
 android {
@@ -24,6 +25,29 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+tasks.withType(Jar){jarTask->
+    if(jarTask.name.equals('packageReleaseJar')){
+        jarTask.from android.sourceSets.main.java.srcDirs
+    }
+}
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+publishing {
+    publications {
+        publishMainEntry(MavenPublication) {
+            groupId "com.ttcd.widget"
+            artifactId "XWidget"
+            version '1.4.0'
+            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+            artifact generateSourcesJar
         }
     }
 }
