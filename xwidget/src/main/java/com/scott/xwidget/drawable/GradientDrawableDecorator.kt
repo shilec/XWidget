@@ -7,7 +7,7 @@ import android.graphics.drawable.GradientDrawable
 import com.scott.xwidget.drawable.editor.DrawableEditTransaction
 import com.scott.xwidget.drawable.editor.IDrawableEditTransaction
 import com.scott.xwidget.drawable.editor.IDrawableEditor
-import com.scott.xwidget.drawable.render.FirstDrawableRender
+import com.scott.xwidget.drawable.render.GradientStrokeRender
 import com.scott.xwidget.drawable.render.IRender
 
 /**
@@ -15,12 +15,14 @@ import com.scott.xwidget.drawable.render.IRender
  */
 class GradientDrawableDecorator(private val drawableInfo: DrawableInfo) : GradientDrawable() ,
     IDrawableEditor {
-    private val renderHead: IRender = FirstDrawableRender()
 
+    private val topRenderList = arrayListOf<IRender>()
+    private val backgroundRenderList = arrayListOf<IRender>()
     var tag: String? = null
 
     override fun commit(drawableInfo: DrawableInfo?): IDrawableEditor {
-        renderHead.next = null
+        topRenderList.clear()
+        backgroundRenderList.clear()
         this.drawableInfo.merge(drawableInfo)
         DrawableWrapUtils.wrap(this.drawableInfo, this)
         return this
@@ -49,30 +51,35 @@ class GradientDrawableDecorator(private val drawableInfo: DrawableInfo) : Gradie
     }
 
     fun addRender(render: IRender) {
-        var tail: IRender? = renderHead
-        while (tail?.next != null) {
-            tail = tail.next
+        if (render is GradientStrokeRender) {
+            topRenderList.add(render)
+        } else {
+            backgroundRenderList.add(render)
         }
-        tail?.next = render
     }
 
     override fun draw(canvas: Canvas) {
-        var head = renderHead.next
+        backgroundRenderList.forEach {
+            it.draw(canvas, bounds)
+        }
+
         super.draw(canvas)
 
-        while (head != null) {
-            head.draw(canvas, bounds)
-            head = head.next
+        topRenderList.forEach {
+            it.draw(canvas, bounds)
         }
     }
 
     override fun setBounds(left: Int, top: Int, right: Int, bottom: Int) {
-        var head = renderHead.next
+        val all = arrayListOf<IRender>()
+        all.addAll(backgroundRenderList)
+        all.addAll(topRenderList)
+
         var rect = Rect(left, top, right, bottom)
-        while (head != null) {
-            rect = head.onBoundsChanged(left, top, right, bottom)
-            head = head.next
+        all.forEach {
+            rect = it.onBoundsChanged(left, top, right, bottom)
         }
+
         super.setBounds(rect.left, rect.top, rect.right, rect.bottom)
     }
 }

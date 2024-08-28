@@ -10,7 +10,7 @@ class ShadowDrawableRender(
     private var shadowDx: Float = 0f,
     private var shadowDy: Float = 0f,
     private var corerType: Int = 0,
-    private var backgroundColor: Int = Color.WHITE
+    private var backgroundColor: Int = Color.TRANSPARENT
 ): IRender {
 
     companion object {
