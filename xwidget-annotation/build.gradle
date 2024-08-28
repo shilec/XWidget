@@ -5,18 +5,6 @@ apply plugin: 'maven-publish'
 group='com.github.shilec'
 
 
-publishing {
-    publications {
-        publishMainEntry(MavenPublication) {
-            groupId "com.ttcd.widget"
-            artifactId "XWidget-annotation"
-            version '1.4.0'
-            afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
-            artifact generateSourcesJar
-        }
-    }
-}
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
