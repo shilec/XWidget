@@ -64,6 +64,17 @@ public class XWidgetProcessor extends AbstractProcessor {
             String name = element.getSimpleName().toString();
             String fullViewClsName = element.toString();
             String packageName = element.getAnnotation(XWidgetView.class).resourcePackageName();
+            
+            // 如果包名为空，自动从View的包名推断
+            if (packageName == null || packageName.isEmpty()) {
+                int lastDot = fullViewClsName.lastIndexOf('.');
+                if (lastDot > 0) {
+                    packageName = fullViewClsName.substring(0, lastDot);
+                } else {
+                    packageName = "com.scott.xwidget"; // 默认包名
+                }
+            }
+            
             generateParser(fullViewClsName, name, packageName);
 
             //names.add(name);
