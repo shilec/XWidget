@@ -1,42 +1,69 @@
 package com.example.viewdemo
 
 import android.graphics.Color
-import android.graphics.Point
 import android.graphics.Rect
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.scott.xwidget.XWidget
 
+/**
+ * MainActivity - 演示XWidget的使用
+ */
 class MainActivity : AppCompatActivity() {
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-//        val view = findViewById<AreaSelectContainerView>(R.id.v_offset_view)
-
-
-//        val vTest = findViewById<View>(R.id.v_test2)
-//
-//        findViewById<View>(R.id.btn_test).setOnClickListener {
-//            val stateEditor = XWidget.getNormalRippleDrawableEditor(vTest)
-//
-//            stateEditor?.edit()
-//            ?.setStrokeBorderColor(Color.BLUE)
-//            ?.setSolidColor(Color.GREEN)
-//                ?.setStrokeBorder(10f)
-//                ?.setRippleEnable(true)
-//            ?.setRippleColor(Color.YELLOW)
-//            ?.setCorner(10f)
-//            ?.commit()
-
-//            stateEditor?.stateEditor?.edit()
-//            ?.setStrokeBorderColor(Color.RED)
-//                ?.setStrokeBorder(30f)
-//            ?.setSolidColor(Color.WHITE)
-//            ?.setRippleColor(Color.RED)
-//            ?.setCorner(40F)
-//            ?.commit()
-//        }
+        
+        // 示例：使用配置Builder自定义AreaSelectView
+        setupAreaSelectViewExample()
+        
+        // 示例：使用配置Builder自定义PositionSelectView
+        setupPositionSelectViewExample()
+    }
+    
+    /**
+     * 示例：配置AreaSelectView
+     */
+    private fun setupAreaSelectViewExample() {
+        // 方式1：使用默认配置
+        // ViewConfigManager.applyDefaultConfig(areaSelectView)
+        
+        // 方式2：使用Builder自定义配置
+        val customConfig = ViewConfigManager.areaSelectConfig()
+            .strokeColor(Color.BLUE)
+            .strokeWidth(8f)
+            .maskColor(Color.parseColor("#88000000"))
+            .touchBoxSize(40f)
+            .build()
+        
+        // areaSelectView.setConfig(customConfig)
+    }
+    
+    /**
+     * 示例：配置PositionSelectView
+     */
+    private fun setupPositionSelectViewExample() {
+        // 方式1：使用默认配置
+        // ViewConfigManager.applyDefaultConfig(positionSelectView)
+        
+        // 方式2：使用Builder自定义配置
+        val customConfig = ViewConfigManager.positionSelectConfig()
+            .rectBorderColor(Color.RED)
+            .rectBorderWidth(6f)
+            .circleRadius(25f)
+            .centerCircleColor(Color.GREEN)
+            .offsetCircleColor(Color.BLUE)
+            .build()
+        
+        // positionSelectView.setConfig(customConfig)
+    }
+    
+    /**
+     * 示例：AreaSelectView的回调处理
+     */
+    private fun onAreaSelected(rect: Rect) {
+        Log.d("MainActivity", "选中区域: $rect")
+        // 处理选中区域
     }
 }

@@ -34,8 +34,6 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
     var onTouchDown: ((Point) -> Unit)? = null
 
     companion object {
-
-        const val TOUCH_BOX_SIZE = 30f
         const val STATE_NEW_PATH = 0
         const val STATE_MOVE = 1
         const val STATE_RESIZE_LEFT_TOP = 2
@@ -44,32 +42,43 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
         const val STATE_RESIZE_RIGHT_BOTTOM = 5
     }
 
+    private var config: AreaSelectViewConfig = AreaSelectViewConfig()
+        set(value) {
+            field = value
+            updatePaints()
+            invalidate()
+        }
+
+    private val touchBoxSize: Float
+        get() = config.touchBoxSize
+
     private var state = STATE_NEW_PATH
 
     private var selectRect = Rect()
 
     private fun getStateByPoint(x: Int, y: Int): Int {
+        val boxSize = touchBoxSize
         val leftTopRect = Rect(
-            (selectRect.left - TOUCH_BOX_SIZE).roundToInt(),
-            (selectRect.top - TOUCH_BOX_SIZE).roundToInt(),
-            (selectRect.left + TOUCH_BOX_SIZE).toInt(), (selectRect.top + TOUCH_BOX_SIZE).toInt()
+            (selectRect.left - boxSize).roundToInt(),
+            (selectRect.top - boxSize).roundToInt(),
+            (selectRect.left + boxSize).toInt(), (selectRect.top + boxSize).toInt()
         )
 
         val rightTopRect = Rect(
-            (selectRect.right - TOUCH_BOX_SIZE).toInt(),
-            (selectRect.top - TOUCH_BOX_SIZE).roundToInt(),
-            ((selectRect.right + TOUCH_BOX_SIZE).roundToInt()), (selectRect.top + TOUCH_BOX_SIZE).toInt()
+            (selectRect.right - boxSize).toInt(),
+            (selectRect.top - boxSize).roundToInt(),
+            ((selectRect.right + boxSize).roundToInt()), (selectRect.top + boxSize).toInt()
         )
 
         val leftBottomRect = Rect(
-            (selectRect.left - TOUCH_BOX_SIZE).roundToInt(), (selectRect.bottom - TOUCH_BOX_SIZE).toInt(),
-            (selectRect.left + TOUCH_BOX_SIZE).toInt(), ((selectRect.bottom + TOUCH_BOX_SIZE).roundToInt())
+            (selectRect.left - boxSize).roundToInt(), (selectRect.bottom - boxSize).toInt(),
+            (selectRect.left + boxSize).toInt(), ((selectRect.bottom + boxSize).roundToInt())
         )
 
         val rightBottomRect = Rect(
-            (selectRect.right - TOUCH_BOX_SIZE).toInt(),
-            (selectRect.bottom - TOUCH_BOX_SIZE).toInt(),
-            ((selectRect.right + TOUCH_BOX_SIZE).roundToInt()), ((selectRect.bottom + TOUCH_BOX_SIZE).roundToInt())
+            (selectRect.right - boxSize).toInt(),
+            (selectRect.bottom - boxSize).toInt(),
+            ((selectRect.right + boxSize).roundToInt()), ((selectRect.bottom + boxSize).roundToInt())
         )
 
         if (leftTopRect.contains(x, y)) {
@@ -138,16 +147,17 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
                     }
 
                     STATE_RESIZE_LEFT_TOP -> {
+                        val boxSize = touchBoxSize
                         val offsetX = if (event.x - downX < 0) {
                             max(-selectRect.left, (event.x - downX).roundToInt())
                         } else {
-                            min(abs(selectRect.left - (selectRect.right - TOUCH_BOX_SIZE)), abs(event.x - downX)).roundToInt()
+                            min(abs(selectRect.left - (selectRect.right - boxSize)), abs(event.x - downX)).roundToInt()
                         }
 
                         val offsetY = if (event.y - downY < 0) {
                             max(-selectRect.top, (event.y - downY).roundToInt())
                         } else {
-                            min(abs(selectRect.top - (selectRect.bottom - TOUCH_BOX_SIZE)), abs(event.y - downY)).roundToInt()
+                            min(abs(selectRect.top - (selectRect.bottom - boxSize)), abs(event.y - downY)).roundToInt()
                         }
                         selectRect = Rect(selectRect.left + offsetX, selectRect.top + offsetY, selectRect.right, selectRect.bottom)
                         downX = event.x
@@ -156,16 +166,17 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
                     }
 
                     STATE_RESIZE_RIGHT_TOP -> {
+                        val boxSize = touchBoxSize
                         val offsetX = if (event.x - downX > 0) {
                             min(abs(right - selectRect.right), (event.x - downX).roundToInt())
                         } else {
-                            max(-abs(selectRect.right - (selectRect.left + TOUCH_BOX_SIZE)), event.x - downX).roundToInt()
+                            max(-abs(selectRect.right - (selectRect.left + boxSize)), event.x - downX).roundToInt()
                         }
 
                         val offsetY = if (event.y - downY < 0) {
                             max(-selectRect.top, (event.y - downY).roundToInt())
                         } else {
-                            min(abs(selectRect.top - (selectRect.bottom - TOUCH_BOX_SIZE)), abs(event.y - downY)).roundToInt()
+                            min(abs(selectRect.top - (selectRect.bottom - boxSize)), abs(event.y - downY)).roundToInt()
                         }
                         selectRect = Rect(selectRect.left, selectRect.top + offsetY, selectRect.right + offsetX, selectRect.bottom)
                         downX = event.x
@@ -174,16 +185,17 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
                     }
 
                     STATE_RESIZE_RIGHT_BOTTOM -> {
+                        val boxSize = touchBoxSize
                         val offsetX = if (event.x - downX > 0) {
                             min(abs(right - selectRect.right), (event.x - downX).roundToInt())
                         } else {
-                            max(-abs(selectRect.right - (selectRect.left + TOUCH_BOX_SIZE)), event.x - downX).roundToInt()
+                            max(-abs(selectRect.right - (selectRect.left + boxSize)), event.x - downX).roundToInt()
                         }
 
                         val offsetY = if (event.y - downY > 0) {
                             min(abs(bottom - selectRect.bottom), (event.y - downY).roundToInt())
                         } else {
-                            max(-abs(selectRect.bottom - (selectRect.top + TOUCH_BOX_SIZE)), event.y - downY).roundToInt()
+                            max(-abs(selectRect.bottom - (selectRect.top + boxSize)), event.y - downY).roundToInt()
                         }
                         selectRect = Rect(selectRect.left, selectRect.top, selectRect.right + offsetX, selectRect.bottom + offsetY)
                         downX = event.x
@@ -192,16 +204,17 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
                     }
 
                     STATE_RESIZE_LEFT_BOTTOM -> {
+                        val boxSize = touchBoxSize
                         val offsetX = if (event.x - downX < 0) {
                             max(-selectRect.left, (event.x - downX).roundToInt())
                         } else {
-                            min(abs(selectRect.left - (selectRect.right - TOUCH_BOX_SIZE)), abs(event.x - downX)).roundToInt()
+                            min(abs(selectRect.left - (selectRect.right - boxSize)), abs(event.x - downX)).roundToInt()
                         }
 
                         val offsetY = if (event.y - downY > 0) {
                             min(abs(bottom - selectRect.bottom), (event.y - downY).roundToInt())
                         } else {
-                            max(-abs(selectRect.bottom - (selectRect.top + TOUCH_BOX_SIZE)), event.y - downY).roundToInt()
+                            max(-abs(selectRect.bottom - (selectRect.top + boxSize)), event.y - downY).roundToInt()
                         }
                         selectRect = Rect(selectRect.left + offsetX, selectRect.top, selectRect.right, selectRect.bottom + offsetY)
                         downX = event.x
@@ -225,20 +238,32 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
         postInvalidate()
     }
 
-    private val paint = Paint().run {
+    private val paint = Paint().apply {
         isAntiAlias = true
-        color = Color.parseColor("#FF0000")
-        strokeWidth = 6F
         style = Paint.Style.STROKE
-        this
     }
 
-    private val strokePaint = Paint().run {
+    private val strokePaint = Paint().apply {
         isAntiAlias = true
-        color = Color.parseColor("#FF0000")
-        strokeWidth = 6F
         style = Paint.Style.STROKE
-        this
+    }
+
+    private fun updatePaints() {
+        paint.color = config.strokeColor
+        paint.strokeWidth = config.strokeWidth
+        strokePaint.color = config.strokeColor
+        strokePaint.strokeWidth = config.strokeWidth
+    }
+
+    init {
+        updatePaints()
+    }
+
+    /**
+     * 设置配置
+     */
+    fun setConfig(config: AreaSelectViewConfig) {
+        this.config = config
     }
 
     override fun draw(canvas: Canvas?) {
@@ -248,15 +273,16 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
         if (!rect.isEmpty) {
             val shape = Path()
             shape.addRect(RectF(rect), Path.Direction.CCW)
-            canvas?.drawMaskShape(measuredWidth.toFloat(), measuredHeight.toFloat(), Color.parseColor("#66000000"), shape, paint)
+            canvas?.drawMaskShape(measuredWidth.toFloat(), measuredHeight.toFloat(), config.maskColor, shape, paint)
 
-            var hBoxSize = TOUCH_BOX_SIZE
-            var wBoxSize = TOUCH_BOX_SIZE
-            if (rect.width() < 2 * TOUCH_BOX_SIZE) {
+            val boxSize = touchBoxSize
+            var hBoxSize = boxSize
+            var wBoxSize = boxSize
+            if (rect.width() < 2 * boxSize) {
                 wBoxSize = rect.width() / 2f
             }
 
-            if (rect.height() < 2 * TOUCH_BOX_SIZE) {
+            if (rect.height() < 2 * boxSize) {
                 hBoxSize = rect.height() / 2f
             }
 
@@ -288,7 +314,7 @@ class AreaSelectView(context: Context?, attrs: AttributeSet?) :
 
             canvas?.drawPath(rightBottom, strokePaint)
         } else {
-            canvas?.drawColor(Color.parseColor("#66000000"))
+            canvas?.drawColor(config.maskColor)
         }
     }
 

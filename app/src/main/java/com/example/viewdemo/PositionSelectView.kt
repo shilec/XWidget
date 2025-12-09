@@ -39,59 +39,67 @@ class PositionSelectView(context: Context?, attrs: AttributeSet?) : View(context
             invalidate()
         }
 
-    private val rectBorderColor = Color.parseColor("#FF0000")
-    private val rectBorderWidth = 5f
+    private var config: PositionSelectViewConfig = PositionSelectViewConfig()
+        set(value) {
+            field = value
+            updatePaints()
+            invalidate()
+        }
 
-    private val circleR = 20f
-    private val centerCircleColor = Color.parseColor("#00FF00")
-    private val offsetCircleColor = Color.parseColor("#0000FF")
+    /**
+     * 设置配置
+     */
+    fun setConfig(config: PositionSelectViewConfig) {
+        this.config = config
+    }
 
-    private val lineColor = Color.parseColor("#CCCCCC")
-    private val lineWidth = 13f
-
-    private val touchSize = 60f
+    private val touchSize: Float
+        get() = config.touchSize
+        
     private val touchRect: Rect
         get() = Rect((offsetPoint.x - touchSize).toInt(),
             (offsetPoint.y - touchSize).toInt(), (offsetPoint.x + touchSize).toInt(), (offsetPoint.y + touchSize).toInt()
         )
 
-    private val rectPaint by lazy {
-        val p = Paint()
-        p.isAntiAlias = true
-        p.color = rectBorderColor
-        p.strokeWidth = rectBorderWidth
-        p.style = Paint.Style.STROKE
-        p
+    private val rectPaint = Paint().apply {
+        isAntiAlias = true
+        style = Paint.Style.STROKE
     }
 
-    private val linePaint by lazy {
-        val p = Paint()
-        p.isAntiAlias = true
-        p.strokeCap = Paint.Cap.ROUND
-        p.color = lineColor
-        p.strokeWidth = lineWidth
-        p.style = Paint.Style.STROKE
-        p
+    private val linePaint = Paint().apply {
+        isAntiAlias = true
+        strokeCap = Paint.Cap.ROUND
+        style = Paint.Style.STROKE
     }
 
-    private val centerCirclePaint by lazy {
-        val p = Paint()
-        p.isAntiAlias = true
-        p.strokeCap = Paint.Cap.ROUND
-        p.color = centerCircleColor
-        p.strokeWidth = circleR
-        p.style = Paint.Style.FILL
-        p
+    private val centerCirclePaint = Paint().apply {
+        isAntiAlias = true
+        strokeCap = Paint.Cap.ROUND
+        style = Paint.Style.FILL
     }
 
-    private val offsetCirclePaint by lazy {
-        val p = Paint()
-        p.isAntiAlias = true
-        p.strokeCap = Paint.Cap.ROUND
-        p.color = offsetCircleColor
-        p.strokeWidth = circleR
-        p.style = Paint.Style.FILL
-        p
+    private val offsetCirclePaint = Paint().apply {
+        isAntiAlias = true
+        strokeCap = Paint.Cap.ROUND
+        style = Paint.Style.FILL
+    }
+
+    private fun updatePaints() {
+        rectPaint.color = config.rectBorderColor
+        rectPaint.strokeWidth = config.rectBorderWidth
+        
+        linePaint.color = config.lineColor
+        linePaint.strokeWidth = config.lineWidth
+        
+        centerCirclePaint.color = config.centerCircleColor
+        centerCirclePaint.strokeWidth = config.circleRadius
+        
+        offsetCirclePaint.color = config.offsetCircleColor
+        offsetCirclePaint.strokeWidth = config.circleRadius
+    }
+
+    init {
+        updatePaints()
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -115,9 +123,9 @@ class PositionSelectView(context: Context?, attrs: AttributeSet?) : View(context
             offsetX, offsetY, linePaint
         )
 
-        canvas?.drawCircle(centerX, centerY, circleR, centerCirclePaint)
+        canvas?.drawCircle(centerX, centerY, config.circleRadius, centerCirclePaint)
 
-        canvas?.drawCircle(offsetX, offsetY, circleR, offsetCirclePaint)
+        canvas?.drawCircle(offsetX, offsetY, config.circleRadius, offsetCirclePaint)
     }
 
     private var isTouchInOffsetCircle = false
